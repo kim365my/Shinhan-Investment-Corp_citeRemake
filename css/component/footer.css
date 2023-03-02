@@ -1,0 +1,52 @@
+/* footer */
+footer{
+
+}
+
+/* #footer_csc */
+#footer_csc{
+    width: 100%;
+    /* 박스모델 속성 */
+    padding: 20px 0;
+    border-top: 1px solid #E4E5E8;
+    border-bottom: 1px solid #E4E5E8;
+}
+#footer_csc nav{
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
+.footer_title{
+    margin-bottom: 15px;
+    /* font */
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #666666;
+}
+.footer_list li{
+    list-style: disc;
+    /* font */
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #999999;
+}
+.footer_icon_link{
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #footer_fnb_wrap */
+#footer_fnb_wrap{
+    padding-top: 20px;
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
+
+#fnb li, #fnb li a{
+    display: inline-block;
+}
+#fnb li a{
+    
+}

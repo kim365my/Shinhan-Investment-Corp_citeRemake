@@ -1,0 +1,42 @@
+/* header */
+header{
+    /* 플랙스 */
+    display: flex;
+}
+/* header .logo */
+header .logo{
+    width: 193px; 
+    margin-right: 76px;
+}
+/* header nav */
+header nav{
+    width: 100%;
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul{
+    /* 플랙스 */
+    display: flex;
+}
+/* #gnb */
+header #gnb{
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem;
+}
+header #gnb li:not(:last-child){
+    margin-right: 40px;
+}
+/* #login_gnb */
+header #login_gnb{
+    font-size: 1rem;
+    font-weight: 300;
+}
+header #login_gnb li:first-child::after{
+    content: "";
+    font-size: 0.8rem;
+    padding-right: 16px;
+    border-right: 1px solid #000;
+    margin-right: 16px;
+
+}

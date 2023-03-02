@@ -4,6 +4,9 @@
 /* 외부 폰트 적용 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
 
+/* component */
+@import url(./component/header.css);
+@import url(./component/footer.css);
 /* screen */
 @import url(./screen/main.css);
 @import url(./screen/sub_page.css);
@@ -19,6 +22,12 @@ body{
     line-height: 180%;
     font-weight: 600;
     letter-spacing: -0.05em;
+}
+/* ----------------------- */
+/* wrap 설정 */
+#wrap{
+    padding-top: 40px;
+    padding-bottom: 60px;
 }
 /* --------------------- */
 /* safe area */
