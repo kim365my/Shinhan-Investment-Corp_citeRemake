@@ -1,0 +1,37 @@
+@import url(./reset.css);
+@import url(./variable.css);
+
+/* 외부 폰트 적용 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+/* screen */
+@import url(./screen/main.css);
+@import url(./screen/sub_page.css);
+@import url(./screen/content.css);
+
+
+/* ========================== */
+/* 전체 스타일 적용 */
+/* --------------------- */
+/* body font 적용 */
+body{
+    font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    line-height: 180%;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+/* --------------------- */
+/* safe area */
+.w1720{
+    width: 1720px;
+    margin: 0 auto;
+}
+.w1440{
+    width: 1440px;
+    margin: 0 auto;
+}
+/* --------------------- */
+/* em color 클래스 */
+.em{
+    color: var(--main-color);
+}
