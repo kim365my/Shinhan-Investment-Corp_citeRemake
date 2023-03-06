@@ -2,117 +2,191 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="JGM" />
+    <meta name="description" content="중꺾마 신한투자증권 리뉴얼" />
     <title>신한투자증권</title>
-    <!-- 스타일 -->
-    <link rel="stylesheet" href="./css/style.css">
-
+    <!-- 폰트어썸 -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- 팝이콘 -->
+    <link rel="shortcut icon" href="./images/favicon/fav32.png" />
+    <link
+      rel="apple-touch-icon=precomposed"
+      href="./images/favicon/fav180.png"
+    />
+    <!-- 기본 코딩 JS 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 제이쿼리 플러그인 -->
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.bxslider.js"></script>
+    <script src="./js/jquery.scrollTo.min.js"></script>
     <!-- 차트 api cdn -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
-
+    <!-- 기본 코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Header, Footer Load JS -->
+    <script src="./js/load.js" defer></script>
 </head>
 <body>
     <div id="wrap">
         <!-- header -->
-        <header class="w1720">
-            <!-- header .logo -->
-            <h1 class="logo"><img src="./resource/icon/1_header/logo.png" alt="logo"></h1>
-            <!-- /header .logo -->
-
-            <!-- header nav -->
-            <nav>
-                <ul id="gnb">
-                    <li><a href="#">나의&nbsp;자산</a></li>
-                    <li><a href="#">펀드</a></li>
-                    <li><a href="#">연금</a></li>
-                    <li><a href="#">고객&nbsp;서비스</a></li>
-                </ul>
-                <ul id="login_gnb">
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">인증센터</a></li>
-                </ul>
-            </nav>
-            <!-- /header nav -->
-        </header>
+        <header class="header w1720"></header>
         <!-- /header -->
         
         <!-- article -->
-        <article class="w1720">
+        <article class="mainArticle w1720">
             <!-- 슬라이드 콘텐츠 -->
-            <div>
-                <div id="silder_banner">
+            <div class="mainSilder">
+                <div id="silder_banner" class="mainBanner">
 
                 </div>
-                <div id="lnb_wrap">
-                    <div id="lnb_btn">
-                        <ul>
-                            <li><a href="#">자주가는&nbsp;메뉴</a></li>
-                            <li><a href="#">처음이세요?</a></li>
+                <div class="lnbWrap">
+                    <div class="lnb_btn">
+                        <input type="radio" name="lnbBtn" id="lnbBtn01" checked>
+                        <label for="lnbBtn01">자주가는&nbsp;메뉴</label>
+
+                        <input type="radio" name="lnbBtn" id="lnbBtn02">
+                        <label for="lnbBtn02">처음이세요?</label>
+                        <!-- <ul>
+                            <li id="check">
+                                <a href="#">자주가는&nbsp;메뉴
+                                    <img src="./images/2_main/section1/double_arrow_blue.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">처음이세요?
+                                    <img src="./images/2_main/section1/double_arrow_gray.png" alt="">
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <nav>
+                        <ul class="lnb">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/myAccount.png" alt="myAccount">
+                                    나의&nbsp;계좌
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/assetStatus.png" alt="assetStatus">
+                                    자산현황
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/recommendedFund.png" alt="recommendedFund">
+                                    추천펀드
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/pensionAssets.png" alt="pensionAssets">
+                                    연금자산
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/certificate.png" alt="certificate">
+                                    인증서&nbsp;보내기
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/transfer.png" alt="transfer">
+                                    이체
+                                </a>
+                            </li>
                         </ul>
-                    </div>
-                    <div id="lnb_content">
-                        <nav class="lnb">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="./resource/icon/2_main/section1/myAccount.png" alt="myAccount">
-                                        나의&nbsp;계좌
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./resource/icon/2_main/section1/assetStatus.png" alt="assetStatus">
-                                        자산현황
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./resource/icon/2_main/section1/recommendedFund.png" alt="recommendedFund">
-                                        추천펀드
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./resource/icon/2_main/section1/pensionAssets.png" alt="pensionAssets">
-                                        연금자산
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./resource/icon/2_main/section1/certificate.png" alt="certificate">
-                                        인증서&nbsp;보내기
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./resource/icon/2_main/section1/transfer.png" alt="transfer">
-                                        이체
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                        <ul class="lnb hidden">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/myAccount.png" alt="myAccount">
+                                    나의&nbsp;계좌
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/assetStatus.png" alt="assetStatus">
+                                    자산현황
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/recommendedFund.png" alt="recommendedFund">
+                                    추천펀드
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/pensionAssets.png" alt="pensionAssets">
+                                    연금자산
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/certificate.png" alt="certificate">
+                                    인증서&nbsp;보내기
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/2_main/section1/transfer.png" alt="transfer">
+                                    이체
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <!-- /슬라이드 콘텐츠 -->
 
             <!-- 서브 콘텐츠 -->
-            <div>
+            <div class="snbArticle">
                 <h2 class="em">
                     가지고만&nbsp;있어도&nbsp;쌓이는&nbsp;수익 <br>
-                    신한투자증권&nbsp;ETF
+                    <strong>신한투자증권&nbsp;ETF</strong>
                 </h2>
                 <input type="search" name="" id="" autocapitalize="off" placeholder="ETF 검색">
 
-                <h2>이벤트</h2>
+                <h3>이벤트</h3>
                 <div class="area">
 
                 </div>
 
-                <h2>공지사항</h2>
-                <div class="area">
-                    
+                <h3>공지사항</h3>
+                <div class="notice">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- /서브 콘텐츠 -->
@@ -120,46 +194,48 @@
         <!-- /article -->
 
         <!-- main -->
-        <main role="main" class="w1440">
+        <main role="main">
             <section id="content1">
                 <h2>
                     자산관리,<br>
                     <span class="em">신한투자증권</span>과&nbsp;함께하세요!
                 </h2>
-                <div class="card_wrap">
+                <div class="card_wrap w1440">
                     <div class="card">
                         <a href="#">
-                            <img src="./resource/icon/2_main/section2/myAccount.png" alt="myAccount">
+                            <div>
+                                <img src="./images/2_main/section2/myAccount.png" alt="myAccount">
+                            </div>
                             <h3>전계좌현황</h3>
-                            <p>나의&nbsp;계좌별&nbsp;자산형황을&nbsp;한번에!</p>
+                            <p>나의&nbsp;계좌별&nbsp;자산현황을&nbsp;한번에!</p>
                         </a>
                     </div>
                     <div class="card">
                         <a href="#">
-                            <img src="./resource/icon/2_main/section2/assetStatus.png" alt="assetStatus">
+                            <img src="./images/2_main/section2/assetStatus.png" alt="assetStatus">
                             <h3>자산현황분석</h3>
-                            <p>나의&nbsp;계좌별&nbsp;자산형황을&nbsp;한번에!</p>
+                            <p>나의&nbsp;계좌별&nbsp;자산현황을&nbsp;한번에!</p>
                         </a>
                     </div>
                     <div class="card">
                         <a href="#">
-                            <img src="./resource/icon/2_main/section2/recommendedFund.png" alt="recommendedFund">
+                            <img src="./images/2_main/section2/recommendedFund.png" alt="recommendedFund">
                             <h3>추천펀드</h3>
-                            <p>나의&nbsp;계좌별&nbsp;자산형황을&nbsp;한번에!</p>
+                            <p>나의&nbsp;계좌별&nbsp;자산현황을&nbsp;한번에!</p>
                         </a>
                     </div>
                     <div class="card">
                         <a href="#">
-                            <img src="./resource/icon/2_main/section2/pensionAssets.png" alt="pensionAssets">
+                            <img src="./images/2_main/section2/pensionAssets.png" alt="pensionAssets">
                             <h3>연금자산</h3>
-                            <p>나의&nbsp;계좌별&nbsp;자산형황을&nbsp;한번에!</p>
+                            <p>나의&nbsp;계좌별&nbsp;자산현황을&nbsp;한번에!</p>
                         </a>
                     </div>
                 </div>
             </section>
-            <section id="content2">
-                <figure>
-                    <img src="" alt="주식차트">
+            <section id="content2" class="w1440">
+                <figure class="chartGraph">
+                    <img src="./images/2_main/section3/Rectangle 9.png" alt="주식차트">
                 </figure>
 
                 <div>
@@ -176,7 +252,7 @@
             </section>
 
             <!-- 주식표 -->
-            <section id="content3">
+            <section id="content3" class="w1440">
                 <h2>국내 TOP 종목</h2>
                 <div class="table">
                     <table>
@@ -186,114 +262,24 @@
                 <h2>인기검색종목</h2>
             </section>
             
+            <!-- banner -->
+            <aside class="banner w1440">
+                <h2>
+                    공모주 청약, 한번에 신청하세요!
+                    <p>
+                        신규 상장 기업의 주식을 배정받기 위해 청약하는 것입니다. 증권사에서 청약을 하면, 최종 경쟁률과 총 청약지수에 따라 주식을 배정받게 됩니다.
+                    </p>
+                </h2>
+                <a href="#" class="bannerLink">자세히 보기</a>
+            </aside>
+            <!-- /banner -->
         </main>
         <!-- main -->
-
-        <!-- banner -->
-        <aside class="w1440">
-            <h2>
-                공모주 청약, 한번에 신청하세요!
-                <p>
-                    신규 상장 기업의 주식을 배정받기 위해 청약하는 것입니다. 증권사에서 청약을 하면, 최종 경쟁률과 총 청약지수에 따라 주식을 배정받게 됩니다.
-                </p>
-            </h2>
-            <a href="#">자세히 보기</a>
-        </aside>
-        <!-- /banner -->
-
         <!-- footer -->
-        <footer class="w1440">
-            <!-- #footer_csc -->
-            <div id="footer_csc">
-                <h2 class="footer_title">고객지원센터</h2>
-                <nav>
-                    <h3>
-                        <p class="em">1588-0365</p>
-                        <p>
-                            말로하는&nbsp;AI&nbsp;상담서비스 <br>
-                            24시간&nbsp;챗봇&nbsp;상담(신한알파)
-                        </p>
-                    </h3>
-                    <ul class="footer_list">
-                        <li>해외주식팀&nbsp;02-3772-2525</li>
-                        <li>해외주식팀&nbsp;02-3772-4365</li>
-                        <li>해외사용자&nbsp;ARS</li>
-                        <li>82-2-6255-4510(유료)</li>
-                    </ul>                    
-                    <ul class="footer_list">
-                        <li>퇴직연금&nbsp;고객센터&nbsp;1588-1122</li>
-                        <li>디지털PB센터&nbsp;02-3772-1010</li>
-                        <li>이벤트전용센터&nbsp;02-3772-2220</li>
-                    </ul>                    
-                    <ul class="footer_icon_link">
-                        <li>
-                            <a href="#">
-                                <img src="./resource/icon/5_footer/Remote_control.png" alt="Remote_control">
-                                원격제어
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./resource/icon/5_footer/FAQ.png" alt="FAQ">
-                                FAQ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./resource/icon/5_footer/consultation.png" alt="consultation">
-                                1:1상담
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./resource/icon/5_footer/Business_information.png" alt="Business_information">
-                                업무안내
-                            </a>
-                        </li>
-                    </ul>                    
-                </nav>
-            </div>
-            <!-- /#footer_csc -->
-
-            <div id="footer_fnb_wrap">
-                <div>
-                    <!-- footer #fnb -->
-                    <nav id="fnb">
-                        <ul>
-                            <li><a href="#">회사소개</a></li>
-                            <li><a href="#">인증센터</a></li>
-                            <li><a href="#">트레이딩&nbsp;다운로드</a></li>
-                            <li><a href="#">보안센터</a></li>
-                            <li><a href="#">지점망안내</a></li>
-                            <li><a href="#">전자민원신청</a></li>
-                            <li><a href="#">휴면계좌조회</a></li>
-                            <li><a href="#">금융상품&nbsp;통합비교공사</a></li>
-                            <li><a href="#">내부고발제도</a></li>
-                        </ul>
-                        <ul>
-                            <li class="em"><a href="#">개인정보처리방침</a></li>
-                            <li class="em"><a href="#">신용정보활용체계</a></li>
-                            <li><a href="#">약관&nbsp;및&nbsp;유의사항</a></li>
-                            <li><a href="#">보호금융상품등록부</a></li>
-                            <li><a href="#">상품공시실</a></li>
-                            <li><a href="#">투자권유대행인</a></li>
-                            <li><a href="#">사이트맵</a></li>
-                        </ul>
-                    </nav>
-                    <!-- footer #fnb -->
-        
-                    <!-- footer #copyright -->
-                    <div id="copyright">
-                        <p>
-                            서울특별시 영등포구 여의대로 70(신한투자증권타워)
-                        </p>
-                    </div>
-                    <!-- /footer #copyright -->
-                </div>
-                <h2 id="footer_logo"><img src="./resource/icon/5_footer/logo_gray.png" alt="footer_logo"></h2>
-            </div>
-        </footer>
-        <!-- /footer -->
+        <footer class="footer"></footer>
+        <!-- /footer -->     
     </div>
 </body>
+<!-- 페이지 JS -->
+<script src="./js/main.js"></script>
 </html>

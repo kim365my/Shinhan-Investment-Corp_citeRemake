@@ -1,46 +1,225 @@
-@import url(./reset.css);
-@import url(./variable.css);
+@charset "utf-8";
 
-/* 외부 폰트 적용 */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+/* ================= */
+/* article */
+/* ================= */
+.mainArticle{
+    margin-top: 37px;
+    margin-bottom: 120px;
+    /* 플랙스 */
+    display: flex;
+}
+.mainSilder{
+    margin-right: 60px;
+    margin-bottom: 31px;
+}
 
-/* component */
-@import url(./component/header.css);
-@import url(./component/footer.css);
-/* screen */
-@import url(./screen/main.css);
-@import url(./screen/sub_page.css);
-@import url(./screen/content.css);
+.mainBanner{
+    width: 1256px;
+    height: 362px;
+    background-color: #D9D9D9;
+    border-radius: 16px 16px 0 0;
+}
+.lnbWrap{
+    width: 1256px;
+    height: 160px;
 
+}
+.lnbWrap{
+    background-color: #F6F6F6;
+    border-radius: 0 0 16px 16px;
+    /* 플랙스 */
+    display: flex;
+    align-items: center;
+}
+.lnb_btn label{
+    display: block;
+    width: 212px;
+    height: 80px;
+    cursor: pointer;
+    background-color: #E7E7E7;
+    /* 플랙스 */
+    display: flex;
+    align-items: center;    
+    justify-content: space-around;
+}
+.lnb_btn label:last-child{
+    border-radius: 0 0 16px 16px;
+}
+.lnb_btn input:checked + label{background-color: #F6F6F6;}
+/* 버튼 */
+.lnb_btn input + label::after{
+    content: url(../images/2_main/section1/double_arrow_gray.png);
+    margin-top: 8px;
+}
+.lnb_btn input:checked + label::after{
+    content:url(../images/2_main/section1/double_arrow_blue.png);
+}
+/* input 숨기기 */
+.lnb_btn input{
+    display: none;
+}
 
-/* ========================== */
-/* 전체 스타일 적용 */
-/* --------------------- */
-/* body font 적용 */
-body{
-    font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    line-height: 180%;
-    font-weight: 600;
-    letter-spacing: -0.05em;
+.lnbWrap nav{
+    width: 100%;
+}
+
+.lnb{
+    /* 플랙스 */
+    display: flex;
+    align-items: center;    
+    justify-content: space-evenly;
+}
+
+.lnb a{
+    /* 플랙스 */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.lnb a img{
+    width: min-content;
 }
 /* ----------------------- */
-/* wrap 설정 */
-#wrap{
-    padding-top: 40px;
-    padding-bottom: 60px;
+/* snb_content */
+.snbArticle h2{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
-/* --------------------- */
-/* safe area */
-.w1720{
-    width: 1720px;
-    margin: 0 auto;
+.snbArticle h2 strong{
+    font-weight: 600;
 }
-.w1440{
-    width: 1440px;
-    margin: 0 auto;
+.snbArticle input{
+    width: 100%;
+    border: 1px solid #0046FF;
+    border-radius: 8px;
+    padding: 10px 30px;
+    box-shadow: 0 4px 3px 0 #D9D9D9;
 }
-/* --------------------- */
-/* em color 클래스 */
-.em{
-    color: var(--main-color);
+.snbArticle h3{
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.snbArticle .area{
+    width: 100%;
+    height: 176px;
+    background-color: #D9D9D9;
+    border-radius: 16px;
+}
+.snbArticle .notice a{
+    padding: 10px 0;
+    border-bottom: 1px solid #E4E5E8;
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+}
+.snbArticle .notice a:first-child{
+    border-top: 1px solid #E4E5E8;
+}
+/* ================= */
+/* main */
+/* ================= */
+main{
+    padding-bottom: 120px;
+}
+
+
+#content1{
+    height: 396px;
+    background-color: #EEF1F9;
+    text-align: center;
+    margin-bottom: 282px;
+    /* 포지션 */
+    position: relative;
+}
+#content1 h2{
+    padding-top: 77px;
+    margin-bottom: 74px;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.1;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.card_wrap{
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
+.card a{
+    display: block;   
+    width: 335px;
+    height: 319px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 #fff;
+    /* 플랙스 */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------- */
+/* content2 */
+/* -------------------------- */
+#content2{
+    margin-bottom: 80px;
+    /* 플랙스 */
+    display: flex;
+}
+#content2 h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.chartGraph{
+    margin-right: 40px;
+}
+
+/* -------------------------- */
+/* content3 */
+/* -------------------------- */
+#content3{
+    margin-bottom: 120px;
+}
+#content3 h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* -------------------------- */
+/* banner */
+/* -------------------------- */
+.banner{
+    height: 180px;
+    color: #fff;
+    background-color: #0046FF;
+    border-radius: 16px; 
+    /* padding: 0 60px; */
+    /* 플랙스 */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.banner h2{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.banner p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #CCCCCC;
+}
+.bannerLink{
+    display: inline-block;
+    padding: 11px 60px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    border-radius: 30px; 
 }

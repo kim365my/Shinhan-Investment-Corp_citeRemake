@@ -1,20 +1,12 @@
 /* footer */
-footer{
-
-}
 
 /* #footer_csc */
-#footer_csc{
+.footer_csc{
     width: 100%;
     /* 박스모델 속성 */
     padding: 20px 0;
     border-top: 1px solid #E4E5E8;
     border-bottom: 1px solid #E4E5E8;
-}
-#footer_csc nav{
-    /* 플랙스 */
-    display: flex;
-    justify-content: space-between;
 }
 .footer_title{
     margin-bottom: 15px;
@@ -23,6 +15,23 @@ footer{
     font-weight: 600;
     color: #666666;
 }
+.footer_csc nav{
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
+.footer_csc nav h3{
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem; 
+    line-height: 1.5;
+}
+.footer_csc nav h3 .em{
+    /* 36/16 = 2.25 */
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #0046FF;
+}
+
 .footer_list li{
     list-style: disc;
     /* font */
@@ -30,23 +39,54 @@ footer{
     font-weight: 300;
     color: #999999;
 }
+
+/* .footer_icon */
 .footer_icon_link{
     /* 플랙스 */
     display: flex;
     justify-content: space-between;
 }
+.footer_icon_link a{
+    margin-left: 60px;
+    /* 플랙스 */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.footer_icon_link a img{
+    width: 80px;
+    height: 80px;
+}
 
-/* #footer_fnb_wrap */
-#footer_fnb_wrap{
+/* .fnb_wrap */
+.fnb_wrap{
     padding-top: 20px;
+}
+
+/* .fnb */
+.fnb li, .fnb p{
+    display: inline-block;
+    color: #999999;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+.fnb li.em{
+    color: #0046FF;
+}
+.fnb li:not(:last-child)::after{
+    content: "";
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1.8px solid #999999;
+}
+
+/* .last_footer */
+.last_footer{
+    margin-top: 40px;
     /* 플랙스 */
     display: flex;
     justify-content: space-between;
-}
-
-#fnb li, #fnb li a{
-    display: inline-block;
-}
-#fnb li a{
-    
+    align-items: flex-end;
 }

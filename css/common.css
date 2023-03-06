@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* 폰트 CSS && 리셋 CSS */
+@import url(./font.css);
+@import url(./reset.css);
+
+/* component */
+@import url(./component/header.css);
+@import url(./component/footer.css);
+
+/* 외부 폰트 적용 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+/* ========================== */
+/* 전체 스타일 적용 */
+/* --------------------- */
+/* body font 적용 */
+body{
+    font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    line-height: 180%;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+/* --------------------- */
+#wrap{
+    background-color: #F5F5F5;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+/* safe area */
+.w1720{
+    width: 1720px;
+    margin: 0 auto;
+}
+.w1440{
+    width: 1440px;
+    margin: 0 auto;
+}
+/* --------------------- */
+/* em color 클래스 */
+.em{
+    color: #0046FF;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.alert{
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    color: #fff;
+    /* 포지션 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 로딩시 숨기기 */
+    display: none;
+}
+
+a > img{
+    width: min-content;
+    height: 80px;
+    object-fit: contain;
+}
