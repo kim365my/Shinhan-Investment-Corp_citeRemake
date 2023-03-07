@@ -4,28 +4,26 @@
 /* article */
 /* ================= */
 .mainArticle{
-    margin-top: 37px;
-    margin-bottom: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     /* 플랙스 */
     display: flex;
 }
 .mainSilder{
-    margin-right: 60px;
-    margin-bottom: 31px;
+    margin-right: 66px;
+    /* (1256/1720)*100 = 73.0232558139535 */
+    width: 73.0232558139535%;
 }
 
 .mainBanner{
-    width: 1256px;
-    height: 362px;
+    height: 600px;
     background-color: #D9D9D9;
     border-radius: 16px 16px 0 0;
 }
-.lnbWrap{
-    width: 1256px;
-    height: 160px;
 
-}
+/* -------------- */
 .lnbWrap{
+    height: 160px;
     background-color: #F6F6F6;
     border-radius: 0 0 16px 16px;
     /* 플랙스 */
@@ -59,11 +57,9 @@
 .lnb_btn input{
     display: none;
 }
-
 .lnbWrap nav{
     width: 100%;
 }
-
 .lnb{
     /* 플랙스 */
     display: flex;
@@ -77,8 +73,57 @@
     flex-flow: column;
     align-items: center;
 }
-.lnb a img{
-    width: min-content;
+.lnb a span{
+    height: 90px;
+    line-height: 90px;
+}
+.lnb a span img{
+    vertical-align: middle;
+}
+/* -------------- */
+.chartSilder{
+    width: 100%;
+    margin-top: 16px;
+}
+.chartSilder{
+    /* 플랙스 */
+    display: flex;
+    align-items: center;
+}
+#chartBtn{
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#chartBtn img{
+    vertical-align: middle;
+}
+.chartSilder > ul{
+    width: 100%;
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-evenly;
+}
+.chartSilder > ul ul > li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.chartSilder > ul ul > li:last-child{
+    margin-right: 0;
+    color: red;
+}
+.chartSilder > ul ul > li:last-child::before{
+    content: "\f0d8";
+    font-family: "FontAwesome";
+    margin-right: 5px;
+}
+.chartSilder > ul ul > li:last-child.down{
+    color: #0046FF;
+}
+.chartSilder > ul ul > li:last-child.down::before{
+    content: "\f0d7";
+    font-family: "FontAwesome";
+    margin-right: 5px;
 }
 /* ----------------------- */
 /* snb_content */
@@ -99,8 +144,8 @@
     box-shadow: 0 4px 3px 0 #D9D9D9;
 }
 .snbArticle h3{
-    margin-top: 30px;
-    margin-bottom: 14px;
+    margin-top: 48px;
+    margin-bottom: 24px;
     font-size: 24px;
     font-weight: 500;
 }
@@ -111,7 +156,7 @@
     border-radius: 16px;
 }
 .snbArticle .notice a{
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #E4E5E8;
     /* 플렉스 */
     display: flex;
@@ -144,25 +189,43 @@ main{
     line-height: 1.1;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
 }
-.card_wrap{
+#content1  .card_wrap{
     /* 플랙스 */
     display: flex;
     justify-content: space-between;
 }
-.card a{
-    display: block;   
-    width: 335px;
+#content1 .card{
+    /* (335/1440)*100 = 23.26388888888889 */
+    width: 23.26388888888889%;
+}
+#content1  .card a{
     height: 319px;
     border-radius: 16px;
     background-color: #fff;
     box-shadow: 0 0 2px 0 #fff;
+
     /* 플랙스 */
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
-
+#content1  .card >  a > span{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}
+#content1  .card >  a > span > img{
+    vertical-align: middle;
+}
+#content1  .card >  a > h3{
+    font-size: 24px;
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+#content1  .card >  a > p{
+    color: #999999;
+}
 /* -------------------------- */
 /* content2 */
 /* -------------------------- */
@@ -171,27 +234,133 @@ main{
     /* 플랙스 */
     display: flex;
 }
+.chartGraph{
+    /* (1020/1440)*100 = 70.83333333333334 */
+    width: 70.83333333333334%;
+    margin-right: 40px;
+}
+.chartGraph img{
+    width: 100%;
+}
+#content2 .right{
+    width: 29.166666666666657%;
+}
+
 #content2 h2{
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
 }
-.chartGraph{
-    margin-right: 40px;
+#content2 h2 + .card{
+    background-color: #FFFFFF;
+    border: 1px solid #E4E5E8;
+    border-radius: 16px;
 }
-
+/* reward card */
+#content2 .reward{
+    margin-bottom: 20px;
+    padding: 30px;
+}
+#content2 .reward p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#content2 .reward p .em{
+    font-weight: 600;
+}
+#content2 .reward a{
+    width: 100%;
+    display: block;
+    padding: 17px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: #0046FF;
+    color: #fff;
+}
+/* question card */
+#content2 .question a{
+    padding: 24px;
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#content2 .question img{
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+#content2 .question span img{
+    margin-right: 10px;
+}
 /* -------------------------- */
 /* content3 */
 /* -------------------------- */
 #content3{
     margin-bottom: 120px;
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
 }
 #content3 h2{
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
-
+#content3 h2 a{
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 25px;
+}
+#content3 > div{
+    width: 100%;
+    /* background-color: red; */
+}
+#content3 > div:first-child{
+    /* (45.94/1440)*100 = 3.1902777777777773 */
+    margin-right: 3.1902777777777773%;
+}
+#content3 table{
+    width: 100%;
+}
+#content3 th{
+    color: #3C3C3C;
+    font-size: 14px;
+    padding: 7px;
+    border-top:1px solid #CCCCCC;
+    border-bottom:1px solid #E4E5E8;
+}
+#content3 td{
+    color: #181818;
+    font-weight: 500;
+    padding: 10px;
+    border-bottom:1px solid #E4E5E8;
+}
+#content3 th:nth-child(1),
+#content3 td:nth-child(1){
+    padding-left: 22px;
+    text-align: start;
+}
+#content3 td:nth-child(even),
+#content3 td:nth-child(even){
+    text-align: end;
+}
+#content3 td:nth-child(3){
+    text-align: center;
+}
+#content3 td:nth-child(3) span{
+    display: inline-block;
+    width: 100%;
+    padding: 4px;
+    background-color: #ED3738;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+#content3 td:nth-child(3) span.down{
+    background-color: #097DF3;
+}
 /* -------------------------- */
 /* banner */
 /* -------------------------- */
@@ -200,11 +369,11 @@ main{
     color: #fff;
     background-color: #0046FF;
     border-radius: 16px; 
-    /* padding: 0 60px; */
+    padding: 0 60px;
     /* 플랙스 */
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .banner h2{
     font-size: 26px;
