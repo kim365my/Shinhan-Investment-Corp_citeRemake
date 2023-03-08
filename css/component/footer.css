@@ -53,11 +53,15 @@
     flex-flow: column nowrap;
     align-items: center;
 }
-.footer_icon_link a img{
+.footer_icon_link a span{
     width: 80px;
     height: 80px;
+    line-height: 80px;
+    text-align: center;
 }
-
+.footer_icon_link a img{
+    vertical-align: middle;
+}
 /* .fnb_wrap */
 .fnb_wrap{
     padding-top: 20px;
