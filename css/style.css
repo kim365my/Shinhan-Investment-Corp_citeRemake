@@ -44,7 +44,7 @@ article.w1440{
     background-color: #ebf3fc;
     /* 포지션 기준값 */
     position: relative;
-    z-index: 999;
+    z-index: 100; /* 박스 슬라이드 이미지의 앵커태그 */
     overflow: hidden;
 }
 
@@ -58,7 +58,7 @@ article.w1440{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 1; /* 박스 슬라이드 이미지 */
 }
 .mainSlider #item01 img{
     max-width:fit-content;
@@ -85,12 +85,18 @@ article.w1440{
     position: absolute;
     top: 24%;
     left: 8%;
-    z-index: 99;
+    z-index: 2; /* 박스 슬라이드 텍스트 */
 }
-.mainSlider div a p{
+.mainSlider div a p:first-child{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.mainSlider div a p:last-child{
     margin-top: 20px;
     font-size: 24px;
     line-height: 1.2;
+    opacity: 0.8;
 }
 /* -------------------- */
 /* 메인 슬라이더 컨트롤 스타일 */
@@ -108,7 +114,7 @@ article.w1440{
     position: absolute;
     left: 30px;
     bottom: 20px;
-    z-index: 999;
+    z-index: 101; /* 박스 슬라이드 컨트롤 */
 }
 .mainArticle .slider_wrap .bx-controls-direction{
     display: none;
@@ -185,6 +191,9 @@ article.w1440{
     width: 100%;
 }
 .lnb{
+    display: none;
+}
+.lnb.cheack{
     /* 플랙스 */
     display: flex;
     align-items: center;    
@@ -220,6 +229,7 @@ article.w1440{
 .chartSlider_wrap{
     width: 100%;
     height: 46px;
+    white-space: nowrap;
     overflow:hidden;
     cursor: pointer;
     /* 플랙스 */
@@ -243,10 +253,9 @@ article.w1440{
 /* 애니메이션 재생 */
 .playAni{
     /* 애니메이션 */
-    animation: chart_slider_ani cubic-bezier(0,0,0,0) 20s 1s forwards;
+    animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s 1s forwards;
     /* 무한 반복 애니메이션 */
     animation-iteration-count: infinite;
-    animation-play-state: running;
 }
 
 @keyframes chart_slider_ani {
@@ -316,7 +325,7 @@ article.w1440{
     /* 포지션 기준값 */
     position: relative;
     overflow: hidden;
-    z-index: 999;
+    z-index: 100; /* 이벤트 슬라이드 앵커 태그 */
 }
 .snbArticle .area div:nth-child(3) a{
     background-color: #818994;
@@ -333,25 +342,24 @@ article.w1440{
     /* 포지션 기준값 */
     position: relative;
 }
-.snbArticle .bx-controls-direction{
-    width: 95%;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
+.snbArticle .bx-controls-direction a{
+    padding: 10px;
     /* 포지션 */
     position: absolute;
     top: 50%;
-    left: 8px;
     transform: translateY(-50%);
-    z-index: 99;
+    z-index: 101; /* 이벤트 슬라이드 컨트롤 */
 }
+.snbArticle .bx-controls-direction a:first-child{left: 0;}
+.snbArticle .bx-controls-direction a:last-child{right: 0;}
+
 /* 슬라이드 텍스트 오른쪽 상단위로 */
 .snbArticle .bx-pager{
     /* 포지션 */
     position: absolute;
     top: 13px;
     right: 51px;
-    z-index: 99;
+    z-index: 2; /* 이벤트 슬라이드 인덱스번호 */
 }
 /* 슬라이드 오토버튼 위치이동 */
 .snbArticle .bx-controls-auto{
@@ -359,7 +367,7 @@ article.w1440{
     position: absolute;
     top: 10px;
     right: 15px;
-    z-index: 99;
+    z-index: 2; /* 이벤트 슬라이드 오토버튼 */
 }
 /* 슬라이드 이동버튼 */
 .bx-prev::before{

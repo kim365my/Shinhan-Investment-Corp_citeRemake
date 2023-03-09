@@ -74,7 +74,7 @@
     bottom: 0;
     transform: translateY(100%);
     left: 0;
-    z-index: 99999;
+    z-index: 999; /* 헤더 서브메뉴 */
     /* 디스플레이 가리기 */
     display: none;
 }
@@ -93,11 +93,12 @@
     /* 커서 포인터 */
     cursor: pointer;
 }
-.snb .snbTitle:last-child{
-    border-bottom: none !important;
+.snb .snbTitle:last-of-type{
+    border-bottom: none;
 }
 .snbTitle::after{
     content: url(../../images/1_header/plus.png);
+    vertical-align: middle;
 }
 .snb h2{
     height: 100%;
@@ -125,6 +126,8 @@
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 20px;
+    /* 커서 논 */
+    cursor: default;
 }
 .snbItem dl dd{
     margin-bottom: 10px;
