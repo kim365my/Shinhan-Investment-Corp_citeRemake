@@ -54,12 +54,14 @@
     align-items: center;
 }
 .footer_icon_link a span{
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
     text-align: center;
+    margin-bottom: 5px;
 }
 .footer_icon_link a img{
+
     vertical-align: middle;
 }
 /* .fnb_wrap */

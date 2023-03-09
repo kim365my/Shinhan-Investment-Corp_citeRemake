@@ -50,6 +50,7 @@ body{
     display: none !important;
 }
 
+/* 경고창 */
 .alert{
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -64,8 +65,3 @@ body{
     display: none;
 }
 
-a > img{
-    width: min-content;
-    height: 80px;
-    object-fit: contain;
-}

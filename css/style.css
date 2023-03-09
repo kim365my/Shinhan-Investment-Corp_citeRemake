@@ -25,7 +25,7 @@
 /* article */
 /* ================= */
 article.w1440{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
     /* 플랙스 */
     display: flex;
@@ -60,19 +60,19 @@ article.w1440{
     right: 0;
     z-index: 1;
 }
-.mainSlider div:nth-child(2) img{
+.mainSlider #item01 img{
     max-width:fit-content;
     width: fit-content;
     top: 193px;
     left: -60px;
 }
 
-.mainSlider div:nth-child(3) img{
+.mainSlider #item02 img{
     object-fit:none;
     top: 90px;
     left: 320px;
 }
-.mainSlider div:nth-child(3){
+.mainSlider #item02 a{
     background-color: #D9D9D9;
 }
 
@@ -221,25 +221,43 @@ article.w1440{
     width: 100%;
     height: 46px;
     overflow:hidden;
-    position: relative;
+    cursor: pointer;
+    /* 플랙스 */
+    display: flex;
 }
 .chartSlider{
     height: 46px;
     /* 플랙스 */
     display: flex;
     align-items: center;
-    /* 애니메이션 */
-    animation: chart_slider_ani 20s linear 0.6s forwards;
-    animation-iteration-count: infinite;
 }
-.chartSlider:hover{
+.chart_wrap #chart_btn{
+    width: 30px;
+    cursor: pointer;
+}
+/* 호버시 애니메이션 정지 */
+.chart_wrap .bx-start + .chartSlider_wrap .chartSlider, 
+.chartSlider_wrap:hover .chartSlider{
     animation-play-state: paused;
+}
+/* 애니메이션 재생 */
+.playAni{
+    /* 애니메이션 */
+    animation: chart_slider_ani cubic-bezier(0,0,0,0) 20s 1s forwards;
+    /* 무한 반복 애니메이션 */
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes chart_slider_ani {
+    from { transform: translateZ(0) }
+    to { transform: translate3d(-100%, 0, 0) }
 }
 
 .chartSlider a{
     margin-right: 40px;
 }
-.chartSlider dl{
+.chartSlider dl {
     width: max-content;
 }
 .chartSlider dl > *{
@@ -262,20 +280,6 @@ article.w1440{
     content: "\f0d7";
     font-family: "FontAwesome";
     margin-right: 5px;
-}
-
-@keyframes chart_slider_ani {
-    0%{transform: translateX(0%);}
-    10%{transform: translateX(-10%);}
-    20%{transform: translateX(-20%);}
-    30%{transform: translateX(-30%);}
-    40%{transform: translateX(-40%);}
-    50%{transform: translateX(-50%);}
-    60%{transform: translateX(-60%);}
-    70%{transform: translateX(-70%);}
-    80%{transform: translateX(-80%);}
-    90%{transform: translateX(-90%);}
-    100%{transform: translateX(-100%);}
 }
 
 /* ----------------------- */

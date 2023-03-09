@@ -163,3 +163,22 @@ input, textarea {
 .no_br {border-right: 0 !important;}
 .no_bb {border-bottom: 0 !important;}
 .no_bl {border-left: 0 !important;}
+
+
+/* 기본 input의 x버튼 숨기기 */
+/* IE의 경우 */
+input::-ms-clear,
+input::-ms-reveal{
+       opacity: 0;
+      position: absolute;
+      right: 0;
+}
+/* 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+       opacity: 0;
+      position: absolute;
+      right: 0;
+}
