@@ -6,17 +6,17 @@ $(function(){
     $(".menu").mouseenter(snbOpen);
     $(".menu").keyup(snbOpen);
 
-    // 메뉴 클릭시 상호작용
-    $(".menu").click(snbClose);
-
     // -----------------
     // header 메뉴를 떠나면 자동으로 닫히게
     // -----------------
-    // snb 포지션을 업도미얼로 잡아서 헤더가 아니면 안됨
-    $("header").mouseleave(snbClose);
+    // XX snb 포지션을 업도미얼로 잡아서 헤더가 아니면 안됨 XX <- 된다!
+    // 메뉴를 호버해서 열리는 이벤트와 닫히는 이벤트를 같은 영역 안에서 사용해야 함. 
+    // 구조를 수정해야 하니까, .snb를 메뉴 안에 넣으면 메뉴 위에 호버하고 있는 시점에서는 사라지지 않음.
+    // 영역간의 블록을 잘 살펴야함
+    $(".menu").mouseleave(snbClose);
 
     function snbOpen(){
-        $(this).next().stop().slideDown();
+        $(".snb").stop().slideDown();
     }
     function snbClose(){
         $('.snbTitle').removeClass(CHECK_CLASS);

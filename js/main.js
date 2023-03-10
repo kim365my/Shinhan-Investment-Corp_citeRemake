@@ -91,6 +91,7 @@ $("#chart_btn").click(function(){
 // +) 해당 updownChart의 인덱스 번호를 받아서 해당 li에 클래스를 추가해야함 어떻게 구현하지?
 // 3) 만약 0보다 작다면 해당 태그에 class명 추가
 
+// 변수 선언
 let updownChart = document.querySelectorAll("#content3 .table td:nth-child(3) span");
 //18개
 
@@ -101,14 +102,14 @@ for (let i = 0; i < updownChart.length; i++) {
     // push하기 전에 중간에 형변환하면 되네
     cartText.push(Number(updownChart[i].textContent));    
 }
-console.log(cartText);
+// console.log(cartText);
 
 // 만약 0보다 작다면 해당 태그에 class명 추가
 // i를 인덱스 번호로 활용하면 됨
 for (let i = 0; i < cartText.length; i++) {
     let num = cartText[i];
     if (!(num > 0)) {
-        console.log("거짓" + i);
+        // console.log("거짓" + i);
         updownChart[i].classList.add("down");
     } 
 }
