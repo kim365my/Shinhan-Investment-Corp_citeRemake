@@ -33,9 +33,6 @@
 .header .gnb{
    font-size: 24px;
 }
-.header .gnb li:not(:last-child){
-    margin-right: 40px;
-}
 .header .gnb li label{
     cursor: pointer;
 }

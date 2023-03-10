@@ -22,13 +22,13 @@
 }
 .loginBtn li{
     width: 100%;
+    background-color: #F6F6F6;
 }
 .loginBtn li a{
     display: inline-block;
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    background-color: #F6F6F6;
     border-bottom: 2px solid #097DF3;
     font-weight: 600;
     color: #999999;
@@ -36,6 +36,7 @@
 
 .loginBtn li.cheack a{
     border-radius: 16px 16px 0 0;
+    background-color: #FFFFFF;
     border: 2px solid #097DF3;
     border-bottom: none;
     color: #097DF3;
