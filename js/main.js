@@ -81,4 +81,34 @@ $("#chart_btn").click(function(){
 //     titleStopBtn.classList.toggle(CLASS_STOP);
 // })
 
+// -----------------------
+// 메인 주식차트 표 수치에 따라서 색이 변하게 만들기 
+// -----------------------
 
+// 마이너스라면 class down이 적용되도록 <- 색깔은 css에서 조절
+// 1) nth-child(3) 위치에 존재, 해당 텍스트를 불러오기
+// 2) 숫자로 강제 형변환
+// +) 해당 updownChart의 인덱스 번호를 받아서 해당 li에 클래스를 추가해야함 어떻게 구현하지?
+// 3) 만약 0보다 작다면 해당 태그에 class명 추가
+
+let updownChart = document.querySelectorAll("#content3 .table td:nth-child(3) span");
+//18개
+
+const cartText = new Array;
+
+// 텍스트 컨텐츠 뽑아오기
+for (let i = 0; i < updownChart.length; i++) {
+    // push하기 전에 중간에 형변환하면 되네
+    cartText.push(Number(updownChart[i].textContent));    
+}
+console.log(cartText);
+
+// 만약 0보다 작다면 해당 태그에 class명 추가
+// i를 인덱스 번호로 활용하면 됨
+for (let i = 0; i < cartText.length; i++) {
+    let num = cartText[i];
+    if (!(num > 0)) {
+        console.log("거짓" + i);
+        updownChart[i].classList.add("down");
+    } 
+}

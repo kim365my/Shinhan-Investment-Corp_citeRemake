@@ -575,6 +575,12 @@ main{
 #content3 td:nth-child(3){
     text-align: center;
 }
+#content3 td:nth-child(3) span:not(.down)::before{
+    content: "+";
+}
+#content3 td:nth-child(3) span::after{
+    content: "%";
+}
 #content3 td:nth-child(3) span{
     display: inline-block;
     width: 100%;
@@ -586,6 +592,7 @@ main{
 #content3 td:nth-child(3) span.down{
     background-color: #097DF3;
 }
+
 /* -------------------------- */
 /* banner */
 /* -------------------------- */
