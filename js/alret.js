@@ -3,7 +3,7 @@
 // --------------------------------
 $(function(){
     $(`<div class="alert">죄송합니다. 해당페이지는 준비중입니다.</div>`).appendTo("#wrap");
-    $("a[href='#']").not(".evnetNone").on("click", function(e){
+    $("a[href='#']").not(".eventNone").on("click", function(e){
         e.preventDefault();
         $(".alert").stop().fadeIn(700)
         setTimeout(() => {

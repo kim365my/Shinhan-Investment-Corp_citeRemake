@@ -47,8 +47,10 @@
 /* .login_gnb */
 .header .login_gnb{
     font-size: 1rem;
-    font-weight: 300;
     margin-right: 40px;
+}
+.header .login_gnb a{
+    font-weight: 600;
 }
 .header .login_gnb li:first-child::after{
     content: "";
@@ -84,21 +86,22 @@
     width: 100%;
     height: 60px;
     padding: 0 24px;
+    line-height: 60px;
+    border-top: 1px solid #B9BDC4;
     /* 플랙스 */
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #B9BDC4;
-    transition: all 0.8s;
     align-items: center;
     /* 커서 포인터 */
     cursor: pointer;
 }
-.snb .snbTitle:last-of-type{
-    border-bottom: none;
+.snb .snbTitle:first-child{
+    border-top: none;
 }
 .snbTitle::after{
     content: url(../../images/1_header/plus.png);
     vertical-align: middle;
+    margin-bottom: -10px;
 }
 .snb h2{
     height: 100%;
@@ -106,6 +109,7 @@
     font-size: 28px;
     font-weight: 700;
     color: #797979;
+    transition: all 0.1s;
 }
 /* snb 내용 */
 .snbItem{
@@ -134,14 +138,17 @@
 }
 
 /* 클릭 되었을때 */
+.snbTitle.check{
+    border-bottom: 1px solid #B9BDC4;
+}
 .snbTitle.check h2{
     color: #097DF3;    
     border-bottom: 2px solid #097DF3;
 }
 .snbTitle.check::after{
     content: url(../../images/1_header/mu.png);
+    margin-bottom: -15px;
 }
 .snbTitle.check + .snbItem{
     display: flex;
-    border-bottom: 1px solid #B9BDC4;
 }

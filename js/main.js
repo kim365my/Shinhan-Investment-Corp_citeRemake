@@ -42,8 +42,7 @@ $("#slider_banner_area").bxSlider({
 // lnb 메뉴 : 자주가는 메뉴/처음이세요
 // -----------------------
 $(".lnb_btn label").click(function () {
-    let num = Math.floor($(this).index() /3)
-    console.log();
+    let num = Math.floor($(this).index() /3);
     
     $(".lnb").removeClass("cheack");
     $(".lnb").eq(num).addClass("cheack");

@@ -33,7 +33,7 @@
     <!-- 기본 코딩 CSS 파일 -->
     <link rel="stylesheet" href="./css/common.css">
     <!-- 페이지 CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
     <div id="wrap">
@@ -41,16 +41,29 @@
         <header class="header w1440"></header>
         <!-- /header -->
         
+        <!-- article -->
+        <article id="top_select_menu">
+            <div class="w1440">
+                <div>
+                    홈 | 로그인
+                </div>    
+                <div>
+                    프린트 별 확대
+                </div>
+            </div>
+        </article>
+        <!-- article -->
+
         <!-- main -->
         <main role="main">
-            <div class="w1440">
-                <h2>로그인</h2>
-                <ul>
-                    <li><a href="#">인증서로그인</a></li>
-                    <li><a href="#">스마트폰인증</a></li>
-                    <li><a href="#">ID로그인</a></li>
+            <section class="w1440">
+                <h2 class="loginTitle">로그인</h2>
+                <ul class="loginBtn">
+                    <li><a href="#" class="eventNone">인증서로그인</a></li>
+                    <li><a href="#" class="eventNone">스마트폰인증</a></li>
+                    <li class="cheack"><a href="#" class="eventNone">ID로그인</a></li>
                 </ul>
-                <div>
+                <div class="loginItemWrap">
                     <div class="item">
                         
                     </div>
@@ -59,13 +72,14 @@
                     </div>
                     <div id="loginID" class="item">
                         <form action="#">
-                            <figcaption>ID 로그인 창</figcaption>
-                            <h3>ID로그인 시 조회용 서비스만 이용가능합니다.</h3>
+                            <legend>ID로그인 시 조회용 서비스만 이용가능합니다.</legend>
                             <fieldset>
-                                <label for="login">로그인</label>
-                                <input type="text" name="login" id="login" placeholder="고객(HTS) ID입력">
-                                <label for="password">비밀번호</label>
-                                <input type="password" name="password" id="password" placeholder="ID 비밀번호 입력">
+                                <div class="itemIDPASS">
+                                    <label for="login">로그인</label>
+                                    <input type="text" name="login" id="login" placeholder="고객(HTS) ID입력" required autofocus autocomplete="off" maxlength="13">
+                                    <label for="password">비밀번호</label>
+                                    <input type="password" name="password" id="password" placeholder="ID 비밀번호 입력" required autofocus autocomplete="off">
+                                </div>
                                 <input type="submit" value="제출">
                             </fieldset>
                             <fieldset>
@@ -80,9 +94,9 @@
                     </div>
                 </div>
 
-            </div>
+            </section>
         </main>
-        <!-- /main -->
+        <!-- /main -->ㄴ
 
         <!-- footer -->
         <footer class="footer"></footer>
@@ -95,4 +109,11 @@
 
 <!-- 미구현 기능 클릭시 안내문 -->
 <script src="./js/alret.js"></script>
+<script>
+    $(".loginBtn li").click(function(e){
+        e.preventDefault();
+        $(".loginBtn li").removeClass("cheack");
+        $(this).addClass("cheack");
+    })
+</script>
 </html></html>

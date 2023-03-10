@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="JGM" />
+    <meta name="description" content="중꺾마 신한투자증권 리뉴얼" />
+    <title>신한투자증권</title>
+    <!-- 폰트어썸 -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- 팝이콘 -->
+    <link rel="shortcut icon" href="./images/favicon/fav32.png" />
+    <link
+      rel="apple-touch-icon=precomposed"
+      href="./images/favicon/fav180.png"
+    />
+    <!-- 기본 코딩 JS 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 제이쿼리 플러그인 -->
+    <script src="./js/jquery.bxslider.js"></script>
+    <!-- 차트 api cdn -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- 기본 코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/style2.css">
+    <!-- 그래프 JS -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header class="header w1440"></header>
+        <!-- /header -->
+        
+        <!-- article -->
+        <article class="w1440">
+            <!-- 슬라이드 콘텐츠 -->
+            <div class="mainArticle">
+                <div class="slider_wrap">
+                    <div id="slider_banner_main" class="mainSlider">
+                        <div id="item01">
+                            <a href="#">
+                                <span>
+                                    <p class="em">Grand Open</p>
+                                    공모주 이곳에서 한번에 신청하세요!
+                                    <p>
+                                        계좌개설, 계좌정보 조회부터 청약까지 <br>
+                                        한 페이지에서 확인 가능해요.
+                                    </p>
+                                </span>
+                                <img src="./images/2_main/article_01_mainslider/slide01.png" alt="">
+                            </a>
+                        </div>
+                        <div id="item02">
+                            <a href="#">
+                                <span>
+                                    <p>HOT ISSUE 상품</p>
+                                    신한 NEO AI상품
+                                    <p>
+                                        인공지능을 활용한 글로벌 포트폴리오 투자를
+                                        <br>
+                                        안내드립니다.
+                                    </p>
+                                </span>
+                                <img src="./images/2_main/article_01_mainslider/slide02.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <span>
+                                    <p class="em">주식전략/시황</p>
+                                    주식전략, 주도주의 출현 이후(feat. 코스닥)
+                                    <p>
+                                        『파월 증언에 KOSPI 이틀 하락』 <br>
+                                        - 2월 고용과 물가의 중요도 높아지며 KOSPI 이틀 연속 하락 <br>
+                                        - 건설, 금융, 자동차, 통신 상승, 2차전지 밸류체인 차익실현 압력 <br>
+                                        - 2차전지 주가 흐름 둔화 구간에서 순환매 업종에 관심  
+                                    </p>
+                                </span>
+                                <img src="./images/2_main/article_01_mainslider/slide03.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lnbWrap">
+                    <div class="lnb_btn">
+                        <input type="radio" name="lnbBtn" id="lnbBtn01" checked>
+                        <label for="lnbBtn01">자주가는&nbsp;메뉴</label>
+
+                        <input type="radio" name="lnbBtn" id="lnbBtn02">
+                        <label for="lnbBtn02">처음이세요?</label>
+                    </div>
+                    <nav id="lnb_wrap">
+                        <ul class="lnb cheack">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/myAccount.png" alt="myAccount">
+                                    </span>
+                                    나의&nbsp;계좌
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/assetStatus.png" alt="assetStatus">
+                                    </span>
+                                    자산현황
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/recommendedFund.png" alt="recommendedFund">
+                                    </span>
+                                    추천펀드
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/pensionAssets.png" alt="pensionAssets">
+                                    </span>
+                                    연금자산
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/certificate.png" alt="certificate">
+                                    </span>
+                                    인증서&nbsp;보내기
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/transfer.png" alt="transfer">
+                                    </span>
+                                    이체
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="lnb">
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/assetStatus.png" alt="assetStatus">
+                                    </span>
+                                    자산현황
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/myAccount.png" alt="myAccount">
+                                    </span>
+                                    나의&nbsp;계좌
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/pensionAssets.png" alt="pensionAssets">
+                                    </span>
+                                    연금자산
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/recommendedFund.png" alt="recommendedFund">
+                                    </span>
+                                    추천펀드
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/certificate.png" alt="certificate">
+                                    </span>
+                                    인증서&nbsp;보내기
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/2_main/section1/transfer.png" alt="transfer">
+                                    </span>
+                                    이체
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- 주식 슬라이드 -->
+                <div class="chart_wrap">
+                    <div id="chart_btn" class="bx-stop"></div>
+                    <div class="chartSlider_wrap">                        
+                        <div class="chartSlider playAni">
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd>13.27</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd>13.27</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd class="down">13.27</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd>13.27</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd>13.27</dd>
+                                </dl>
+                            </a>
+
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd class="down">13.27</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd class="down">13.27</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd>13.27</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd>13.27</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd>13.27</dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /슬라이드 콘텐츠 -->
+
+            <!-- 서브 콘텐츠 -->
+            <div class="snbArticle">
+                <h2 class="em">
+                    가지고만&nbsp;있어도&nbsp;쌓이는&nbsp;수익 <br>
+                    <strong>신한투자증권&nbsp;ETF</strong>
+                </h2>
+                <input type="search" name="" id="" autocapitalize="off" placeholder="ETF 검색">
+
+                <h3>이벤트</h3>
+                <div id="slider_banner_area" class="area">
+                    <div>
+                        <a href="#">
+                            <img src="./images/2_main/article_02_eventslider/event01.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="./images/2_main/article_02_eventslider/event02.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="./images/2_main/article_02_eventslider/event03.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <h3>공지사항</h3>
+                <div class="notice">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /서브 콘텐츠 -->
+        </article>
+        <!-- /article -->
+
+        <!-- main -->
+        <main role="main">
+            <!-- Section 2 -->
+            <section class="sec_2">
+                <section class="sec_2_cover w1440">
+                    <h2>
+                    자산관리, <br />
+                    <span>신한투자증권</span>과 함께하세요!
+                    </h2>
+                    <article>
+                    <div class="article_box">
+                        <h2>
+                        <img src="./images/2_main/section2/myAccount.png" alt="전계좌현황" />
+                        </h2>
+                        <h3>전계좌현황</h3>
+                        <p>나의 계좌멸 자산현환을 한번에!</p>
+                    </div>
+                    <div class="article_box">
+                        <h2>
+                        <img src="./images/2_main/section2/assetStatus.png" alt="전계좌현황" />
+                        </h2>
+                        <h3>자산현황분석</h3>
+                        <p>나의 계좌멸 자산현환을 한번에!</p>
+                    </div>
+                    <div class="article_box">
+                        <h2>
+                        <img
+                            src="./images/2_main/section2/recommendedFund.png"
+                            alt="전계좌현황"
+                        />
+                        </h2>
+                        <h3>추천펀드</h3>
+                        <p>나의 계좌멸 자산현환을 한번에!</p>
+                    </div>
+                    <div class="article_box">
+                        <h2>
+                        <img src="./images/2_main/section2/pensionAssets.png" alt="전계좌현황" />
+                        </h2>
+                        <h3>연금자산</h3>
+                        <p>나의 계좌멸 자산현환을 한번에!</p>
+                    </div>
+                    </article>
+                </section>
+            </section>
+            <!-- /Section 2 -->
+
+            <!-- Section 3 -->
+            <section class="sec_3 w1440">
+                <!-- Section 3 Left-->
+                <section class="sec_3_left">
+                    <div id="stock_graph"></div>
+                    <div class="sec_3_left_bottom">
+                    <table></table>
+                    </div>
+                </section>
+                <!-- /Section 3 Left-->
+
+                <!-- Section 3 Right -->
+                <section class="sec_3_right">
+                    <h3>리워드</h3>
+                    <div class="reward_contents">
+                    <p>
+                        또 나만 몰랐어? <span>신한투자증권</span><br />
+                        클릭 1번으로 매일 리워드 받는 방법!
+                    </p>
+                    <input type="button" value="로그인 후 참여하기" />
+                    </div>
+                    <h3>자주하는 질문</h3>
+                    <div class="question_contents">
+                    <img src="./images/2_main/section3/sms.png" alt="sms" />
+                    <p>매수·매도 방법이 궁금해요</p>
+                    <img src="./images/2_main/section3/rightArrow.png" alt="우측화살표" />
+                    </div>
+                </section>
+                <!-- /Section 3 Right -->
+            </section>
+            <!-- /Section 3 -->
+        </main>
+        <!-- /main -->
+        
+        <!-- footer -->
+        <footer class="footer"></footer>
+        <!-- /footer -->     
+    </div>
+</body>
+<!-- Header, Footer Load JS -->
+<script src="./js/load.js"></script>
+<!-- 미구현 기능 클릭시 안내문 -->
+<script src="./js/alret.js"></script>
+<!-- 페이지 JS -->
+<script src="./js/main.js"></script>
+<script src="./js/candlestick.js"></script>
+</html>
