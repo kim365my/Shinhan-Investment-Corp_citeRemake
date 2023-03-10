@@ -10,9 +10,10 @@ $(function(){
     $(".menu").click(snbClose);
 
     // -----------------
-    // snb 메뉴를 떠나면 자동으로 닫히게
+    // gnb 메뉴를 떠나면 자동으로 닫히게
     // -----------------
-    $(".snb").mouseleave(snbClose);
+    $("header").mouseleave(snbClose);
+
     function snbOpen(){
         $(this).next().stop().slideDown();
     }
