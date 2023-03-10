@@ -10,8 +10,9 @@ $(function(){
     $(".menu").click(snbClose);
 
     // -----------------
-    // gnb 메뉴를 떠나면 자동으로 닫히게
+    // header 메뉴를 떠나면 자동으로 닫히게
     // -----------------
+    // snb 포지션을 업도미얼로 잡아서 헤더가 아니면 안됨
     $("header").mouseleave(snbClose);
 
     function snbOpen(){

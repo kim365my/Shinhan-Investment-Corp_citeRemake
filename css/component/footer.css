@@ -40,6 +40,9 @@
     color: #999999;
     line-height: 30px;
 }
+.footer_list:first-of-type li:last-child{
+    list-style: none;
+}
 
 /* .footer_icon */
 .footer_icon_link{
