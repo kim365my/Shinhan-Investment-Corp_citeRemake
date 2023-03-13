@@ -15,13 +15,13 @@ $("#slider_banner_main").bxSlider({
     // 텍스트 없게
     startText:" ",
     stopText:" ",
-    // 오류픽스 : 이미지 클릭이 이동 되도록
+    // 오류픽스 : 터치로 이동되는 것을 막아서 이미지 클릭이 이동 되도록
     touchEnabled : (navigator.maxTouchPoints > 0)
 });
 // 이벤트 슬라이드
 $("#slider_banner_area").bxSlider({
     // 슬라이드간의 마진
-    // slideMargin:1,
+    slideMargin:1,
     // 오토슬라이드
     auto: true,
     autoControls: true,
@@ -35,6 +35,7 @@ $("#slider_banner_area").bxSlider({
     prevText:" ",
     startText:" ",
     stopText:" ",
+    // 오류픽스 : 터치로 이동되는 것을 막아서 이미지 클릭이 이동 되도록
     touchEnabled : (navigator.maxTouchPoints > 0)
 });
 
@@ -51,13 +52,21 @@ $(".lnb_btn label").click(function () {
 // -----------------------
 // 주식 차트 슬라이드
 // -----------------------
-// 클래스명
+// 차트 애니메이션 속도 일정하게 변경 리스트 하나당 2.5s로
+// 차트가 몇개 있는지 받아오기 / 나중에 차트를 동적으로 추가되지 않는 이상은 const를 써도 되지 않으려나? 잘 모르겠네
+let chartNum = $(".chartSlider").children().length;
+const result = chartNum * 2.5;
+$(".playAni").css("animation-duration", `${result}s`);
+
+// -----------------------
+// 기존 차트 슬라이드 복붙
+let chartChild = $(".chartSlider_wrap").children().eq(0).clone();
+// JS에서는 prepend로 해도 문제가 없었는데 JQ에서 요소가 겹치는 문제가 발생해서 수정
+chartChild.appendTo(".chartSlider_wrap");
+// -----------------------
+// 차트 슬라이드 조작 버튼
 const CLASS_START = "bx-start";
 const CLASS_STOP = "bx-stop";
-
-let chartChild = $(".chartSlider_wrap").children().eq(0).clone();
-// JS에서는 prepend로 해서 문제가 없었는데 JQ에서 요소가 겹치는 문제가 발생해서 수정
-chartChild.appendTo(".chartSlider_wrap");
 $("#chart_btn").click(function(){
     $("#chart_btn").toggleClass(CLASS_START);
     $("#chart_btn").toggleClass(CLASS_STOP);

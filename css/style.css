@@ -223,9 +223,6 @@ article.w1440{
     display: flex;
     align-items: center;
 }
-.chart_wrap .bx-start{
-    margin-right: 10px;
-}
 .chartSlider_wrap{
     width: 100%;
     height: 46px;
@@ -241,41 +238,31 @@ article.w1440{
     display: flex;
     align-items: center;
 }
+/* ----------------------- */
+/* 차트 슬라이더 버튼 */
 .chart_wrap #chart_btn{
     width: 30px;
     cursor: pointer;
 }
-/* 호버시 애니메이션 정지 */
-.chart_wrap .bx-start + .chartSlider_wrap .chartSlider, 
-.chartSlider_wrap:hover .chartSlider{
-    animation-play-state: paused;
+.chart_wrap .bx-start{
+    margin-right: 10px;
 }
-/* 애니메이션 재생 */
-.playAni{
-    /* 애니메이션 */
-    animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s 1s forwards;
-    /* 무한 반복 애니메이션 */
-    animation-iteration-count: infinite;
-}
-
-@keyframes chart_slider_ani {
-    from { transform: translateZ(0) }
-    to { transform: translate3d(-100%, 0, 0) }
-}
-
+/* ----------------------- */
+/* 차트 슬라이더의 차트별 세부설정 */
 .chartSlider a{
     margin-right: 40px;
 }
 .chartSlider dl {
     width: max-content;
 }
-.chartSlider dl > *{
+.chartSlider dl dt,
+.chartSlider dl dd{
     display: inline-block;
     margin-right: 10px;
 }
-.chartSlider dl > *:last-child{
+.chartSlider dl dd:last-child{
     margin-right: 0;
-    color: red;
+    color: #ED3788;
 }
 .chartSlider dl > *:last-child::before{
     content: "\f0d8";
@@ -289,6 +276,23 @@ article.w1440{
     content: "\f0d7";
     font-family: "FontAwesome";
     margin-right: 5px;
+}
+/* ----------------------- */
+/* 애니메이션 재생 */
+.playAni{
+    /* 애니메이션 */
+    animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s backwards;
+    /* 무한 반복 애니메이션 */
+    animation-iteration-count: infinite;
+}
+/* 호버시, 버튼 클릭시 애니메이션 정지 */
+.chart_wrap .bx-start + .chartSlider_wrap .chartSlider, 
+.chartSlider_wrap:hover .chartSlider{
+    animation-play-state: paused;
+}
+@keyframes chart_slider_ani {
+    from { transform: translateX(0) }
+    to { transform: translateX(-100%) }
 }
 
 /* ----------------------- */
@@ -541,7 +545,7 @@ main{
 }
 #content3 > div{
     width: 100%;
-    /* background-color: red; */
+    /* background-color: #ED3788; */
 }
 #content3 > div:first-child{
     /* (45.94/1440)*100 = 3.1902777777777773 */
@@ -562,6 +566,10 @@ main{
     font-weight: 500;
     padding: 10px;
     border-bottom:1px solid #E4E5E8;
+}
+#content3 td a:hover{
+    color: #0046FF;
+    text-decoration: underline;
 }
 #content3 th:nth-child(1),
 #content3 td:nth-child(1){
