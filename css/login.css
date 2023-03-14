@@ -1,6 +1,6 @@
 #top_select_menu{
     background-color: #FAFBFB;
-    border: 1px solid #CCCCCC;
+    border: 1px solid #E4E5E8;
     margin-bottom: 50px;
 }
 #top_select_menu > div{
@@ -29,7 +29,7 @@
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #097DF3;
+    border-bottom: 2px solid #0046FF;
     font-weight: 600;
     color: #999999;
 }
@@ -37,9 +37,9 @@
 .loginBtn li.cheack a{
     border-radius: 16px 16px 0 0;
     background-color: #FFFFFF;
-    border: 2px solid #097DF3;
+    border: 2px solid #0046FF;
     border-bottom: none;
-    color: #097DF3;
+    color: #0046FF;
 }
 
 .loginItemWrap .item{
@@ -58,5 +58,5 @@ fieldset:has(.itemIDPASS){
     display: flex;
 }
 .itemIDPASS input{
-    border: 1px solid #CCCCCC;
+    border: 1px solid #E4E5E8;
 }

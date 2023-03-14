@@ -11,13 +11,13 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url(../images/2_main/section1/playBtn.png) no-repeat center;
+    background: url(../images/main/playBtn.png) no-repeat center;
 }
 .bx-stop{
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url(../images/2_main/section1/pause.png) no-repeat center;
+    background: url(../images/main/pause.png) no-repeat center;
 }
 
 
@@ -177,11 +177,11 @@ article.w1440{
 .lnb_btn input:checked + label{background-color: #F6F6F6;}
 /* 버튼 */
 .lnb_btn input + label::after{
-    content: url(../images/2_main/section1/double_arrow_gray.png);
+    content: url(../images/main/double_arrow_gray.png);
     margin-top: 8px;
 }
 .lnb_btn input:checked + label::after{
-    content:url(../images/2_main/section1/double_arrow_blue.png);
+    content:url(../images/main/double_arrow_blue.png);
 }
 /* input 숨기기 */
 .lnb_btn input{
@@ -199,7 +199,9 @@ article.w1440{
     align-items: center;    
     justify-content: space-evenly;
 }
-
+.lnb li{
+    width: 15%;
+}
 .lnb a{
     /* 플랙스 */
     display: flex;
@@ -217,7 +219,6 @@ article.w1440{
 /* 차트 슬라이더 */
 .chart_wrap{
     width: 100%;
-    height: 46px;
     margin-top: 16px;
     /* 플랙스 */
     display: flex;
@@ -225,8 +226,6 @@ article.w1440{
 }
 .chartSlider_wrap{
     width: 100%;
-    height: 46px;
-    white-space: nowrap;
     overflow:hidden;
     cursor: pointer;
     /* 플랙스 */
@@ -237,6 +236,7 @@ article.w1440{
     /* 플랙스 */
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 /* ----------------------- */
 /* 차트 슬라이더 버튼 */
@@ -249,39 +249,31 @@ article.w1440{
 }
 /* ----------------------- */
 /* 차트 슬라이더의 차트별 세부설정 */
-.chartSlider a{
-    margin-right: 40px;
-}
-.chartSlider dl {
-    width: max-content;
-}
 .chartSlider dl dt,
-.chartSlider dl dd{
+.chartSlider dl dd{ 
     display: inline-block;
     margin-right: 10px;
 }
 .chartSlider dl dd:last-child{
-    margin-right: 0;
+    margin-right: 40px;
     color: #ED3788;
 }
 .chartSlider dl > *:last-child::before{
-    content: "\f0d8";
-    font-family: "FontAwesome";
+    content: url(../images/main/up_arrow.png);
     margin-right: 5px;
 }
 .chartSlider dl dd.down{
     color: #0046FF;
 }
 .chartSlider dl dd.down::before{
-    content: "\f0d7";
-    font-family: "FontAwesome";
+    content: url(../images/main/down_arrow.png);
     margin-right: 5px;
 }
 /* ----------------------- */
 /* 애니메이션 재생 */
 .playAni{
     /* 애니메이션 */
-    animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s backwards;
+    animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s;
     /* 무한 반복 애니메이션 */
     animation-iteration-count: infinite;
 }
