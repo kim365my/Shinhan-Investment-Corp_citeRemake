@@ -20,6 +20,7 @@ body{
     line-height: 180%;
     font-weight: 600;
     letter-spacing: -0.05em;
+    color: #000000;
 }
 /* --------------------- */
 #wrap{
@@ -28,15 +29,8 @@ body{
     padding-bottom: 60px;
 }
 /* safe area */
-.w1720{
-    /* (1720/1920)*100 = 89.58333333333334 */
-    /* width: 89.58333333333334%; */
-    width: 1720px;
-    margin: 0 auto;
-}
 .w1440{
     /* (1440/1920)*100 = 75 */
-    /* width: 75%; */
     width: 1440px;
     margin: 0 auto;
 }
@@ -44,10 +38,6 @@ body{
 /* em color 클래스 */
 .em{
     color: #0046FF;
-}
-
-.hidden{
-    display: none !important;
 }
 
 /* 경고창 */
@@ -58,11 +48,10 @@ body{
     color: #fff;
     /* 포지션 */
     position: fixed;
-    top: 50%;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99999; /* 경고창 */
     /* 로딩시 숨기기 */
     display: none;
 }
-

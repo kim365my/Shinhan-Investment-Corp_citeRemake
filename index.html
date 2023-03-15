@@ -28,12 +28,17 @@
     <!-- <script src="./js/jquery-ui.min.js"></script> -->
     <script src="./js/jquery.bxslider.js"></script>
     <!-- <script src="./js/jquery.scrollTo.min.js"></script> -->
-    <!-- 차트 api cdn -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
     <!-- 기본 코딩 CSS 파일 -->
     <link rel="stylesheet" href="./css/common.css">
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- 차트 api cdn -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <!-- 그래프 JS -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -104,7 +109,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/마이자산.png" alt="myAccount">
+                                        <img src="./images/main/menu01.png" alt="myAccount">
                                     </span>
                                     나의&nbsp;계좌
                                 </a>
@@ -112,7 +117,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/퇴직연금잔고.png" alt="assetStatus">
+                                        <img src="./images/main/menu02.png" alt="assetStatus">
                                     </span>
                                     퇴직연금잔고
                                 </a>
@@ -120,7 +125,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/인증서내보내기.png" alt="recommendedFund">
+                                        <img src="./images/main/menu03.png" alt="recommendedFund">
                                     </span>
                                     인증서 보내기
                                 </a>
@@ -128,7 +133,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/아이디비번재등록.png" alt="pensionAssets">
+                                        <img src="./images/main/menu04.png" alt="pensionAssets">
                                     </span>
                                     ID/PW 재등록
                                 </a>
@@ -136,7 +141,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/이체.png" alt="certificate">
+                                        <img src="./images/main/menu05.png" alt="certificate">
                                     </span>
                                     이체
                                 </a>
@@ -144,7 +149,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/펀드검색.png" alt="transfer">
+                                        <img src="./images/main/menu06.png" alt="transfer">
                                     </span>
                                     펀드검색
                                 </a>
@@ -154,7 +159,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/계좌개설.png" alt="assetStatus">
+                                        <img src="./images/main/menu07.png" alt="assetStatus">
                                     </span>
                                     계좌개설
                                 </a>
@@ -162,7 +167,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/아이디등록.png" alt="myAccount">
+                                        <img src="./images/main/menu04.png" alt="myAccount">
                                     </span>
                                     ID등록
                                 </a>
@@ -170,7 +175,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/인증서내보내기.png" alt="pensionAssets">
+                                        <img src="./images/main/menu03.png" alt="pensionAssets">
                                     </span>
                                     OTP 관리
                                 </a>
@@ -178,7 +183,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/수수료안내.png" alt="recommendedFund">
+                                        <img src="./images/main/menu10.png" alt="recommendedFund">
                                     </span>
                                     수수료안내
                                 </a>
@@ -187,7 +192,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/영업점 안내.png" alt="certificate">
+                                        <img src="./images/main/menu11.png" alt="certificate">
                                     </span>
                                     영업점안내
                                 </a>
@@ -195,7 +200,7 @@
                             <li>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/main/HTS다운로드.png" alt="transfer">
+                                        <img src="./images/main/menu12.png" alt="transfer">
                                     </span>
                                     HTS 다운로드
                                 </a>
@@ -392,9 +397,11 @@
                 </div>
             </section>
             <section id="content2" class="w1440">
-                <figure class="chartGraph">
-                    <img src="./images/main/Rectangle 9.png" alt="주식차트">
-                </figure>
+                <!-- 그래프 -->
+                <section class="chartGraph">
+                    <div id="stock_graph"></div>
+                  </section>
+        
 
                 <div class="right">
                     <!-- 리워드 -->
@@ -433,7 +440,6 @@
                     </h2>
                     <div class="table">
                         <table>
-                            <caption class="hidden">국내 TOP 종목</caption>
                             <thead>
                                 <tr>
                                     <th>종목명</th>
@@ -447,27 +453,27 @@
                                 <tr>
                                     <td><a href="#"></a>KODEX 인버스</a></td>
                                     <td>4,720</td>
-                                    <td><span>1.93</span></td>
+                                    <td><span>+1.93</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 <tr>
                                     <td><a href="#">비보존 제약</a></td>
                                     <td>1,144</td>
-                                    <td><span>11.93</span></td>
+                                    <td><span>+11.93</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">카나리 아바이오</a></td>
                                     <td>19,460</td>
-                                    <td><span>1.06</span></td>
+                                    <td><span>+1.06</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">SK증권</a></td>
                                     <td>819</td>
-                                    <td><span>0.84</span></td>
+                                    <td><span>+0.84</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                     
@@ -490,14 +496,14 @@
                                 <tr>
                                     <td><a href="#">KODEX코스닥150레버...</a></td>
                                     <td>8,540</td>
-                                    <td><span>14.93</span></td>
+                                    <td><span>+14.93</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">KODEX 레버리지</a></td>
                                     <td>15,440</td>
-                                    <td><span>12.93</span></td>
+                                    <td><span>+12.93</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 </tr>
@@ -518,7 +524,6 @@
                     </h2>
                     <div class="table">
                         <table>
-                            <caption class="hidden">국내 TOP 종목</caption>
                             <thead>
                                 <tr>
                                     <th>종목명</th>
@@ -532,27 +537,27 @@
                                 <tr>
                                     <td><a href="#">KODEX 인버스</a></td>
                                     <td>4,720</td>
-                                    <td><span>1.93</span></td>
+                                    <td><span>+1.93</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 <tr>
                                     <td><a href="#">비보존 제약</a></td>
                                     <td>1,144</td>
-                                    <td><span>11.93</span></td>
+                                    <td><span>+11.93</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">카나리 아바이오</a></td>
                                     <td>19,460</td>
-                                    <td><span>1.06</span></td>
+                                    <td><span>+1.06</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">SK증권</a></td>
                                     <td>819</td>
-                                    <td><span>0.84</span></td>
+                                    <td><span>+0.84</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                     
@@ -575,14 +580,14 @@
                                 <tr>
                                     <td><a href="#">KODEX코스닥150레버...</a></td>
                                     <td>8,540</td>
-                                    <td><span>14.93</span></td>
+                                    <td><span>+14.93</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 </tr>
                                 <tr>
                                     <td><a href="#">KODEX 레버리지</a></td>
                                     <td>15,440</td>
-                                    <td><span>12.93</span></td>
+                                    <td><span>+12.93</span></td>
                                     <td>2조 8,553억원</td>
                                     <td>141,644,623</td>
                                 </tr>
@@ -623,4 +628,5 @@
 <script src="./js/alret.js"></script>
 <!-- 페이지 JS -->
 <script src="./js/main.js"></script>
+<script src="./js/candlestick.js"></script>
 </html>

@@ -1,5 +1,44 @@
 @charset "utf-8";
+/* component */
+@import url(./component/header.css);
+@import url(./component/footer.css);
+/* body font 적용 */
+body{
+    font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    line-height: 180%;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    color: #000000;
+}
+/* safe area */
+.w1440{
+    /* (1440/1920)*100 = 75 */
+    width: 1440px;
+    margin: 0 auto;
+}
+/* --------------------- */
+/* em color 클래스 */
+.em{
+    color: #0046FF;
+}
 
+/* 경고창 */
+.alert{
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    color: #fff;
+    /* 포지션 */
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999; /* 경고창 */
+    /* 로딩시 숨기기 */
+    display: none;
+}
+
+/* ------------------- */
 /* 메인 슬라이드 오토 컨트롤버튼 중앙정렬 */
 .bx-controls-auto .bx-controls-auto-item{
     /* 플랙스 */
@@ -252,7 +291,7 @@ article.w1440{
 .chartSlider dl dt,
 .chartSlider dl dd{ 
     display: inline-block;
-    margin-right: 10px;
+    padding: 0 5px;
 }
 .chartSlider dl dd:last-child{
     margin-right: 40px;
@@ -455,14 +494,16 @@ main{
     /* 플랙스 */
     display: flex;
 }
+#stock_graph {
+  border-radius: 16px;
+}
 .chartGraph{
     /* (1020/1440)*100 = 70.83333333333334 */
     width: 70.83333333333334%;
+    height: 100%;
     margin-right: 40px;
 }
-.chartGraph img{
-    width: 100%;
-}
+/* ----------- */
 #content2 .right{
     width: 29.166666666666657%;
 }
@@ -574,9 +615,6 @@ main{
 }
 #content3 td:nth-child(3){
     text-align: center;
-}
-#content3 td:nth-child(3) span:not(.down)::before{
-    content: "+";
 }
 #content3 td:nth-child(3) span::after{
     content: "%";
