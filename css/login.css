@@ -82,7 +82,8 @@ fieldset {
     text-align: center;
 }
 fieldset legend {
-    font-size: 20px;
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem;
     color: #000;
     margin-bottom: 48px;
 }
@@ -133,7 +134,8 @@ fieldset legend {
     align-items: center;
 }
 .login_checkboxes label:last-child {
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     color: #666;
 }
 .login_checkboxes label:last-child img {

@@ -302,7 +302,8 @@
     z-index: 1;
 }
 .slide h3 {
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     color: #666;
     font-weight: 300;
     /* 포지션 */
@@ -319,7 +320,8 @@
     border-radius: 16px;
     padding: 5px 18px;
     border: 1px solid #000;
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     white-space: nowrap;
     cursor: pointer;
 }
@@ -331,7 +333,8 @@
     background-color: #0046ff;
     color: #fff;
     font-weight: 300;
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     white-space: nowrap;
     /* 포지션 */
     position: absolute;
@@ -415,7 +418,8 @@
     border: 1px solid #999999;
     border-radius: 8px;
     margin-right: 20px;
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
 }
 .select_arrow2  {
     width: 101px;
@@ -423,7 +427,8 @@
     padding: 10px 3px 10px 12px;
     border: 1px solid #999999;
     border-radius: 8px;
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
 }
 
 /* IE 화살표 없애기 */
@@ -537,7 +542,8 @@ input {
     padding: 16px 100px 16px 20px;
     color: #000;
     letter-spacing: -1px;
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     margin-right: 20px;
 }
 
@@ -554,7 +560,8 @@ input {
     line-height: 49px;
     display: inline-block;
     background-color: #EBEBED;
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     border-radius: 14px;
     color: #666;
 }
@@ -638,14 +645,16 @@ table input {
     font-weight: 500;
 }
 .td2 div h2 span {
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     font-weight: 400;
     color: #666;
 }
 .td2_d3 {
     display: flex;
     color: #666;
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
 }
 .td2 div ul {
     display: flex;

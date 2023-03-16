@@ -71,17 +71,20 @@ figure{
   margin-bottom: 20px;
 }
 .sec_3 .card dl>dt span {
-  font-size: 14px;
+  /* 14/16 = 0.875 */
+    font-size: 0.875rem;
   font-weight: 300;
   color: #b9b9b9;
 }
 .sec_3 .card dd.up i {
   margin: 0 9px 0 25px;
   color: #ed3738;
-  font-size: 14px;
+  /* 14/16 = 0.875 */
+    font-size: 0.875rem;
 }
 .sec_3 .card .check {
-  font-size: 20px;
+  /* 20/16 = 1.25 */
+  font-size: 1.25rem;
   font-weight: 700;
   color: #b0afaf;
 }
@@ -222,7 +225,8 @@ input[id="basic_info4"]:checked ~ .content4{
   border-left: none;
 }
 .content2 .content_name p{
-  font-size: 14px;
+  /* 14/16 = 0.875 */
+    font-size: 0.875rem;
   color: #999999;
 
 }

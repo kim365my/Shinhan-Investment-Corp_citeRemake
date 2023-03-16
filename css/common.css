@@ -42,6 +42,7 @@ html {
 /* header */
 /* ========================== */
 .header{
+    /* (193/1440)*100 = 13.402777777777777 */
     padding-bottom: 20px;
     /* 플랙스 */
     display: flex;
@@ -107,7 +108,6 @@ html {
 .header .login_gnb{
     font-size: 1rem;
     margin-right: 40px;
-    line-height: 1;
 }
 .header .login_gnb a{
     font-weight: 600;
@@ -288,7 +288,6 @@ footer{
     margin-bottom: 5px;
 }
 .footer_icon_link a img{
-
     vertical-align: middle;
 }
 /* .fnb_wrap */
@@ -336,6 +335,9 @@ footer{
 }
 
 
+/* ========================== */
+/* Top button / chatBot */
+/* ========================== */
 /* ========================== */
 /* Top button / chatBot */
 /* ========================== */
@@ -410,3 +412,4 @@ footer{
 .aside_button .top:hover i {
     color: #fff;
 }
+
