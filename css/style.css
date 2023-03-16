@@ -135,7 +135,6 @@ article.w1440{
 }
 /* 메인 슬라이더 컨트롤 버튼 스타일 */
 .mainArticle .slider_wrap .bx-pager{
-    width: 110px;
     /* 플랙스 */
     display: flex;
     align-items: center;

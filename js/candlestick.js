@@ -60,7 +60,7 @@ Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-ohlc.json', funct
         },
         series: [{
             type: 'candlestick',
-            name: 'AAPL Stock Price',
+            name: 'Samsung Stock Price',
             data: data,
             upColor: '#ED3738',
             dataGrouping: {
