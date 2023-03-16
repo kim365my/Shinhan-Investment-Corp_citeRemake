@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="JGM" />
+    <meta name="description" content="중꺾마 신한투자증권 리뉴얼" />
+    <title>신한투자증권</title>
+    <!-- 폰트어썸 -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- 팝이콘 -->
+    <link rel="shortcut icon" href="./images/favicon/fav32.png" />
+    <link
+      rel="apple-touch-icon=precomposed"
+      href="./images/favicon/fav180.png"
+    />
+    <!-- 기본 코딩 JS 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 제이쿼리 플러그인 -->
+    <!-- <script src="./js/jquery-ui.min.js"></script> -->
+    <script src="./js/jquery.bxslider.js"></script>
+    <!-- <script src="./js/jquery.scrollTo.min.js"></script> -->
+    <!-- 그래프 JS -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- 기본 코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/moblie_style.css">
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header class="header w1440"></header>
+        <!-- /header -->
+        
+        <!-- article -->
+        <article class="w1440">
+            <!-- 슬라이드 콘텐츠 -->
+            <div class="mainArticle">
+                <div class="slider_wrap">
+                    <div id="slider_banner_main" class="mainSlider">
+                        <div id="item01">
+                            <a href="#">
+                                <span>
+                                    <p class="em">Grand Open</p>
+                                    공모주 이곳에서 한번에 신청하세요!
+                                    <p>
+                                        계좌개설, 계좌정보 조회부터 청약까지 <br>
+                                        한 페이지에서 확인 가능해요.
+                                    </p>
+                                </span>
+                                <img src="./images/main/slide01.png" alt="">
+                            </a>
+                        </div>
+                        <div id="item02">
+                            <a href="#">
+                                <span>
+                                    <p>HOT ISSUE 상품</p>
+                                    신한 NEO AI상품
+                                    <p>
+                                        인공지능을 활용한 글로벌 포트폴리오 투자를
+                                        <br>
+                                        안내드립니다.
+                                    </p>
+                                </span>
+                                <img src="./images/main/slide02.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <span>
+                                    <p class="em">주식전략/시황</p>
+                                    주식전략, 주도주의 출현 이후(feat. 코스닥)
+                                    <p>
+                                        『파월 증언에 KOSPI 이틀 하락』 <br>
+                                        - 2월 고용과 물가의 중요도 높아지며 KOSPI 이틀 연속 하락 <br>
+                                        - 건설, 금융, 자동차, 통신 상승, 2차전지 밸류체인 차익실현 압력 <br>
+                                        - 2차전지 주가 흐름 둔화 구간에서 순환매 업종에 관심  
+                                    </p>
+                                </span>
+                                <img src="./images/main/slide03.jpg" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/main/event01.jpg" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/main/event02.jpg" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./images/main/event03.jpg" alt="">
+                            </a>
+                        </div>    
+                    </div>
+                </div>
+
+                
+                <!-- 주식 슬라이드 -->
+                <div class="chart_wrap">
+                    <div id="chart_btn" class="bx-stop"></div>
+                    <div class="chartSlider_wrap">                        
+                        <div class="chartSlider playAni">
+                            <a href="#">
+                                <dl>
+                                    <dt>KOSOPAO</dt>
+                                    <dd>788.89</dd>
+                                    <dd>1.25</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>DOW</dt>
+                                    <dd>733,826.69</dd>
+                                    <dd>3.03</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>NASDAQ</dt>
+                                    <dd>711,787.27</dd>
+                                    <dd class="down">13.50</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>LG엔솔</dt>
+                                    <dd>547.00</dd>
+                                    <dd>3.55</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>POSCO</dt>
+                                    <dd>329.50</dd>
+                                    <dd>7.15</dd>
+                                </dl>
+                            </a>
+
+                            <a href="#">
+                                <dl>
+                                    <dt>S-Oil</dt>
+                                    <dd>50.50</dd>
+                                    <dd class="down">21.05</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>KT&G</dt>
+                                    <dd>87.00</dd>
+                                    <dd class="down">11.25</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>HMM</dt>
+                                    <dd>22.05</dd>
+                                    <dd>4.20</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>NAVER</dt>
+                                    <dd>214.50</dd>
+                                    <dd>3.19</dd>
+                                </dl>
+                            </a>
+                            <a href="#">
+                                <dl>
+                                    <dt>SK그룹</dt>
+                                    <dd>184.40</dd>
+                                    <dd>5.25</dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /슬라이드 콘텐츠 -->
+
+            <!-- 서브 콘텐츠 -->
+            <div class="snbArticle">
+                <h3>공지사항</h3>
+                <div class="notice">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>신한투자 앱 서비스 종료안내</span>
+                                <time datetime="2023.02.10">2023.02.10</time>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /서브 콘텐츠 -->
+        </article>
+        <!-- /article -->
+
+        <!-- main -->
+        <main role="main">
+            <section id="content1">
+                <h2>
+                    자산관리,<br>
+                    <span class="em">신한투자증권</span>과&nbsp;함께하세요!
+                </h2>
+                <div class="card_wrap w1440">
+                    <div class="card">
+                        <a href="#">
+                            <span><img src="./images/main/myAccount.png" alt="myAccount"></span>
+                            <h3>전계좌현황</h3>
+                            <p>
+                                나의 계좌별 자산현황을 한번에 보고 싶으시다면 <br> 전계좌현황에서 확인해보세요.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <span><img src="./images/main/assetStatus.png" alt="assetStatus"></span>
+                            <h3>자산현황분석</h3>
+                            <p>
+                                보유펀드 및 종목 수익률 현황 및 나의 자산현황을 <br>
+                                한눈에 확인해보세요.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <span><img src="./images/main/recommendedFund.png" alt="recommendedFund"></span>
+                            <h3>추천펀드</h3>
+                            <p>
+                                신한투자증권이 매월 엄선하여 <br>
+                                선정하는 추천펀드를 만나보세요.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <span><img src="./images/main/pensionAssets.png" alt="pensionAssets"></span>
+                            <h3>연금자산</h3>
+                            <p>
+                                노후만큼은 쉽게 미리 미리 신한투자증권이 <br>
+                                당신의 여유로운 은퇴 준비를 도와드립니다.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="content2" class="w1440">
+                <!-- 그래프 -->
+                <section class="chartGraph">
+                    <div id="stock_graph"></div>
+                  </section>
+        
+
+                <div class="right">
+                    <!-- 리워드 -->
+                    <div>
+                        <h2>리워드</h2>
+                        <div class="card reward">
+                            <p>
+                                또 나만 몰랐어? <span class="em">신한투자증권</span> <br>
+                                클릭 1번으로 매일 리워드 받는 방법
+                            </p>
+                            <a href="#">로그인 후 참여하기</a>
+                        </div>
+                    </div>
+
+                    <!-- 자주하는 질문 -->
+                    <div>                        
+                        <h2>자주하는 질문</h2>
+                        <div class="card question">
+                            <a href="#">
+                                <span>
+                                    <img src="./images/main/sms.png" alt="sms아이콘">
+                                    매수·매도 방법이 궁금해요
+                                </span>
+                                <img src="./images/main/rightArrow.png" alt="rightArrow">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 주식표 -->
+            <section id="content3" class="w1440">
+                <div>
+                    <h2>국내 TOP 종목
+                        <a href="#">더보기</a>
+                    </h2>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>종목명</th>
+                                    <th>현재가</th>
+                                    <th>등락률</th>
+                                    <th>시가총액</th>
+                                    <th>거래량·거래대금</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">KODEX 인버스</a></td>
+                                    <td>4,720</td>
+                                    <td><span>+1.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                <tr>
+                                    <td><a href="#">비보존 제약</a></td>
+                                    <td>1,144</td>
+                                    <td><span>+11.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">카나리 아바이오</a></td>
+                                    <td>19,460</td>
+                                    <td><span>+1.06</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">SK증권</a></td>
+                                    <td>819</td>
+                                    <td><span>+0.84</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td><a href="#">MDS테크</a></td>
+                                    <td>2,445</td>
+                                    <td><span>-1.33</span></td>                                
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">노터스</a></td>
+                                    <td>4,760</td>
+                                    <td><span>-1.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+    
+                                </tr>
+                                <tr>
+                                    <td><a href="#">KODEX코스닥150레버...</a></td>
+                                    <td>8,540</td>
+                                    <td><span>+14.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">KODEX 레버리지</a></td>
+                                    <td>15,440</td>
+                                    <td><span>+12.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주맥주</a></td>
+                                    <td>1,636</td>
+                                    <td><span>-8.02</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h2>인기검색종목
+                        <a href="#">더보기</a>
+                    </h2>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>종목명</th>
+                                    <th>현재가</th>
+                                    <th>등락률</th>
+                                    <th>시가총액</th>
+                                    <th>거래량·거래대금</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">KODEX 인버스</a></td>
+                                    <td>4,720</td>
+                                    <td><span>+1.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                <tr>
+                                    <td><a href="#">비보존 제약</a></td>
+                                    <td>1,144</td>
+                                    <td><span>+11.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">카나리 아바이오</a></td>
+                                    <td>19,460</td>
+                                    <td><span>+1.06</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">SK증권</a></td>
+                                    <td>819</td>
+                                    <td><span>+0.84</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td><a href="#">MDS테크</a></td>
+                                    <td>2,445</td>
+                                    <td><span>-1.33</span></td>                                
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">노터스</a></td>
+                                    <td>4,760</td>
+                                    <td><span>-1.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+    
+                                </tr>
+                                <tr>
+                                    <td><a href="#">KODEX코스닥150레버...</a></td>
+                                    <td>8,540</td>
+                                    <td><span>+14.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">KODEX 레버리지</a></td>
+                                    <td>15,440</td>
+                                    <td><span>+12.93</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">제주맥주</a></td>
+                                    <td>1,636</td>
+                                    <td><span>-8.02</span></td>
+                                    <td>2조 8,553억원</td>
+                                    <td>141,644,623</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- banner -->
+            <div class="banner w1440">
+                <h2>
+                    공모주 청약, 한번에 신청하세요!
+                    <p>
+                        신규 상장 기업의 주식을 배정받기 위해 청약하는 것입니다. 증권사에서 청약을 하면, 최종 경쟁률과 총 청약지수에 따라 주식을 배정받게 됩니다.
+                    </p>
+                </h2>
+                <a href="#" class="bannerLink">자세히 보기</a>
+            </div>
+            <!-- /banner -->
+
+            <!-- TOP 버튼 -->
+            <aside>
+                
+            </aside>
+            <!-- /TOP 버튼 -->
+        </main>
+        <!-- main -->
+        <!-- footer -->
+        <footer class="footer"></footer>
+        <!-- /footer -->     
+    </div>
+</body>
+<!-- Header, Footer Load JS -->
+<script src="./js/load.js"></script>
+<!-- 미구현 기능 클릭시 안내문 -->
+<script src="./js/alret.js"></script>
+<!-- 페이지 JS -->
+<script src="./js/main.js"></script>
+<script src="./js/candlestick.js"></script>
+</html>

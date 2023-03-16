@@ -56,13 +56,6 @@ html {
     color: #000000;
 }
 /* ------------------------- */
-/* header .logo */
-.header .logo{
-    width: 193px; 
-    margin-right: 76px;
-}
-
-/* ------------------------- */
 /* header nav */
 .header nav{
     /* 플랙스 */
@@ -80,11 +73,32 @@ html {
 .header .gnb{
    font-size: 24px;
 }
-
-.header .gnb li label{
-    cursor: pointer;
+.header .menu .hambeger{
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    /* 플랙스 */
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-around;
+    align-items: center;
 }
-.header .gnb li input[type="checkbox"]{
+.header .menu .hambeger div{
+    width: 20px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.1s;
+}
+.header .menu:hover .hambeger {
+    justify-content: center;
+}
+.header .menu:hover .hambeger div:first-child{
+    transform: translateY(50%) rotate(40deg);
+}
+.header .menu:hover .hambeger div:last-child{
+    transform:translateY(-50%) rotate(-45deg);
+}
+.header .menu:hover .hambeger div:nth-child(2){
     display: none;
 }
 
@@ -93,6 +107,7 @@ html {
 .header .login_gnb{
     font-size: 1rem;
     margin-right: 40px;
+    line-height: 1;
 }
 .header .login_gnb a{
     font-weight: 600;
