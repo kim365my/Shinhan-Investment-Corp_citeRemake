@@ -3,7 +3,8 @@ Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-ohlc.json', funct
     // create the chart
     Highcharts.stockChart('stock_graph', {
         chart: {
-            backgroundColor: '#231d3a'
+            // backgroundColor: '#231d3a',
+            backgroundColor: 'rgb(255 255 255 / 0%)'
         },
         
         rangeSelector: {
@@ -47,7 +48,7 @@ Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-ohlc.json', funct
         title: {
             text: 'Samsung Stock Price',
             style: {
-               color: '#fff'
+               color: '#fff'   
             }
         },
         xAxis: {
@@ -61,7 +62,7 @@ Highcharts.getJSON('https://demo-live-data.highcharts.com/aapl-ohlc.json', funct
             type: 'candlestick',
             name: 'AAPL Stock Price',
             data: data,
-            upColor: 'red',
+            upColor: '#ED3738',
             dataGrouping: {
                 units: [
                     [

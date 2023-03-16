@@ -4,42 +4,24 @@
 @import url(./font.css);
 @import url(./reset.css);
 
-/* component */
-@import url(./component/header.css);
-@import url(./component/footer.css);
-
-/* 외부 폰트 적용 */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
-
-/* ========================== */
-/* 전체 스타일 적용 */
-/* --------------------- */
-/* body font 적용 */
-body{
-    font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    line-height: 180%;
-    font-weight: 600;
-    letter-spacing: -0.05em;
-    color: #000000;
+/* 공통 CSS */
+html {
+    font-family: 'Pretendard', sans-serif;
 }
-/* --------------------- */
+
 #wrap{
-    background-color: #FAFBFB;
+    /* background-color: #FAFBFB; */
     padding-top: 40px;
     padding-bottom: 60px;
 }
 /* safe area */
 .w1440{
     /* (1440/1920)*100 = 75 */
+    /* width: 75%; */
     width: 1440px;
     margin: 0 auto;
 }
 /* --------------------- */
-/* em color 클래스 */
-.em{
-    color: #0046FF;
-}
-
 /* 경고창 */
 .alert{
     padding: 10px 20px;
@@ -54,4 +36,362 @@ body{
     z-index: 99999; /* 경고창 */
     /* 로딩시 숨기기 */
     display: none;
+}
+
+/* ========================== */
+/* header */
+/* ========================== */
+.header{
+    padding-bottom: 20px;
+    /* 플랙스 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 포지션 */
+    position: relative;
+    /* 폰트 설정 */
+    line-height: 180%;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    color: #000000;
+}
+/* ------------------------- */
+/* header .logo */
+.header .logo{
+    width: 193px; 
+    margin-right: 76px;
+}
+
+/* ------------------------- */
+/* header nav */
+.header nav{
+    /* 플랙스 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header nav ul{
+    /* 플랙스 */
+    display: flex;
+}
+
+/* ------------------------- */
+/* .gnb */
+.header .gnb{
+   font-size: 24px;
+}
+
+.header .gnb li label{
+    cursor: pointer;
+}
+.header .gnb li input[type="checkbox"]{
+    display: none;
+}
+
+/* ------------------------- */
+/* .login_gnb */
+.header .login_gnb{
+    font-size: 1rem;
+    margin-right: 40px;
+}
+.header .login_gnb a{
+    font-weight: 600;
+}
+.header .login_gnb li:first-child::after{
+    content: "";
+    font-size: 0.8rem;
+    padding-right: 16px;
+    border-right: 1px solid #000;
+    margin-right: 16px;
+}
+
+/* ---------------------------- */
+/* .header .snb */
+.header .snb{
+    width: 100%;
+    height: auto !important;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #B9BDC4;
+    border-radius: 16px;
+    /* 폰트 사이즈 수정 */
+    font-size: 1rem;
+    /* 포지션 */
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    left: 0;
+    z-index: 999; /* 헤더 서브메뉴 */
+    /* 디스플레이 가리기 */
+    display: none;
+}
+
+/* snb 타이틀 */
+.snbTitle{
+    width: 100%;
+    height: 60px;
+    padding: 0 24px;
+    line-height: 60px;
+    border-top: 1px solid #B9BDC4;
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 커서 포인터 */
+    cursor: pointer;
+}
+.snb .snbTitle:first-child{
+    border-top: none;
+}
+.snbTitle::after{
+    content: url(../images/header/plus.png);
+    vertical-align: middle;
+    margin-bottom: -10px;
+}
+.snb h2{
+    height: 100%;
+    line-height: 60px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #797979;
+    transition: all 0.1s;
+}
+/* snb 내용 */
+.snbItem{
+    width: 100%;
+    background-color: #F7F8F8;
+    padding: 24px 0;
+    transition: all 0.8s;
+    /* 숨기기 */
+    display: none;
+}
+.snbItem:last-child{
+    border-bottom: 1px solid #B9BDC4;
+}
+.snbItem dl{
+    width: 25%;
+    border-right: 1px solid #E1E3E5;
+    padding: 20px;
+}
+.snbItem dl dt{
+    color: #333333;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+    /* 커서 논 */
+    cursor: default;
+}
+.snbItem dl dd{
+    margin-bottom: 10px;
+}
+
+/* 클릭 되었을때 */
+.snbTitle.check{
+    border-bottom: 1px solid #B9BDC4;
+}
+.snbTitle.check h2{
+    color: #097DF3;    
+    border-bottom: 2px solid #097DF3;
+}
+.snbTitle.check::after{
+    content: url(../images/header/mu.png);
+    margin-bottom: -15px;
+}
+.snbTitle.check + .snbItem{
+    display: flex;
+}
+
+
+/* ========================== */
+/* footer */
+/* ========================== */
+footer{
+    /* 폰트 설정 */
+    line-height: 180%;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    color: #000000;
+}
+/* #footer_csc */
+.footer_csc{
+    width: 100%;
+    /* 박스모델 속성 */
+    padding: 20px 0;
+    border-top: 1px solid #E4E5E8;
+    border-bottom: 1px solid #E4E5E8;
+}
+.footer_title{
+    margin-bottom: 15px;
+    /* font */
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #666666;
+}
+.footer_csc nav{
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
+.footer_csc nav h3{
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem; 
+    line-height: 1.5;
+}
+.footer_csc nav h3 .em{
+    /* 36/16 = 2.25 */
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #0046FF;
+}
+
+.footer_list li{
+    list-style: disc;
+    /* font */
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #999999;
+}
+
+/* .footer_icon */
+.footer_icon_link{
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
+.footer_icon_link a{
+    margin-left: 60px;
+    /* 플랙스 */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.footer_icon_link a span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.footer_icon_link a img{
+
+    vertical-align: middle;
+}
+/* .fnb_wrap */
+.fnb_wrap{
+    padding-top: 20px;
+}
+
+/* .fnb */
+.fnb li, .fnb p{
+    display: inline-block;
+    color: #999999;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+.fnb li.em{
+    color: #0046FF;
+}
+.fnb li:not(:last-child)::after{
+    content: "";
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1.8px solid #999999;
+}
+.fnb ul {
+    margin-bottom: 10px;
+}
+.footer_list li{
+    list-style: disc;
+    /* font */
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #999999;
+    line-height: 30px;
+}
+
+/* .last_footer */
+.last_footer{
+    margin-top: 40px;
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+/* ========================== */
+/* Top button / chatBot */
+/* ========================== */
+.aside_button{
+    height: 120px;
+    z-index: 99999;
+    /* 포지션 */
+    position: fixed;
+    /* right: 140px; */
+    right: 7.291666666666667%;
+    transform: translateX(100%);
+    bottom: 50px;
+}
+.aside_button div{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #0046ff;
+    box-shadow: 0 0 3px 0 white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* -------------------- */
+/* 챗봇 */
+.aside_button .chbot{
+    margin-bottom: 20px;
+    /* 포지션 */
+    position: relative;
+}
+
+.aside_button .chbot h2 {
+    line-height: 20px;
+    vertical-align: top;
+    transition: all 0.8s;
+}
+.aside_button h2 p {
+    color: #fff;
+    opacity: 0;
+    transition: all 0.8s;
+    font-size: 5px;
+}
+.chbot_text {
+    height: 50px;
+    padding-left: 30px;
+    padding-top: 5px;
+    background-color: #0046FF;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 80%);
+    border-radius: 40px;
+    /* 포지션 */
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+/* ----------------------- */
+/* top 버튼 */
+.aside_button i {
+    color: #fff;
+    position: relative;
+    /* vertical-align: middle; */
+    /* top: 5px; */
+    /* transform: translateX(-50%); */
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 호버 */
+.aside_button .top:hover {
+    background-color: #002DA4;
+}
+.aside_button .top:hover i {
+    color: #fff;
 }

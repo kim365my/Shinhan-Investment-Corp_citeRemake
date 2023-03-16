@@ -1,7 +1,5 @@
 @charset "utf-8";
-/* component */
-@import url(./component/header.css);
-@import url(./component/footer.css);
+
 /* body font 적용 */
 body{
     font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -10,32 +8,9 @@ body{
     letter-spacing: -0.05em;
     color: #000000;
 }
-/* safe area */
-.w1440{
-    /* (1440/1920)*100 = 75 */
-    width: 1440px;
-    margin: 0 auto;
-}
-/* --------------------- */
 /* em color 클래스 */
 .em{
     color: #0046FF;
-}
-
-/* 경고창 */
-.alert{
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 16px;
-    color: #fff;
-    /* 포지션 */
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 99999; /* 경고창 */
-    /* 로딩시 숨기기 */
-    display: none;
 }
 
 /* ------------------- */
@@ -166,29 +141,28 @@ article.w1440{
     align-items: center;
 }
 .mainArticle .slider_wrap .bx-pager div{
+    margin-right: 10px;
+    overflow: hidden;
+}
+.mainArticle .slider_wrap .bx-pager div a{
+    display: block;
     width: 15px;
     height: 15px;
     border-radius: 100%;
     background-color: #CCCCCC;
-    margin-right: 10px;
+    line-height: 45px;
+    box-shadow: 0 0 20px 0 rgb(255 255 255 / 0%);
     /* transition */
     transition: all 0.3s;
-    overflow: hidden;
 }
-.mainArticle .slider_wrap .bx-pager div:hover{
+.mainArticle .slider_wrap .bx-pager div:hover a{
     background-color: #999999;
 }
-.mainArticle .slider_wrap .bx-pager div:has(a.active){
+.mainArticle .slider_wrap .bx-pager div a.active{
     width: 50px;
     border-radius: 16px;
     background-color: #097DF3;
 }
-.mainArticle .slider_wrap .bx-pager div a{
-    display: block;
-    /* 텍스트 숨기기 */
-    line-height: 45px;
-}
-
 
 /* -------------- */
 .lnbWrap{
@@ -315,6 +289,7 @@ article.w1440{
     animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s;
     /* 무한 반복 애니메이션 */
     animation-iteration-count: infinite;
+    /* box-shadow: inset 0 0 20px 0 rgb(255 255 255 / 0%); */
 }
 /* 호버시, 버튼 클릭시 애니메이션 정지 */
 .chart_wrap .bx-start + .chartSlider_wrap .chartSlider, 
@@ -322,12 +297,16 @@ article.w1440{
     animation-play-state: paused;
 }
 @keyframes chart_slider_ani {
-    from { transform: translateX(0) }
-    to { transform: translateX(-100%) }
+    from { transform:translate3d(0) }
+    to { transform: translate3d(-100%, 0,0) }
 }
 
 /* ----------------------- */
 /* snb_content */
+.snbArticle{
+    /* (398/1720)*100 = 23.13953488372093 */
+    width: 23.13953488372093%;
+}
 .snbArticle h2{
     font-size: 30px;
     font-weight: 500;
@@ -431,8 +410,6 @@ article.w1440{
 main{
     padding-bottom: 120px;
 }
-
-
 #content1{
     height: 396px;
     background-color: #EEF1F9;
@@ -459,16 +436,13 @@ main{
     width: 23.26388888888889%;
 }
 #content1  .card a{
+    display: block;
     height: 319px;
     border-radius: 16px;
     background-color: #fff;
-    box-shadow: 0 0 2px 0 #fff;
-
-    /* 플랙스 */
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 0 6px 0 #EEF1F9;
+    padding: 20px;
+    padding-top: 64px;
 }
 #content1  .card >  a > span{
     width: 80px;
@@ -485,6 +459,7 @@ main{
 }
 #content1  .card >  a > p{
     color: #999999;
+    line-height: 1.5;
 }
 /* -------------------------- */
 /* content2 */
@@ -494,20 +469,32 @@ main{
     /* 플랙스 */
     display: flex;
 }
-#stock_graph {
-  border-radius: 16px;
-}
 .chartGraph{
     /* (1020/1440)*100 = 70.83333333333334 */
     width: 70.83333333333334%;
     height: 100%;
     margin-right: 40px;
 }
+#stock_graph {
+    border-radius: 16px;
+    background: linear-gradient(#001a44, #6f6b9f);   
+}
+
+#stock_graph .highcharts-grid-line{
+    stroke: #687aa5;
+}
+#stock_graph .highcharts-point{
+    fill: #ED3738;
+    stroke: #ED3738;
+}
+#stock_graph .highcharts-point-down{
+    fill: #0046FF;
+    stroke: #0046FF;
+}
 /* ----------- */
 #content2 .right{
     width: 29.166666666666657%;
 }
-
 #content2 h2{
     font-size: 20px;
     font-weight: 700;
@@ -599,6 +586,11 @@ main{
     font-weight: 500;
     padding: 10px;
     border-bottom:1px solid #E4E5E8;
+}
+#content3 td a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 #content3 td a:hover{
     color: #0046FF;
