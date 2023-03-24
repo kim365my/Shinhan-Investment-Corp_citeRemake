@@ -179,6 +179,7 @@ article.w1440{
 .lnb_btn{
     /* (212/600)*100 = 35.333333333333336 */
     width: 35.333333333333336%;
+    max-width: 212px;
     height: 100%;
 }
 .lnb_btn label{
@@ -297,7 +298,7 @@ article.w1440{
     animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s;
     /* 무한 반복 애니메이션 */
     animation-iteration-count: infinite;
-    /* box-shadow: inset 0 0 20px 0 rgb(255 255 255 / 0%); */
+    box-shadow: inset 0 0 20px 0 rgb(255 255 255 / 0%);
 }
 /* 호버시, 버튼 클릭시 애니메이션 정지 */
 .chart_wrap .bx-start + .chartSlider_wrap .chartSlider, 
@@ -313,7 +314,7 @@ article.w1440{
 /* snb_content */
 .snbArticle{
     /* (398/1720)*100 = 23.13953488372093 */
-    width: 23.13953488372093%;
+    width: 24%;
 }
 .snbArticle h2{
     /* 30/16 = 1.875 */
@@ -325,12 +326,17 @@ article.w1440{
 .snbArticle h2 strong{
     font-weight: 600;
 }
-.snbArticle input{
+.snbArticle label{
     width: 100%;
     border: 1px solid #0046FF;
     border-radius: 8px;
-    padding: 10px 30px;
+    padding: 10px 16px 10px 24px;
     box-shadow: 0 4px 3px 0 #D9D9D9;
+    /* flex */
+    display: flex;
+}
+.snbArticle label button[type="submit"]{
+    cursor: pointer;
 }
 .snbArticle h3{
     margin-top: 48px;
@@ -376,20 +382,20 @@ article.w1440{
 .snbArticle .bx-controls-direction a:first-child{left: 0;}
 .snbArticle .bx-controls-direction a:last-child{right: 0;}
 
-/* 슬라이드 텍스트 오른쪽 상단위로 */
+/* 슬라이드 텍스트 오른쪽 상단하단으로 변경 */
 .snbArticle .bx-pager{
     /* 포지션 */
     position: absolute;
-    top: 13px;
-    right: 51px;
+    bottom: 10px;
+    right: 40px;
     z-index: 2; /* 이벤트 슬라이드 인덱스번호 */
 }
 /* 슬라이드 오토버튼 위치이동 */
 .snbArticle .bx-controls-auto{
     /* 포지션 */
     position: absolute;
-    top: 10px;
-    right: 15px;
+    bottom: 10px;
+    right: 10px;
     z-index: 2; /* 이벤트 슬라이드 오토버튼 */
 }
 /* 슬라이드 이동버튼 */
@@ -402,6 +408,14 @@ article.w1440{
     font-family: "FontAwesome";
 }
 
+#snbArticle_03 h3{
+    display: flex;
+    justify-content: space-between;
+}
+#snbArticle_03 h3 a{
+    font-size: 0.875rem;
+    font-weight: 400;
+}
 
 .snbArticle .notice a{
     padding: 12px 0;
@@ -412,6 +426,14 @@ article.w1440{
 }
 .snbArticle .notice a:first-child{
     border-top: 1px solid #E4E5E8;
+}
+.snbArticle .notice a span{
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.snbArticle .notice a span::after{
+    content: "...";
 }
 /* ================= */
 /* main */

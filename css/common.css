@@ -229,14 +229,12 @@ footer{
 }
 /* #footer_csc */
 .footer_csc{
-    width: 100%;
     /* 박스모델 속성 */
     padding: 20px 0;
     border-top: 1px solid #E4E5E8;
     border-bottom: 1px solid #E4E5E8;
 }
 .footer_title{
-    margin-bottom: 15px;
     /* font */
     font-size: 1.25rem;
     font-weight: 600;
@@ -247,6 +245,7 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+
 .footer_csc nav h3{
     /* 20/16 = 1.25 */
     font-size: 1.25rem; 
@@ -258,23 +257,29 @@ footer{
     font-weight: 600;
     color: #0046FF;
 }
+/* footer_csc nav div */
+.footer_csc nav div{
+    width: 50%;
+    /* 플랙스 */
+    display: flex;
+    justify-content: space-between;
+}
 
 .footer_list li{
     list-style: disc;
     /* font */
-    font-size: 1.25rem;
     font-weight: 300;
     color: #999999;
 }
 
 /* .footer_icon */
 .footer_icon_link{
+    width: 336px;
     /* 플랙스 */
     display: flex;
     justify-content: space-between;
 }
 .footer_icon_link a{
-    margin-left: 60px;
     /* 플랙스 */
     display: flex;
     flex-flow: column nowrap;
@@ -307,22 +312,13 @@ footer{
 .fnb li.em{
     color: #0046FF;
 }
-.fnb li:not(:last-child)::after{
-    content: "";
-    padding-right: 10px;
+.fnb li:not(:first-child)::before{
+    content: "|";
+    padding-left: 10px;
     margin-right: 10px;
-    border-right: 1.8px solid #999999;
 }
 .fnb ul {
     margin-bottom: 10px;
-}
-.footer_list li{
-    list-style: disc;
-    /* font */
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: #999999;
-    line-height: 30px;
 }
 
 /* .last_footer */
@@ -356,9 +352,11 @@ footer{
     height: 50px;
     line-height: 50px;
     background-color: #0046ff;
-    box-shadow: 0 0 3px 0 white;
     border-radius: 50%;
     cursor: pointer;
+}
+.aside_button div:last-child{
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 80%);
 }
 
 /* -------------------- */

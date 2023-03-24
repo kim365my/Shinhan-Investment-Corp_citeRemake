@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/replace.css">
     <!-- 모바일 css -->
     <link rel="stylesheet" href="./css/moblie_style.css">
 </head>
@@ -298,7 +299,16 @@
                         가지고만&nbsp;있어도&nbsp;쌓이는&nbsp;수익 <br>
                         <strong>신한투자증권&nbsp;ETF</strong>
                     </h2>
-                    <input type="search" name="" id="" autocapitalize="off" placeholder="ETF 검색">
+                    <form action="#">
+                        <label for="search">
+                            <input type="search" name="main_search" id="search" autocapitalize="off" placeholder="ETF 검색" required>
+                            <button type="submit">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                            
+                        </label>
+                    </form>
+
                 </section>
 
                 <section id="snbArticle_02">
@@ -323,7 +333,9 @@
                 </section>
 
                 <section id="snbArticle_03">
-                    <h3>공지사항</h3>
+                    <h3>공지사항
+                        <a href="#">더보기</a>
+                    </h3>
                     <div class="notice">
                         <ul>
                             <li>
@@ -334,26 +346,26 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>신한투자 앱 서비스 종료안내</span>
-                                    <time datetime="2023.02.10">2023.02.10</time>
+                                    <span>개인종합자산관리계좌(중개형) 약관 개정안내</span>
+                                    <time datetime="2023.02.10">2023.02.09</time>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>신한투자 앱 서비스 종료안내</span>
-                                    <time datetime="2023.02.10">2023.02.10</time>
+                                    <span>[금융감독원] 택배회사, 정부기관 등을 사칭한 보이스피싱 경보 발령!!!</span>
+                                    <time datetime="2023.02.10">2023.02.09</time>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>신한투자 앱 서비스 종료안내</span>
-                                    <time datetime="2023.02.10">2023.02.10</time>
+                                    <span>증거금률 수시변경 안내(2023.03.21 적용)</span>
+                                    <time datetime="2023.02.10">2023.02.08</time>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>신한투자 앱 서비스 종료안내</span>
-                                    <time datetime="2023.02.10">2023.02.10</time>
+                                    <span>'신한투자증권'으로 새롭게 시작합니다.</span>
+                                    <time datetime="2023.02.10">2023.02.01</time>
                                 </a>
                             </li>
                         </ul>
