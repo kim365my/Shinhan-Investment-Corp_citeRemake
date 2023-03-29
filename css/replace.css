@@ -15,14 +15,6 @@ body{
 #content1 h2 {
     padding-top: 106px;
 }
-.snbArticle{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.snbArticle h3 {
-    margin-top: 0;
-}
 
 .mainSlider #item02 img {
     object-fit:contain;

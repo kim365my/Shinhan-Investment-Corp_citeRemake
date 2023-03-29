@@ -334,9 +334,6 @@ footer{
 /* ========================== */
 /* Top button / chatBot */
 /* ========================== */
-/* ========================== */
-/* Top button / chatBot */
-/* ========================== */
 .aside_button{
     height: 120px;
     z-index: 99999;
@@ -397,9 +394,6 @@ footer{
 .aside_button i {
     color: #fff;
     position: relative;
-    /* vertical-align: middle; */
-    /* top: 5px; */
-    /* transform: translateX(-50%); */
     left: 50%;
     transform: translateX(-50%);
 }

@@ -53,19 +53,21 @@ $("aside").load("./module/aside.html", function(){
     $('aside div').eq(-1).hide();
         // 탑버튼 스크롤 
         var sa = 100;
-        $(window).scroll(function(){
-            var num = $(window).scrollTop();
-            // console.log(num);
-            if(num > sa){
-                $('aside div').stop().fadeIn();
-            }else{
-                $('aside div').eq(-1).stop().fadeOut();
-            };
+        $(window).on("mousewheel", function(){
+            var scorll = $(window).scrollTop();
+            if(scorll > sa){
+                $('aside div').stop().fadeIn(200);
+            } else{
+                $('aside div').eq(-1).stop().fadeOut(200);
+
+            }
         });
+
 
         $('.top').click(function(e){
             e.preventDefault();
             $('html,body').stop().animate({scrollTop:0},200, 'swing');
+            $('aside div').eq(-1).stop().fadeOut(200);
         });
 
         // 챗봇

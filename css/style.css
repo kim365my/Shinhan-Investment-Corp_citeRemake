@@ -184,7 +184,7 @@ article.w1440{
 }
 .lnb_btn label{
     display: block;
-    width: 100%;
+    width: 200px;
     height: 50%;
     cursor: pointer;
     background-color: #E7E7E7;
@@ -259,6 +259,7 @@ article.w1440{
     display: flex;
     align-items: center;
     white-space: nowrap;
+    background-color: rgb(255 255 255 / 0%);
 }
 /* ----------------------- */
 /* 차트 슬라이더 버튼 */
@@ -315,6 +316,10 @@ article.w1440{
 .snbArticle{
     /* (398/1720)*100 = 23.13953488372093 */
     width: 24%;
+    /* 플렉스 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .snbArticle h2{
     /* 30/16 = 1.875 */
@@ -339,7 +344,6 @@ article.w1440{
     cursor: pointer;
 }
 .snbArticle h3{
-    margin-top: 48px;
     margin-bottom: 24px;
     font-size: 1.5rem;
     font-weight: 500;
