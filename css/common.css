@@ -3,6 +3,7 @@
 /* 폰트 CSS && 리셋 CSS */
 @import url(./font.css);
 @import url(./reset.css);
+@import url(./root.css);
 
 /* 공통 CSS */
 html {
@@ -116,7 +117,7 @@ html {
     content: "";
     font-size: 0.8rem;
     padding-right: 16px;
-    border-right: 1px solid #000;
+    border-right: var(--border);
     margin-right: 16px;
 }
 
@@ -255,7 +256,7 @@ footer{
     /* 36/16 = 2.25 */
     font-size: 2.25rem;
     font-weight: 600;
-    color: #0046FF;
+    color: var(--main-color);
 }
 /* footer_csc nav div */
 .footer_csc nav div{
@@ -310,7 +311,7 @@ footer{
     font-weight: 400;
 }
 .fnb li.em{
-    color: #0046FF;
+    color: var(--main-color);
 }
 .fnb li:not(:first-child)::before{
     content: "|";
@@ -348,7 +349,7 @@ footer{
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background-color: #0046ff;
+    background-color: var(--main-color);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -379,7 +380,7 @@ footer{
     height: 50px;
     padding-left: 30px;
     padding-top: 5px;
-    background-color: #0046FF;
+    background-color: var(--main-color);
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 80%);
     border-radius: 40px;
     /* 포지션 */

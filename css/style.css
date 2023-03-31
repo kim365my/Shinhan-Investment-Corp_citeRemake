@@ -10,7 +10,7 @@ body{
 }
 /* em color 클래스 */
 .em{
-    color: #0046FF;
+    color: var(--main-color);
 }
 
 /* ------------------- */
@@ -286,7 +286,7 @@ article.w1440{
     margin-right: 5px;
 }
 .chartSlider dl dd.down{
-    color: #0046FF;
+    color: var(--main-color);
 }
 .chartSlider dl dd.down::before{
     content: url(../images/main/down_arrow.png);
@@ -562,7 +562,7 @@ main{
     padding: 17px;
     text-align: center;
     border-radius: 16px;
-    background-color: #0046FF;
+    background-color: var(--main-color);
     color: #fff;
 }
 /* question card */
@@ -610,10 +610,12 @@ main{
 }
 #content3 > div:first-child{
     /* (45.94/1440)*100 = 3.1902777777777773 */
-    margin-right: 3.1902777777777773%;
+    margin-right: 2%;
 }
 #content3 table{
     width: 100%;
+    border-top:1px solid #CCCCCC;
+    border-collapse: collapse;
 }
 #content3 th{
     color: #3C3C3C;
@@ -635,7 +637,7 @@ main{
     height: 100%;
 }
 #content3 td a:hover{
-    color: #0046FF;
+    color: var(--main-color);
     text-decoration: underline;
 }
 #content3 th:nth-child(1),
@@ -671,7 +673,7 @@ main{
 .banner{
     height: 180px;
     color: #fff;
-    background-color: #0046FF;
+    background-color: var(--main-color);
     border-radius: 16px; 
     padding: 0 60px;
     /* 플랙스 */

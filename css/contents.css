@@ -127,12 +127,12 @@ figure{
 .sec_3_btn button {
   margin-left: 20px;
   padding:19px 59px 17px;
-  border: 1px solid #000;
+  border: var(--border);
   border-radius: 8px;
   cursor: pointer;
 }
 .blue_btn {
-  background-color: #0046ff;
+  background-color: var(--main-color);
   color: #fafbfb;
   border: none;
 }
@@ -197,7 +197,7 @@ input[id="basic_info4"]:checked ~ .content4{
 }
 .content1 .content_name p{
   padding: 12px 36px;
-  border: 1px solid #000;
+  border: var(--border);
   border-radius: 8px;
 }
 .content1 .table table{
@@ -207,7 +207,7 @@ input[id="basic_info4"]:checked ~ .content4{
 }
 .table table,.table th,.table td{
   border: 1px solid #fafbfb;
-  border-top: 1px solid #000;
+  border-top: var(--border);
   border-collapse: collapse;
   border-right: none;
 }
@@ -246,7 +246,7 @@ input[id="basic_info4"]:checked ~ .content4{
   padding-right: 20px;
 }
 .blue{
-  color: #0046ff;
+  color: var(--main-color);
   position: relative;
 }
 .blue img{

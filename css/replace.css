@@ -37,20 +37,3 @@ body{
 .chartGraph {
     margin-right: 24px;
 }
-
-/* ------------------- */
-/* 펀드투자 스타일 */
-/* ------------------- */
-.title {
-    margin-top: 48px;
-}
-.title article {
-    align-items: center;
-    justify-content: center;
-}
-.title article img {
-    margin: 0 10px 0 -10px;
-}
-.title article p {
-    line-height: normal;
-}
