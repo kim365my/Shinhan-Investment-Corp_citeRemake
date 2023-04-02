@@ -57,19 +57,6 @@ $('#check3').click(function(){
 
 
 
-// a 링크 기본기능 제거
-$('a [href="#"]').on('click',function(e){
-    console.log(e);
-    e.preventDefault();
-});
-
-$('.eventNone').on('click',function(e){
-    console.log(e);
-    e.preventDefault();
-});
-
-
-
 // 그래프 화살표
 $('.forward_btn').on('click', function(){
     $('.graph .slide>li').eq(-1).css({display:'flex','justify-content':'space-between'}).show();
@@ -80,14 +67,14 @@ $('.forward_btn').on('click', function(){
     });
 });
 
-$(function(){
-    $(`<div class="alert">죄송합니다. 해당페이지는 준비중입니다.</div>`).appendTo("#wrap");
-    $("button").not(".eventNone").on("click", function(e){
-        e.preventDefault();
-        $(".alert").stop().fadeIn(700)
-        setTimeout(() => {
-            $(".alert").stop().fadeOut(700);
-        }, 1000);
-    })
+
+// modal
+const tb2Detail = document.querySelector(".tb2Detail");
+$(".td2_d2 a").on("click", (e)=>{
+    e.preventDefault();
+    tb2Detail.showModal();
 })
 
+function setFramHegiht(obj){
+    obj.width = obj.contentWindow.document.body.scrollWidth;
+}
