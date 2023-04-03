@@ -11,7 +11,7 @@ html {
 }
 
 #wrap{
-    background-color: #FAFBFB;
+    /* background-color: #FAFBFB; */
     padding: 40px 0 60px;
 }
 /* safe area */
@@ -411,7 +411,6 @@ footer{
 /* modal */
 /* ================================= */
 dialog{
-    width: 90vw;
     height: 90%;
     border: 0;
     border-radius: 25px;
@@ -430,7 +429,7 @@ dialog button[value="close"]{
     right: 30px;
 }
 dialog iframe{
-    width: 100%;
+    width: 1260px;
     height: 100%;
 }
 dialog::backdrop{

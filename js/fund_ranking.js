@@ -14,9 +14,8 @@ $(pg).click(function(){
 var tab = $('.page_num').find('.pg');
 var table = $('.table').find('section div');
 
-var i;
 function tab_menu(num){
-    for(i=0; i<tab.length; i++){
+    for(let i=0; i<tab.length; i++){
         if(num == i) {
             tab.eq(i).addClass('active');
             table.eq(i).show();
@@ -59,11 +58,17 @@ $('#check3').click(function(){
 
 // 그래프 화살표
 $('.forward_btn').on('click', function(){
-    $('.graph .slide>li').eq(-1).css({display:'flex','justify-content':'space-between'}).show();
-    $('.graph .slide>li').eq(0).hide();
+    $('.slide').eq(-1).css({
+        display:'flex','justify-content':'space-between'
+    }).show();
+    $('.slide_index').eq(-1).show();
+    $('.slide_index').eq(0).hide();
+    $('.slide').eq(0).hide();
     $('.back_btn').on('click',function(){
-        $('.graph .slide>li').eq(0).show();
-        $('.graph .slide>li').eq(-1).hide();
+        $('.slide').eq(0).show();
+        $('.slide').eq(-1).hide();
+        $('.slide_index').eq(0).show();
+        $('.slide_index').eq(-1).hide();
     });
 });
 
@@ -73,8 +78,15 @@ const tb2Detail = document.querySelector(".tb2Detail");
 $(".td2_d2 a").on("click", (e)=>{
     e.preventDefault();
     tb2Detail.showModal();
-})
+    console.log(tb2Detail);
+});
+
+// $("window").on("click", (e)=>{
+//     e.target === 
+//     tb2Detail.close();
+// });
 
 function setFramHegiht(obj){
-    obj.width = obj.contentWindow.document.body.scrollWidth;
+    // obj.width = obj.contentWindow.document.body.scrollWidth;
+    console.log(obj.contentWindow.document.body.scrollWidth);
 }

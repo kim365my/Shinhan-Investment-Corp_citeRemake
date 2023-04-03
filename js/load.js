@@ -46,6 +46,8 @@ $(".header").load("./module/header.html", function(){
         // 클래스 토글
         // console.log($(this).hasClass(CHECK_CLASS));
     })
+
+
 });
 $(".footer").load("./module/footer.html");
 
