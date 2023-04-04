@@ -99,11 +99,9 @@ main .w1440{
 .slide li{
     width: 100%;
     padding: 0 20px;
-    text-align: center;
 }
 .rank_img{
     height: 163px;
-    text-align: center;
     position: relative;
 }
 .rank_img p{
@@ -158,6 +156,7 @@ main .w1440{
     font-weight: 300;
     /* 14/16 = 0.875 */
     font-size: 0.875rem;
+    text-align: center;
 }
 .slide .taskBtn div{
     display: inline-block;
