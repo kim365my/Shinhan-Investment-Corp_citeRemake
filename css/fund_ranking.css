@@ -1,12 +1,4 @@
 @charset "utf-8";
-/* IE 화살표 없애기 */
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 98px;
-    height: 37px;
-}
 
 
 .header_wrap{
@@ -225,7 +217,14 @@ main .w1440{
     font-size: 0.875rem;
 }
 
-
+/* IE 화살표 없애기 */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 98px;
+    height: 23px;
+}
 select::-ms-expand {display: none;}
 select {
     background-image: url('../images/sub/down-arrow.png');
@@ -373,7 +372,7 @@ table input {
 }
 .table .tr1 select {
     margin-top: 6px;
-    padding: 10px 0 10px 12px;
+    padding: 0 10px;
     border-radius: 8px;
 }
 .table .tr1 th {
