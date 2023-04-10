@@ -16,7 +16,10 @@ $("#slider_banner_main").bxSlider({
     startText:" ",
     stopText:" ",
     // 오류픽스 : 터치로 이동되는 것을 막아서 이미지 클릭이 이동 되도록
-    touchEnabled : (navigator.maxTouchPoints > 0)
+    touchEnabled : (navigator.maxTouchPoints > 0),
+    // 호버시 애니메이션 중지
+    autoHover : true,
+    autoDelay : 0
 });
 // 이벤트 슬라이드
 $("#slider_banner_area").bxSlider({
@@ -36,7 +39,10 @@ $("#slider_banner_area").bxSlider({
     startText:" ",
     stopText:" ",
     // 오류픽스 : 터치로 이동되는 것을 막아서 이미지 클릭이 이동 되도록
-    touchEnabled : (navigator.maxTouchPoints > 0)
+    touchEnabled : (navigator.maxTouchPoints > 0),
+    // 호버시 애니메이션 중지
+    autoHover : true,
+    autoDelay : 0
 });
 
 // -----------------------

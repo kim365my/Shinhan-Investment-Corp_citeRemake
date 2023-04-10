@@ -338,10 +338,12 @@ article.w1440{
     border-radius: 8px;
     padding: 10px 16px 10px 24px;
     box-shadow: 0 4px 3px 0 #D9D9D9;
+    color: #999999;
     /* flex */
     display: flex;
 }
 .snbArticle label button[type="submit"]{
+    color: #999999;
     cursor: pointer;
 }
 .snbArticle h3{
@@ -392,15 +394,15 @@ article.w1440{
     /* 포지션 */
     position: absolute;
     bottom: 5px;
-    right: 40px;
+    right: 20px;
     z-index: 2; /* 이벤트 슬라이드 인덱스번호 */
 }
 /* 슬라이드 오토버튼 위치이동 */
 .snbArticle .bx-controls-auto{
     /* 포지션 */
     position: absolute;
-    bottom: 5px;
-    right: 10px;
+    bottom: 2px;
+    right: 40px;
     z-index: 2; /* 이벤트 슬라이드 오토버튼 */
 }
 /* 슬라이드 이동버튼 */
