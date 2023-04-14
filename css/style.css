@@ -195,7 +195,7 @@ article.w1440{
     justify-content: space-around;
 }
 .lnb_btn label:last-child{
-    border-radius: 0 0 16px 16px;
+    border-radius: 0 0 0 16px;
 }
 .lnb_btn input:checked + label{background-color: #F6F6F6;}
 /* 버튼 */
