@@ -222,7 +222,6 @@ html {
 /* footer */
 /* ========================== */
 footer{
-    padding: 0 30px 0;
     /* 폰트 설정 */
     line-height: 180%;
     font-weight: 600;
@@ -318,9 +317,6 @@ footer{
     content: "|";
     padding-left: 10px;
     margin-right: 10px;
-}
-.fnb ul {
-    margin-bottom: 10px;
 }
 
 /* .last_footer */

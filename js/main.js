@@ -66,9 +66,12 @@ $(".playAni").css("animation-duration", `${result}s`);
 
 // -----------------------
 // 기존 차트 슬라이드 복붙
+
 let chartChild = $(".chartSlider_wrap").children().eq(0).clone();
 // JS에서는 prepend로 해도 문제가 없었는데 JQ에서 요소가 겹치는 문제가 발생해서 수정
 chartChild.appendTo(".chartSlider_wrap");
+
+// $(".chartSlider").eq(-1).css("left",`${width2}`);
 // -----------------------
 // 차트 슬라이드 조작 버튼
 const CLASS_START = "bx-start";

@@ -240,27 +240,28 @@ article.w1440{
 }
 /* -------------- */
 /* 차트 슬라이더 */
-.chart_wrap{
-    width: 100%;
+.chart_containner{
     margin-top: 16px;
     /* 플랙스 */
     display: flex;
     align-items: center;
 }
-.chartSlider_wrap{
+.chart_wrap{
     width: 100%;
+    height: 20px;
     overflow:hidden;
-    cursor: pointer;
-    /* 플랙스 */
-    display: flex;
+    position: relative;
 }
-.chartSlider{
-    height: 46px;
+.chartSlider_wrap{
+    cursor: pointer;
+    position: absolute;
     /* 플랙스 */
     display: flex;
-    align-items: center;
     white-space: nowrap;
-    background-color: rgb(255 255 255 / 0%);
+}
+.chartSlider > a{
+    display: inline-block;
+    margin-right: 32px;
 }
 /* ----------------------- */
 /* 차트 슬라이더 버튼 */
@@ -279,7 +280,6 @@ article.w1440{
     padding: 0 5px;
 }
 .chartSlider dl dd:last-child{
-    margin-right: 40px;
     color: #ED3788;
 }
 .chartSlider dl > *:last-child::before{
@@ -297,10 +297,9 @@ article.w1440{
 /* 애니메이션 재생 */
 .playAni{
     /* 애니메이션 */
-    animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s;
+    animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s 0.5s;
     /* 무한 반복 애니메이션 */
     animation-iteration-count: infinite;
-    box-shadow: inset 0 0 20px 0 rgb(255 255 255 / 100%);
 }
 /* 호버시, 버튼 클릭시 애니메이션 정지 */
 .chart_wrap .bx-start + .chartSlider_wrap .chartSlider, 
