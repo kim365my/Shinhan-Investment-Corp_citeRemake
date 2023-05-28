@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="JGM" />
+    <meta name="description" content="중꺾마 신한투자증권 리뉴얼" />
+    <title>신한투자증권</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="shortcut icon" href="./images/favicon/fav32.png" />
+    <link
+      rel="apple-touch-icon=precomposed"
+      href="./images/favicon/fav180.png"
+    />
+    <!-- 기본 코딩 JS 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="./js/main/keyframes.min.js"></script>
+
+    <!-- 그래프 JS -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <!-- 기본 코딩 CSS 파일 -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="./css/join.css" />
+
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+      <header class="header w1440"></header>
+      <!-- /Header -->
+
+      <!-- Main -->
+      <main role="main">
+        <section class="extra_bar">
+          <div class="extra_bar_cover w1440">
+            <ul>
+              <li><a>홈</a></li>
+              <li><a>ID등록</a></li>
+              <li>
+                  <a href="#"><img src="./images/login/deptharrow.png" alt="depth arrow" /></a>
+              </li>
+            </ul>
+            <div class="bar_right">
+              <a href="#"
+                ><img src="./images/login/print.png" alt="프린트"
+              />
+              <a href="#"><img src="./images/login/star.png" alt="찜" /></a>
+              <a href="#"
+                ><img src="./images/login/minus.png" alt="마이너스"
+              /></a>
+              <p><span>100</span>&nbsp;%</p>
+              <a href="#"><img src="./images/login/plus.png" alt="플러스" /></a>
+            </div>
+          </div>
+        </section>
+        <section class="contents w1440">
+          <h2>ID등록</h2>
+          <p>신규 고객 온라인 이용 가이드</p>
+          <section class="guide">
+            <div class="guide_none">
+              <a href="#">
+                <img src="./images/join/create_account.png" alt="계좌개설" />
+                <p>계좌개설</p>
+              </a>
+            </div>
+            <div class="guide_selected">
+              <a href="#">
+                <img src="./images/join/id.png" alt="ID등록" />
+                <p>ID등록</p>
+              </a>
+            </div>
+            <div class="guide_none">
+              <a href="#">
+                <img src="./images/join/connect.png" alt="계좌연결" />
+                <p>ID에 계좌연결</p>
+              </a>
+            </div>
+            <div class="guide_none">
+              <a href="#">
+                <img src="./images/join/certificate.png" alt="공동인증서" />
+                <p>공동인증서</p>
+              </a>
+            </div>
+            <div class="guide_none">
+              <a href="#">
+                <img src="./images/join/download.png" alt="프로그램 다운로드" />
+                <p>프로그램 다운로드</p>
+              </a>
+            </div>
+            <div class="guide_none">
+              <a href="#">
+                <img src="./images/join/start.png" alt="거래시작" />
+                <p>거래시작</p>
+              </a>
+            </div>
+          </section>
+          <div class="join_method">
+            <button class="button_no_bb">개인(내국인, 개인형IRP)</button>
+            <a href="#"><button class="button_bb">법인</button></a>
+            <a href="#"><button class="button_bb">외국인(재외국민)</button></a>
+            <a href="#"
+              ><button class="button_bb">퇴직연금 (DC/기업형IRP)</button></a
+            >
+          </div>
+          <form action="#">
+            <fieldset>
+              <legend>본인정보 확인</legend>
+              <table>
+                <colgroup>
+                  <col style="width: 288px" />
+                  <col style="width: 1152px" />
+                </colgroup>
+                <tr class="no_bl no_br">
+                  <th>계좌번호</th>
+                  <td class="no_br">
+                    <input
+                      type="number"
+                      name="accountNumberOne"
+                      id="accountNumberOne"
+                      required
+                    />
+                    <input
+                      type="number"
+                      name="accountNumberTwo"
+                      id="accountNumberTwo"
+                      required
+                    />
+                    <p>
+                      <img
+                        src="./images/join/mark.png"
+                        alt="마크"
+                      />온라인거래(HTS)를 이용하고자 하는 종합계좌번호 앞 8자리
+                      입력
+                    </p>
+                  </td>
+                </tr>
+                <tr class="no_bl no_br">
+                  <th>계좌 비밀번호</th>
+                  <td class="no_br">
+                    <input
+                      type="password"
+                      name="passwordNumber"
+                      id="passwordNumber"
+                      required
+                    />
+                    <p>
+                      <img src="./images/join/mark.png" alt="마크" />5회이상
+                      오류 입력시 이용제한
+                    </p>
+                  </td>
+                </tr>
+                <tr class="no_bl no_br">
+                  <th>생년월일</th>
+                  <td class="no_br">
+                    <input
+                      type="number"
+                      name="birthNumber"
+                      id="birthNumber"
+                      required
+                    />
+                    <p>
+                      <img src="./images/join/mark.png" alt="마크" />실명번호 앞
+                      6자리
+                    </p>
+                  </td>
+                </tr>
+              </table>
+              <div class="next_btn_cover">
+                <input type="submit" value="다음" />
+              </div>
+            </fieldset>
+          </form>
+
+          <section class="notice">
+            <h5>
+              <img src="./images/join/information.png" alt="유의사항" />유의사항
+            </h5>
+            <p>
+              · 당사 계좌를 개설하였거나 보유하신 고객께서는
+              <span>
+                온라인 거래(HTS)를 이용하고자 하는 계좌번호와 계좌비밀번호를
+                입력하여 ID 등록을 진행하시기 바랍니다.</span
+              >
+              <br />
+              (단, 계좌비밀번호 5회 이상 오류 입력 시 이용이 제한됩니다.)
+            </p>
+            <p>
+              · 퇴직연금(DC/기업형IRP) 상품 가입 고객중 기존에 당사 계좌를 보유
+              하고 계신 고객(HTS 미신청) 일 경우 HTS 신청 후 개인(내국인, 개인형
+              IRP)로 선택하여 ID를 등록하거나, 기존 계좌를 폐쇄 후 퇴직연 <br />
+              금(DC/기업형IRP)로 ID 등록을 진행하셔야 합니다.
+            </p>
+            <p class="no_mb">
+              · ID, ID비밀번호 등록 후 ID에 계좌가 연결되지 않은 경우, 신규 ID로
+              회원가입 하거나, 기존 ID를 보유한 고객님께서는 기존 ID에 계좌를
+              연결하여 이용하시기 바랍니다.
+            </p>
+          </section>
+          <section class="links">
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./images/join/link.png" alt="링크" />
+                  연관메뉴 바로가기</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  ID에 계좌연결
+                  <img src="./images/join/external_link.png" alt="외부 링크"
+                /></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </main>
+
+      <!-- top버튼  -->
+      <aside>
+        
+      </aside>
+      <!-- /top버튼  -->
+      
+      <!-- Footer -->
+      <footer class="footer w1440"></footer>
+      <!-- /Footer -->
+    </div>
+
+    <!-- 페이지 JS -->
+    <script src="./js/alret.js"></script>
+    <!-- Header, Footer Load JS -->
+    <script src="./js/load.js"></script>
+  </body>
+</html>

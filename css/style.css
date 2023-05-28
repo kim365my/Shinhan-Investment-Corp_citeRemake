@@ -1,7 +1,5 @@
 @charset "utf-8";
-/* component */
-@import url(./component/header.css);
-@import url(./component/footer.css);
+
 /* body font 적용 */
 body{
     font-family: "Pretendard Std Variable", "Pretendard Std", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -10,32 +8,9 @@ body{
     letter-spacing: -0.05em;
     color: #000000;
 }
-/* safe area */
-.w1440{
-    /* (1440/1920)*100 = 75 */
-    width: 1440px;
-    margin: 0 auto;
-}
-/* --------------------- */
 /* em color 클래스 */
 .em{
     color: #0046FF;
-}
-
-/* 경고창 */
-.alert{
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 16px;
-    color: #fff;
-    /* 포지션 */
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 99999; /* 경고창 */
-    /* 로딩시 숨기기 */
-    display: none;
 }
 
 /* ------------------- */
@@ -68,9 +43,9 @@ article.w1440{
     margin-bottom: 40px;
     /* 플랙스 */
     display: flex;
+    justify-content: space-between;
 }
 .mainArticle{
-    margin-right: 66px;
     /* (1256/1720)*100 = 73.0232558139535 */
     width: 73.0232558139535%;
 }
@@ -118,7 +93,8 @@ article.w1440{
 /* 메인 슬라이더 텍스트 스타일 */
 .mainSlider div a span{
     font-weight: 800;
-    font-size: 36px;
+    /* 36/16 = 2.25 */
+    font-size: 2.25rem;
     /* text-shadow: #FFFFFF 0 0 0; */
     /* 포지션 */
     position: absolute;
@@ -127,13 +103,15 @@ article.w1440{
     z-index: 2; /* 박스 슬라이드 텍스트 */
 }
 .mainSlider div a p:first-child{
-    font-size: 20px;
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
 .mainSlider div a p:last-child{
     margin-top: 20px;
-    font-size: 24px;
+    /* 24/16 = 1.5 */
+    font-size: 1.5rem;
     line-height: 1.2;
     opacity: 0.8;
 }
@@ -160,35 +138,33 @@ article.w1440{
 }
 /* 메인 슬라이더 컨트롤 버튼 스타일 */
 .mainArticle .slider_wrap .bx-pager{
-    width: 110px;
     /* 플랙스 */
     display: flex;
     align-items: center;
 }
 .mainArticle .slider_wrap .bx-pager div{
+    margin-right: 10px;
+    overflow: hidden;
+}
+.mainArticle .slider_wrap .bx-pager div a{
+    display: block;
     width: 15px;
     height: 15px;
     border-radius: 100%;
     background-color: #CCCCCC;
-    margin-right: 10px;
+    line-height: 45px;
+    box-shadow: 0 0 20px 0 rgb(255 255 255 / 0%);
     /* transition */
     transition: all 0.3s;
-    overflow: hidden;
 }
-.mainArticle .slider_wrap .bx-pager div:hover{
+.mainArticle .slider_wrap .bx-pager div:hover a{
     background-color: #999999;
 }
-.mainArticle .slider_wrap .bx-pager div:has(a.active){
+.mainArticle .slider_wrap .bx-pager div a.active{
     width: 50px;
     border-radius: 16px;
     background-color: #097DF3;
 }
-.mainArticle .slider_wrap .bx-pager div a{
-    display: block;
-    /* 텍스트 숨기기 */
-    line-height: 45px;
-}
-
 
 /* -------------- */
 .lnbWrap{
@@ -199,10 +175,17 @@ article.w1440{
     display: flex;
     align-items: center;
 }
+
+.lnb_btn{
+    /* (212/600)*100 = 35.333333333333336 */
+    width: 35.333333333333336%;
+    max-width: 212px;
+    height: 100%;
+}
 .lnb_btn label{
     display: block;
-    width: 212px;
-    height: 80px;
+    width: 100%;
+    height: 50%;
     cursor: pointer;
     background-color: #E7E7E7;
     /* 플랙스 */
@@ -315,6 +298,7 @@ article.w1440{
     animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s;
     /* 무한 반복 애니메이션 */
     animation-iteration-count: infinite;
+    box-shadow: inset 0 0 20px 0 rgb(255 255 255 / 0%);
 }
 /* 호버시, 버튼 클릭시 애니메이션 정지 */
 .chart_wrap .bx-start + .chartSlider_wrap .chartSlider, 
@@ -322,14 +306,19 @@ article.w1440{
     animation-play-state: paused;
 }
 @keyframes chart_slider_ani {
-    from { transform: translateX(0) }
-    to { transform: translateX(-100%) }
+    from { transform:translate3d(0) }
+    to { transform: translate3d(-100%, 0,0) }
 }
 
 /* ----------------------- */
 /* snb_content */
+.snbArticle{
+    /* (398/1720)*100 = 23.13953488372093 */
+    width: 24%;
+}
 .snbArticle h2{
-    font-size: 30px;
+    /* 30/16 = 1.875 */
+    font-size: 1.875rem;
     font-weight: 500;
     line-height: 1.5;
     margin-bottom: 15px;
@@ -337,17 +326,22 @@ article.w1440{
 .snbArticle h2 strong{
     font-weight: 600;
 }
-.snbArticle input{
+.snbArticle label{
     width: 100%;
     border: 1px solid #0046FF;
     border-radius: 8px;
-    padding: 10px 30px;
+    padding: 10px 16px 10px 24px;
     box-shadow: 0 4px 3px 0 #D9D9D9;
+    /* flex */
+    display: flex;
+}
+.snbArticle label button[type="submit"]{
+    cursor: pointer;
 }
 .snbArticle h3{
     margin-top: 48px;
     margin-bottom: 24px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 /* 이벤트 슬라이드 배너 */
@@ -388,20 +382,20 @@ article.w1440{
 .snbArticle .bx-controls-direction a:first-child{left: 0;}
 .snbArticle .bx-controls-direction a:last-child{right: 0;}
 
-/* 슬라이드 텍스트 오른쪽 상단위로 */
+/* 슬라이드 텍스트 오른쪽 상단하단으로 변경 */
 .snbArticle .bx-pager{
     /* 포지션 */
     position: absolute;
-    top: 13px;
-    right: 51px;
+    bottom: 10px;
+    right: 40px;
     z-index: 2; /* 이벤트 슬라이드 인덱스번호 */
 }
 /* 슬라이드 오토버튼 위치이동 */
 .snbArticle .bx-controls-auto{
     /* 포지션 */
     position: absolute;
-    top: 10px;
-    right: 15px;
+    bottom: 10px;
+    right: 10px;
     z-index: 2; /* 이벤트 슬라이드 오토버튼 */
 }
 /* 슬라이드 이동버튼 */
@@ -414,6 +408,14 @@ article.w1440{
     font-family: "FontAwesome";
 }
 
+#snbArticle_03 h3{
+    display: flex;
+    justify-content: space-between;
+}
+#snbArticle_03 h3 a{
+    font-size: 0.875rem;
+    font-weight: 400;
+}
 
 .snbArticle .notice a{
     padding: 12px 0;
@@ -425,14 +427,20 @@ article.w1440{
 .snbArticle .notice a:first-child{
     border-top: 1px solid #E4E5E8;
 }
+.snbArticle .notice a span{
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.snbArticle .notice a span::after{
+    content: "...";
+}
 /* ================= */
 /* main */
 /* ================= */
 main{
     padding-bottom: 120px;
 }
-
-
 #content1{
     height: 396px;
     background-color: #EEF1F9;
@@ -444,7 +452,7 @@ main{
 #content1 h2{
     padding-top: 77px;
     margin-bottom: 74px;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 600;
     line-height: 1.1;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
@@ -452,23 +460,21 @@ main{
 #content1  .card_wrap{
     /* 플랙스 */
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 #content1 .card{
     /* (335/1440)*100 = 23.26388888888889 */
     width: 23.26388888888889%;
 }
 #content1  .card a{
+    display: block;
     height: 319px;
     border-radius: 16px;
     background-color: #fff;
-    box-shadow: 0 0 2px 0 #fff;
-
-    /* 플랙스 */
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 0 6px 0 #EEF1F9;
+    padding: 20px;
+    padding-top: 64px;
 }
 #content1  .card >  a > span{
     width: 80px;
@@ -479,12 +485,14 @@ main{
     vertical-align: middle;
 }
 #content1  .card >  a > h3{
-    font-size: 24px;
+    /* 24/16 = 1.5 */
+    font-size: 1.5rem;
     margin-top: 36px;
     margin-bottom: 12px;
 }
 #content1  .card >  a > p{
     color: #999999;
+    line-height: 1.5;
 }
 /* -------------------------- */
 /* content2 */
@@ -494,22 +502,35 @@ main{
     /* 플랙스 */
     display: flex;
 }
-#stock_graph {
-  border-radius: 16px;
-}
 .chartGraph{
     /* (1020/1440)*100 = 70.83333333333334 */
     width: 70.83333333333334%;
     height: 100%;
     margin-right: 40px;
 }
+#stock_graph {
+    border-radius: 16px;
+    background: linear-gradient(#001a44, #6f6b9f);   
+}
+
+#stock_graph .highcharts-grid-line{
+    stroke: #687aa5;
+}
+#stock_graph .highcharts-point{
+    fill: #ED3738;
+    stroke: #ED3738;
+}
+#stock_graph .highcharts-point-down{
+    fill: #0046FF;
+    stroke: #0046FF;
+}
 /* ----------- */
 #content2 .right{
     width: 29.166666666666657%;
 }
-
 #content2 h2{
-    font-size: 20px;
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -524,7 +545,8 @@ main{
     padding: 30px;
 }
 #content2 .reward p{
-    font-size: 20px;
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem;
     margin-bottom: 30px;
 }
 #content2 .reward p .em{
@@ -565,14 +587,16 @@ main{
     justify-content: space-between;
 }
 #content3 h2{
-    font-size: 20px;
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
 #content3 h2 a{
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     font-weight: 400;
     margin-right: 25px;
 }
@@ -589,7 +613,8 @@ main{
 }
 #content3 th{
     color: #3C3C3C;
-    font-size: 14px;
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
     padding: 7px;
     border-top:1px solid #CCCCCC;
     border-bottom:1px solid #E4E5E8;
@@ -599,6 +624,11 @@ main{
     font-weight: 500;
     padding: 10px;
     border-bottom:1px solid #E4E5E8;
+}
+#content3 td a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 #content3 td a:hover{
     color: #0046FF;
@@ -646,7 +676,8 @@ main{
     justify-content: space-between;
 }
 .banner h2{
-    font-size: 26px;
+    /* 26/16 = 1.625 */
+    font-size: 1.625rem;
     font-weight: 700;
     line-height: 1.5;
 }
@@ -658,7 +689,8 @@ main{
 .bannerLink{
     display: inline-block;
     padding: 11px 60px;
-    font-size: 20px;
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem;
     border: 1px solid #fff;
     border-radius: 30px; 
 }

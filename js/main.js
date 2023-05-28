@@ -4,7 +4,7 @@
 // 메인 슬라이드
 $("#slider_banner_main").bxSlider({
     // 슬라이드간의 마진
-    slideMargin:1,
+    slideMargin:0,
     // 오토슬라이드
     auto: true,
     autoControls: true,
@@ -21,7 +21,7 @@ $("#slider_banner_main").bxSlider({
 // 이벤트 슬라이드
 $("#slider_banner_area").bxSlider({
     // 슬라이드간의 마진
-    slideMargin:1,
+    slideMargin:0,
     // 오토슬라이드
     auto: true,
     autoControls: true,

@@ -1,0 +1,64 @@
+html, 
+body{
+    font-size: 14px;
+}
+.w1440{
+    width: 1200px;
+}
+/* ------------------- */
+/* 메인 스타일 */
+/* ------------------- */
+.mainSlider div a {
+    height: 500px;
+}
+
+#content1 h2 {
+    padding-top: 106px;
+}
+.snbArticle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.snbArticle h3 {
+    margin-top: 0;
+}
+
+.mainSlider #item02 img {
+    object-fit:contain;
+    top: 90px;
+    left: 280px;
+}
+#content1 .card_wrap {
+    justify-content: space-between;
+}
+#content1 .card {
+    width: 24%;
+}
+
+#content2 .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chartGraph {
+    margin-right: 24px;
+}
+
+/* ------------------- */
+/* 펀드투자 스타일 */
+/* ------------------- */
+.title {
+    margin-top: 48px;
+}
+.title article {
+    align-items: center;
+    justify-content: center;
+}
+.title article img {
+    margin: 0 10px 0 -10px;
+}
+.title article p {
+    line-height: normal;
+}

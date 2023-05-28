@@ -1,62 +1,190 @@
-#top_select_menu{
-    background-color: #FAFBFB;
-    border: 1px solid #E4E5E8;
-    margin-bottom: 50px;
+@charset "utf-8";
+
+/* Wrap */
+#wrap {
+    padding: 40px 0 60px 0;
 }
-#top_select_menu > div{
-    line-height: 2.5;
-    /* 플랙스 */
+
+/* Extra Bar */
+.extra_bar {
+    border-top: 1px solid #e4e5e8;
+    border-bottom: 1px solid #e4e5e8;
+    margin-bottom: 72px;
+    padding: 9px 0;
+}
+
+.extra_bar_cover {
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.extra_bar_cover ul li {
+    display: inline-block;
+}
+.extra_bar_cover ul li:first-child::after {
+    content: url('../images/login/rightArrow.png');
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+.extra_bar_cover li button {
+    margin-left: 8px;
+    cursor: pointer;
+}
+.bar_right {
+    /* 플렉스 */
+    display: flex;
+}
+.bar_right *:not(:last-child) {
+    margin-right: 10px;
+}
+.bar_right img {
+    cursor: pointer;
+}
+
+/* Contents */
+.contents h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 64px;
+}
+
+.login_method {
+    font-size: 0;
+    margin-bottom: 88px;
+}
+
+.login_method button {
+    width: calc(100%/3);
+    height: 68px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+.button_bb {
+    border-bottom: 2px solid #1a89da;
+    background-color: #f3f5fa;
+    cursor: pointer;
+}
+
+.button_no_bb {
+    font-weight: 600 !important;
+    color: #1a89da !important;
+    border: 2px solid #1a89da;
+    border-bottom: 0 !important;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+fieldset {
+    text-align: center;
+}
+fieldset legend {
+    /* 20/16 = 1.25 */
+    font-size: 1.25rem;
+    color: #000;
+    margin-bottom: 48px;
+}
+.login_info {
+    /* 플렉스 */
+    display: flex;
+    justify-content: center;
+}
+.login_input input {
+    width: 320px;
+    height: 50px;
+    border: 2px solid #e4e5e8;
+    border-radius: 8px;
+    padding-left: 12px;
+    display: block;
+}
+.login_input input {
+    margin-bottom: 8px;
+}
+.login_info input[type="submit"] {
+    width: 160px;
+    height: 108px;
+    font-size: 16px;
+    background: #1a89da;
+    border-radius: 8px;
+    color: #fff;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.login_checkboxes {
+    width: 488px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e4e5e8;
+    padding-bottom: 16px;
+    margin-bottom: 26px;
+    /* 플렉스 */
     display: flex;
     justify-content: space-between;
 }
-.loginTitle{
-    font-size: 36px;
-    font-weight: 600;
-    line-height: 1.5;
-    margin-bottom: 15px;
+.login_checkboxes input {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
 }
-
-.loginBtn{
-    /* 플랙스 */
+.login_checkboxes label {
+    /* 플렉스 */
     display: flex;
+    align-items: center;
 }
-.loginBtn li{
-    width: 100%;
-    background-color: #F6F6F6;
+.login_checkboxes label:last-child {
+    /* 14/16 = 0.875 */
+    font-size: 0.875rem;
+    color: #666;
 }
-.loginBtn li a{
-    display: inline-block;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 2px solid #0046FF;
-    font-weight: 600;
-    color: #999999;
+.login_checkboxes label:last-child img {
+    margin-left: 19px;
+    cursor: pointer;
 }
-
-.loginBtn li.cheack a{
-    border-radius: 16px 16px 0 0;
-    background-color: #FFFFFF;
-    border: 2px solid #0046FF;
-    border-bottom: none;
-    color: #0046FF;
-}
-
-.loginItemWrap .item{
-    padding-top: 20px;
-    /* 플랙스 */
+.login_list ul {
+    margin: 0 auto;
+    /* 플렉스 */
     display: flex;
     justify-content: center;
-    text-align: center;
+}
+.login_list ul li:not(:last-child)::after {
+    content: "|";
+    display: inline-block;
+    font-size: 15px;
+    color: #e4e5e8;
+    margin: 0 20px;
+}
+.contents_bottom {
+    margin-top: 54px;
+    border-top: 1px solid #ccc;
+    padding-top: 17px;
+    /* 플렉스 */
+    display: flex;
+    justify-content: space-between;
+}
+.contents_bottom_text h5 {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 16px;
+}
+.contents_bottom p {
+    color: #666;
+    margin-bottom: 170px;
 }
 
-/* label 숨기기 */
-.loginItemWrap .item label{
-    display: none;
-}
-fieldset:has(.itemIDPASS){
+.logout {
+    margin-top: 8px;
+    /* 플렉스 */
     display: flex;
 }
-.itemIDPASS input{
-    border: 1px solid #E4E5E8;
+.logout p {
+    color: #000;
+}
+.logout select {
+    width: 74px;
+    height: 19px;
+    border: none;
+    margin-left: 80px;
+    cursor: pointer;
 }
