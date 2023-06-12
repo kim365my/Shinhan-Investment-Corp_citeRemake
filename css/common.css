@@ -13,6 +13,8 @@ html {
 #wrap{
     /* background-color: #FAFBFB; */
     padding: 40px 0 60px;
+    /* 포지션 */
+    position: relative;
 }
 /* safe area */
 .w1440{
@@ -333,14 +335,14 @@ footer{
 /* Top button / chatBot */
 /* ========================== */
 .aside_button{
-    height: 120px;
-    z-index: 99999;
+    /* 플렉스 */
+    display: flex;
+    flex-flow: column nowrap;
     /* 포지션 */
     position: fixed;
-    /* right: 140px; */
-    right: 7.291666666666667%;
-    transform: translateX(100%);
+    right: 3%;
     bottom: 50px;
+    z-index: 99999;
 }
 .aside_button div{
     width: 50px;
@@ -402,6 +404,7 @@ footer{
 .aside_button .top:hover i {
     color: #fff;
 }
+
 /* ================================= */
 /* modal */
 /* ================================= */
