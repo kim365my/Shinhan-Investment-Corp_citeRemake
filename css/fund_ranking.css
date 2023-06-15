@@ -313,7 +313,6 @@ select:last-child {
     text-align: center;
     width: 150px;
     line-height: 90px;
-    background-color: #fff;
     cursor: pointer;
 }
 .compare_area .compare_btn>span {

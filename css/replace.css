@@ -8,7 +8,7 @@ body{
 /* ------------------- */
 /* 메인 스타일 */
 /* ------------------- */
-.mainSlider div a {
+.swiper-wrapper div a {
     height: 500px;
 }
 
@@ -16,7 +16,7 @@ body{
     padding-top: 106px;
 }
 
-.mainSlider #item02 img {
+.swiper-wrapper #item02 img {
     object-fit:contain;
     top: 90px;
     left: 280px;

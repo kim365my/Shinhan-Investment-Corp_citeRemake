@@ -18,7 +18,7 @@
     .mainArticle{
         width: 70%;
     }
-    .mainSlider div a{
+    .swiper-wrapper div a{
         height: 50vh;
     }
     /* ================================= */
@@ -67,7 +67,7 @@
         /* (335/768)*100 = 43.61979166666667 */
         width: 43.61979166666667%;
     }
-    .mainSlider img {
+    .swiper-wrapper img {
         max-width: none;
         width: auto;
     }

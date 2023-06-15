@@ -224,6 +224,7 @@ html {
 /* footer */
 /* ========================== */
 footer{
+    padding: 0 30px;
     /* 폰트 설정 */
     line-height: 180%;
     font-weight: 600;

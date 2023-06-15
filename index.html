@@ -24,10 +24,8 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/prefixfree.min.js"></script>
-    <!-- 제이쿼리 플러그인 -->
-    <!-- <script src="./js/jquery-ui.min.js"></script> -->
-    <script src="./js/jquery.bxslider.js"></script>
-    <!-- <script src="./js/jquery.scrollTo.min.js"></script> -->
+    <!-- 박스슬라이더 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- 그래프 JS -->
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/data.js"></script>
@@ -51,9 +49,9 @@
         <article class="w1440">
             <!-- 슬라이드 콘텐츠 -->
             <div class="mainArticle">
-                <div class="slider_wrap">
-                    <div id="slider_banner_main" class="mainSlider">
-                        <div id="item01">
+                <div class="swiper mySwiper">
+                    <div id="slider_banner_main" class="swiper-wrapper">
+                        <div id="item01" class="swiper-slide">
                             <a href="#">
                                 <span>
                                     <p class="em">Grand Open</p>
@@ -66,7 +64,7 @@
                                 <img src="./images/main/slide01.png" alt="">
                             </a>
                         </div>
-                        <div id="item02">
+                        <div id="item02" class="swiper-slide">
                             <a href="#">
                                 <span>
                                     <p>HOT ISSUE 상품</p>
@@ -80,7 +78,7 @@
                                 <img src="./images/main/slide02.png" alt="">
                             </a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="#">
                                 <span>
                                     <p class="em">주식전략/시황</p>
@@ -96,6 +94,7 @@
                             </a>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
                 <div class="lnbWrap">
                     <div class="lnb_btn">
@@ -315,22 +314,27 @@
 
                 <section id="snbArticle_02">
                     <h3>이벤트</h3>
-                    <div id="slider_banner_area" class="area">
-                        <div>
-                            <a href="#">
-                                <img src="./images/main/event01.jpg" alt="">
-                            </a>
+                    <div id="slider_banner_area" class="swiper subSwiper area">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/main/event01.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="bgGray">
+                                    <img src="./images/main/event02.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/main/event03.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <a href="#">
-                                <img src="./images/main/event02.jpg" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="./images/main/event03.jpg" alt="">
-                            </a>
-                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="subSwiper-pagination"></div>
                     </div>
                 </section>
 
@@ -636,8 +640,8 @@
             </section>
             
             <!-- banner -->
-            <div id="banner_wapper">
-                <div class="banner w1440">
+            <div id="banner_wapper" class="w1440">
+                <div class="banner">
                     <h2>
                         공모주 청약, 한번에 신청하세요!
                         <p>
@@ -662,6 +666,8 @@
         <!-- /TOP 버튼 -->
     </div>
 </body>
+<!-- 박스 슬라이드 플러그인 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <!-- Header, Footer Load JS -->
 <script src="./js/load.js"></script>
 <!-- 미구현 기능 클릭시 안내문 -->

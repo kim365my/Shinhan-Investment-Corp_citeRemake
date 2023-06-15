@@ -15,6 +15,7 @@
 }
 
 .extra_bar_cover {
+  padding: 0 30px;
   /* 플렉스 */
   display: flex;
   justify-content: space-between;
@@ -42,7 +43,9 @@
 .bar_right a img {
   cursor: pointer;
 }
-
+.contents {
+  padding: 0 30px;
+}
 .contents h2 {
   font-size: 40px;
   font-weight: 600;
@@ -92,6 +95,7 @@ legend {
   font-size: 0;
 }
 .join_method button {
+  width: 25%;
   height: 78px;
   font-size: 16px;
   margin-bottom: 48px;
@@ -112,18 +116,7 @@ legend {
   border-radius: 10px 10px 0 0;
   cursor: pointer;
 }
-.join_method button:nth-child(1) {
-  width: 412px;
-}
-.join_method a:nth-child(2) button {
-  width: 256px;
-}
-.join_method a:nth-child(3) button {
-  width: 372px;
-}
-.join_method a:nth-child(4) button {
-  width: 400px;
-}
+
 
 .contents table {
   margin-top: 33px;

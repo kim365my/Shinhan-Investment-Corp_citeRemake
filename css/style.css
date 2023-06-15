@@ -40,7 +40,7 @@ body{
 /* ================= */
 article.w1440{
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 86px;
     padding: 0 30px 0;
     /* 플랙스 */
     display: flex;
@@ -51,19 +51,22 @@ article.w1440{
     width: 73.0232558139535%;
 }
 
-/* 박스 슬라이드 이미지 */
-.mainSlider div a{
-    height: 600px;
-    display: block;
-    border-radius: 16px 16px 0 0;
+/* 박스 슬라이더 커스텀 작업 */
+.swiper{
     background-color: #ebf3fc;
-    /* 포지션 기준값 */
-    position: relative;
-    z-index: 100; /* 박스 슬라이드 이미지의 앵커태그 */
+    border-radius: 16px 16px 0 0;
     overflow: hidden;
+    /* 포지션 */
+    position: relative;
 }
-
-.mainSlider img{
+.mainArticle .swiper-slide{
+    height: 500px;
+    overflow: hidden;
+    /* 포지션 */
+    position: relative;
+}
+/* 박스 슬라이드 이미지 */
+.swiper-wrapper img{
     max-width: 100%;
     width: 100%;
     height: 100%;
@@ -75,24 +78,24 @@ article.w1440{
     right: 0;
     z-index: 1; /* 박스 슬라이드 이미지 */
 }
-.mainSlider #item01 img{
+.swiper-wrapper #item01 img{
     max-width:fit-content;
     width: fit-content;
     top: 193px;
     left: -60px;
 }
 
-.mainSlider #item02 img{
+.swiper-wrapper #item02 img{
     object-fit:none;
     top: 90px;
     left: 320px;
 }
-.mainSlider #item02 a{
+.swiper-wrapper #item02 a{
     background-color: #D9D9D9;
 }
 
 /* 메인 슬라이더 텍스트 스타일 */
-.mainSlider div a span{
+.swiper-wrapper div a span{
     font-weight: 800;
     /* 36/16 = 2.25 */
     font-size: 2.25rem;
@@ -103,13 +106,13 @@ article.w1440{
     left: 8%;
     z-index: 2; /* 박스 슬라이드 텍스트 */
 }
-.mainSlider div a p:first-child{
+.swiper-wrapper div a p:first-child{
     /* 20/16 = 1.25 */
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.mainSlider div a p:last-child{
+.swiper-wrapper div a p:last-child{
     margin-top: 20px;
     /* 24/16 = 1.5 */
     font-size: 1.5rem;
@@ -122,46 +125,23 @@ article.w1440{
     /* 포지션 기준값 */
     position: relative;
 }
-.mainArticle .slider_wrap .bx-controls{
-    padding: 10px;
-    /* 플랙스 */
-    display: flex;
-    flex-flow: row-reverse;
-    /* justify-content: space-between; */
-    /* 포지션 */
-    position: absolute;
-    left: 30px;
-    bottom: 20px;
-    z-index: 101; /* 박스 슬라이드 컨트롤 */
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+    width: auto;
+    margin-left: 35px;
+    margin-bottom: 20px;
 }
-.mainArticle .slider_wrap .bx-controls-direction{
-    display: none;
-}
-/* 메인 슬라이더 컨트롤 버튼 스타일 */
-.mainArticle .slider_wrap .bx-pager{
-    /* 플랙스 */
-    display: flex;
-    align-items: center;
-}
-.mainArticle .slider_wrap .bx-pager div{
-    margin-right: 10px;
-    overflow: hidden;
-}
-.mainArticle .slider_wrap .bx-pager div a{
-    display: block;
+
+.mainArticle .swiper-pagination-bullet{
     width: 15px;
     height: 15px;
     border-radius: 100%;
-    background-color: #CCCCCC;
     line-height: 45px;
-    box-shadow: 0 0 20px 0 rgb(255 255 255 / 0%);
     /* transition */
     transition: all 0.3s;
 }
-.mainArticle .slider_wrap .bx-pager div:hover a{
-    background-color: #999999;
-}
-.mainArticle .slider_wrap .bx-pager div a.active{
+
+.mainArticle .swiper-pagination-bullet-active{
     width: 50px;
     border-radius: 16px;
     background-color: #097DF3;
@@ -250,14 +230,17 @@ article.w1440{
     width: 100%;
     height: 20px;
     overflow:hidden;
+    /* 포지션 */
     position: relative;
 }
 .chartSlider_wrap{
     cursor: pointer;
+    /* 포지션 */
     position: absolute;
-    /* 플랙스 */
-    display: flex;
     white-space: nowrap;
+}
+.chartSlider {
+    display: inline-block;
 }
 .chartSlider > a{
     display: inline-block;
@@ -265,7 +248,7 @@ article.w1440{
 }
 /* ----------------------- */
 /* 차트 슬라이더 버튼 */
-.chart_wrap #chart_btn{
+.chart_containner #chart_btn{
     width: 30px;
     cursor: pointer;
 }
@@ -297,12 +280,12 @@ article.w1440{
 /* 애니메이션 재생 */
 .playAni{
     /* 애니메이션 */
-    animation: chart_slider_ani cubic-bezier(0,0,0,0) 25s 0.5s;
+    animation: chart_slider_ani cubic-bezier(0,0,0,0) 0s 0.5s;
     /* 무한 반복 애니메이션 */
     animation-iteration-count: infinite;
 }
 /* 호버시, 버튼 클릭시 애니메이션 정지 */
-.chart_wrap .bx-start + .chartSlider_wrap .chartSlider, 
+.bx-start + .chart_wrap .chartSlider, 
 .chartSlider_wrap:hover .chartSlider{
     animation-play-state: paused;
 }
@@ -362,7 +345,7 @@ article.w1440{
     overflow: hidden;
     z-index: 100; /* 이벤트 슬라이드 앵커 태그 */
 }
-.snbArticle .area div:nth-child(3) a{
+.snbArticle .area .bgGray{
     background-color: #818994;
 }
 
@@ -373,27 +356,21 @@ article.w1440{
 }
 /* -------------------- */
 /* 이벤트 박스슬라이드 스타일 */
-.snbArticle .bx-wrapper{
+.snbArticle .swiper{
+    border-radius: 16px;
     /* 포지션 기준값 */
     position: relative;
+    overflow: hidden;
 }
-.snbArticle .bx-controls-direction a{
-    padding: 10px;
-    /* 포지션 */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 101; /* 이벤트 슬라이드 컨트롤 */
-}
-.snbArticle .bx-controls-direction a:first-child{left: 0;}
-.snbArticle .bx-controls-direction a:last-child{right: 0;}
+
 
 /* 슬라이드 텍스트 오른쪽 상단하단으로 변경 */
-.snbArticle .bx-pager{
+.snbArticle .subSwiper-pagination{
+    width: max-content;
     /* 포지션 */
     position: absolute;
     bottom: 5px;
-    right: 20px;
+    left: 230px;
     z-index: 2; /* 이벤트 슬라이드 인덱스번호 */
 }
 /* 슬라이드 오토버튼 위치이동 */
@@ -404,12 +381,15 @@ article.w1440{
     right: 40px;
     z-index: 2; /* 이벤트 슬라이드 오토버튼 */
 }
-/* 슬라이드 이동버튼 */
-.bx-prev::before{
+.swiper-button-prev::after{
+    color: #000;
+    font-size: 16px;
     content: "\f053";
     font-family: "FontAwesome";
 }
-.bx-next::before{
+.swiper-button-next::after{
+    color: #000;
+    font-size: 16px;
     content: "\f054";
     font-family: "FontAwesome";
 }
