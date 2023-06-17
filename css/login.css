@@ -14,7 +14,6 @@
 }
 
 .extra_bar_cover {
-    padding: 0 30px;
     /* 플렉스 */
     display: flex;
     justify-content: space-between;
@@ -45,9 +44,6 @@
 }
 
 /* Contents */
-.contents {
-    padding: 0 30px;
-}
 .contents h2 {
     font-size: 40px;
     font-weight: 600;
