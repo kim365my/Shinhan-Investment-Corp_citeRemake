@@ -498,7 +498,7 @@ main{
     height: 319px;
     border-radius: 16px;
     background-color: #fff;
-    box-shadow: 0 0 10px 0 #EEF1F9;
+    box-shadow: 0 0 10px 5px #EEF1F9;
     padding: 15px;
     padding-top: 64px;
 }
