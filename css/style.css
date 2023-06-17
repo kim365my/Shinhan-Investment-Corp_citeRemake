@@ -699,9 +699,7 @@ main{
 /* -------------------------- */
 /* banner */
 /* -------------------------- */
-#banner_wapper{
-    padding: 0 30px 0;
-}
+
 .banner{
     height: 180px;
     color: #fff;

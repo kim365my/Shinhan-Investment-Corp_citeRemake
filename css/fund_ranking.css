@@ -15,7 +15,7 @@ h1.title{
     /* 포지션 */
     position: absolute;
     top: 45px;
-    left: 500px;
+    left: 260px
 }
 main{
     margin-top: 20px;
@@ -161,7 +161,6 @@ main{
     font-weight: 300;
     /* 14/16 = 0.875 */
     font-size: 0.875rem;
-    text-align: center;
 }
 .slide .taskBtn div{
     display: inline-block;
