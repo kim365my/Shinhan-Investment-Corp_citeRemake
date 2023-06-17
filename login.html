@@ -1,163 +1,138 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="JGM" />
-    <meta name="description" content="중꺾마 신한투자증권 리뉴얼" />
-    <title>신한투자증권</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="shortcut icon" href="./images/favicon/fav32.png" />
-    <link
-      rel="apple-touch-icon=precomposed"
-      href="./images/favicon/fav180.png"
-    />
-    <!-- 기본 코딩 JS 파일 -->
-    <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/prefixfree.min.js"></script>
-    <script src="./js/main/keyframes.min.js"></script>
 
-    <!-- 그래프 JS -->
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="JGM" />
+  <meta name="description" content="중꺾마 신한투자증권 리뉴얼" />
+  <title>신한투자증권</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" href="./images/favicon/fav32.png" />
+  <link rel="apple-touch-icon=precomposed" href="./images/favicon/fav180.png" />
+  <!-- 기본 코딩 JS 파일 -->
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/prefixfree.min.js"></script>
+  <script src="./js/main/keyframes.min.js"></script>
 
-    <!-- 기본 코딩 CSS 파일 -->
-    <link rel="stylesheet" href="./css/common.css" />
-    <!-- 페이지 CSS -->
-    <link rel="stylesheet" href="./css/login.css" />
-  </head>
-  <body>
-    <div id="wrap">
-      <!-- Header -->
-      <header class="header w1260"></header>
-      <!-- /Header -->
+  <!-- 그래프 JS -->
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-      <!-- Main -->
-      <main role="main">
-        <section class="extra_bar">
-          <div class="extra_bar_cover w1260">
-            <ul>
-              <li><a>홈</a></li>
-              <li><a>로그인</a></li>
-              <li>
-                <button>
-                  <img src="./images/login/deptharrow.png" alt="depth arrow" />
-                </button>
-              </li>
-            </ul>
-            <div class="bar_right">
-              <img src="./images/login/print.png" alt="프린트" />
-              <img src="./images/login/star.png" alt="찜" />
-              <img src="./images/login/minus.png" alt="마이너스" />
-              <p><span>100</span>&nbsp;%</p>
-              <img src="./images/login/plus.png" alt="플러스" />
+  <!-- 기본 코딩 CSS 파일 -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="preload" href="./css/font.css" as="style" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/common.css" />
+  <!-- 페이지 CSS -->
+  <link rel="stylesheet" href="./css/login.css" />
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Header -->
+    <header class="header w1260"></header>
+    <!-- /Header -->
+
+    <!-- Main -->
+    <main role="main">
+      <section class="extra_bar">
+        <div class="extra_bar_cover w1260">
+          <ul>
+            <li><a>홈</a></li>
+            <li><a>로그인</a></li>
+            <li>
+              <button>
+                <img src="./images/login/deptharrow.png" alt="depth arrow" />
+              </button>
+            </li>
+          </ul>
+          <div class="bar_right">
+            <img src="./images/login/print.png" alt="프린트" />
+            <img src="./images/login/star.png" alt="찜" />
+            <img src="./images/login/minus.png" alt="마이너스" />
+            <p><span>100</span>&nbsp;%</p>
+            <img src="./images/login/plus.png" alt="플러스" />
+          </div>
+        </div>
+      </section>
+      <section class="contents w1260">
+        <h2>로그인</h2>
+        <div class="login_method">
+          <a href="#"><button class="button_bb">인증서 로그인</button></a>
+          <a href="#"><button class="button_bb">스마트폰 인증</button></a>
+          <button class="button_no_bb">ID로그인</button>
+        </div>
+        <form action="#" name="login" method="post">
+          <fieldset>
+            <legend>ID로그인 시 조회용 서비스만 이용 가능합니다.</legend>
+            <div class="login_info">
+              <div class="login_input">
+                <input type="text" name="loginId" id="loginId" placeholder="고객(HTS) ID 입력" required />
+                <input type="password" name="loginPass" id="loginPass" placeholder="ID 비밀번호 입력" required />
+              </div>
+              <input type="submit" value="로그인" />
             </div>
+            <div class="login_checkboxes">
+              <label for="remeberId">
+                <input type="checkbox" name="remeberId" id="remeberId" />ID저장
+              </label>
+              <label for="certificatePhone">
+                <input type="checkbox" name="certificatePhone" id="certificatePhone" />
+                휴대폰인증서사용
+                <img src="./images/login/question.png" alt="물음표" />
+              </label>
+            </div>
+          </fieldset>
+        </form>
+        <div class="login_list">
+          <ul>
+            <li><a href="#">ID등록</a></li>
+            <li><a href="#">ID찾기</a></li>
+            <li><a href="#">ID비밀번호 오류해제</a></li>
+            <li><a href="#">ID비밀번호 찾기</a></li>
+          </ul>
+        </div>
+        <section class="contents_bottom">
+          <div class="contents_bottom_text">
+            <h5>한국투자증권 앱에서 ID없이 회원가입 하셨나요?</h5>
+            <p>
+              <a href="#">
+                자동ID변경,HTS / 홈페이지에서 이용 가능한 ID 만들러가기
+                <img src="./images/login/rightArrow.png" alt="오른쪽 화살표" />
+              </a>
+            </p>
+          </div>
+          <div class="logout">
+            <p>자동 로그아웃</p>
+            <select name="logoutTime" id="logoutTime">
+              <option value="30">30분</option>
+              <option value="60">60분</option>
+              <option value="90">90분</option>
+            </select>
           </div>
         </section>
-        <section class="contents w1260">
-          <h2>로그인</h2>
-          <div class="login_method">
-            <a href="#"><button class="button_bb">인증서 로그인</button></a>
-            <a href="#"><button class="button_bb">스마트폰 인증</button></a>
-            <button class="button_no_bb">ID로그인</button>
-          </div>
-          <form action="#" name="login" method="post">
-            <fieldset>
-              <legend>ID로그인 시 조회용 서비스만 이용 가능합니다.</legend>
-              <div class="login_info">
-                <div class="login_input">
-                  <input
-                    type="text"
-                    name="loginId"
-                    id="loginId"
-                    placeholder="고객(HTS) ID 입력"
-                    required
-                  />
-                  <input
-                    type="password"
-                    name="loginPass"
-                    id="loginPass"
-                    placeholder="ID 비밀번호 입력"
-                    required
-                  />
-                </div>
-                <input type="submit" value="로그인" />
-              </div>
-              <div class="login_checkboxes">
-                <label for="remeberId">
-                  <input
-                    type="checkbox"
-                    name="remeberId"
-                    id="remeberId"
-                  />ID저장
-                </label>
-                <label for="certificatePhone">
-                  <input
-                    type="checkbox"
-                    name="certificatePhone"
-                    id="certificatePhone"
-                  />
-                  휴대폰인증서사용
-                  <img src="./images/login/question.png" alt="물음표" />
-                </label>
-              </div>
-            </fieldset>
-          </form>
-          <div class="login_list">
-            <ul>
-              <li><a href="#">ID등록</a></li>
-              <li><a href="#">ID찾기</a></li>
-              <li><a href="#">ID비밀번호 오류해제</a></li>
-              <li><a href="#">ID비밀번호 찾기</a></li>
-            </ul>
-          </div>
-          <section class="contents_bottom">
-            <div class="contents_bottom_text">
-              <h5>한국투자증권 앱에서 ID없이 회원가입 하셨나요?</h5>
-              <p>
-                <a href="#">
-                  자동ID변경,HTS / 홈페이지에서 이용 가능한 ID 만들러가기
-                  <img
-                    src="./images/login/rightArrow.png"
-                    alt="오른쪽 화살표"
-                  />
-                </a>
-              </p>
-            </div>
-            <div class="logout">
-              <p>자동 로그아웃</p>
-              <select name="logoutTime" id="logoutTime">
-                <option value="30">30분</option>
-                <option value="60">60분</option>
-                <option value="90">90분</option>
-              </select>
-            </div>
-          </section>
-        </section>
-      </main>
+      </section>
+    </main>
 
-      <!-- top버튼  -->
-      <aside>
-        
-      </aside>
-      <!-- /top버튼  -->
-      <!-- Footer -->
-      <footer class="footer w1260"></footer>
-      <!-- /Footer -->
-    </div>
+    <!-- top버튼  -->
+    <aside>
 
-    <!-- 페이지 JS -->
-    <script src="./js/alret.js"></script>
-    <!-- Header, Footer Load JS -->
-    <script src="./js/load.js"></script>
-  </body>
+    </aside>
+    <!-- /top버튼  -->
+    <!-- Footer -->
+    <footer class="footer w1260"></footer>
+    <!-- /Footer -->
+  </div>
+
+  <!-- 페이지 JS -->
+  <script src="./js/alret.js"></script>
+  <!-- Header, Footer Load JS -->
+  <script src="./js/load.js"></script>
+</body>
+
 </html>

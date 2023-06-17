@@ -145,7 +145,7 @@ figure {
 }
 
 .blue_btn {
-	background-color: var(--main-color);
+	background-color: #0046ff;
 	color: #fafbfb;
 	border: none;
 }
@@ -280,7 +280,7 @@ input[id="basic_info4"]:checked~.content4 {
 }
 
 .blue {
-	color: var(--main-color);
+	color: #0046ff;
 	position: relative;
 }
 

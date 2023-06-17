@@ -70,7 +70,7 @@ main{
     margin-bottom: 45px;
 }
 .graph h2 span {
-    color: var(--main-color);
+    color: #0046ff;
     font-weight: 600;
 }
 
@@ -169,7 +169,7 @@ main{
     border: var(--border);
 }
 .slide .taskBtn div.join{
-    background-color: var(--main-color);
+    background-color: #0046ff;
     border: none;
     color: #fff;
 }
@@ -208,7 +208,7 @@ main{
 .total_list h2>span {
     font-size: 18px;
     font-weight: 600;
-    color: var(--main-color);
+    color: #0046ff;
     margin-right: 40px;
 }
 #select_arrow {
@@ -302,7 +302,7 @@ select:last-child {
     margin-right: 71px;
 }
 .container_2>p>span {
-    color: var(--main-color);
+    color: #0046ff;
     font-weight: 600;
 }
 .text_box p {
@@ -456,7 +456,7 @@ table input {
     cursor: pointer;
 }
 .td5 button:nth-child(1) {
-    background-color: var(--main-color);
+    background-color: #0046ff;
     border: 1px solid #0046ff;
     color: #fff;
 }

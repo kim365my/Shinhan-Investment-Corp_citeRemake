@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-/* 폰트 CSS && 리셋 CSS */
-@import url(./font.css);
-@import url(./reset.css);
-@import url(./root.css);
-
 /* 공통 CSS */
 html {
     font-family: 'Pretendard', sans-serif;
@@ -261,7 +256,7 @@ footer{
     /* 36/16 = 2.25 */
     font-size: 2.25rem;
     font-weight: 600;
-    color: var(--main-color);
+    color: #0046ff;
 }
 /* footer_csc nav div */
 .footer_csc nav div{
@@ -316,7 +311,7 @@ footer{
     font-weight: 400;
 }
 .fnb li.em{
-    color: var(--main-color);
+    color: #0046ff;
 }
 .fnb li:not(:first-child)::before{
     content: "|";
@@ -351,7 +346,7 @@ footer{
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background-color: var(--main-color);
+    background-color: #0046ff;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -382,7 +377,7 @@ footer{
     height: 50px;
     padding-left: 30px;
     padding-top: 5px;
-    background-color: var(--main-color);
+    background-color: #0046ff;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 80%);
     border-radius: 40px;
     /* 포지션 */
