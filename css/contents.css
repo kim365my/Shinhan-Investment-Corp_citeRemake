@@ -139,7 +139,7 @@ figure {
 .sec_3_btn button {
 	margin-left: 20px;
 	padding: 19px 59px 17px;
-	border: var(--border);
+	border: 1px solid #999999;
 	border-radius: 8px;
 	cursor: pointer;
 }
@@ -223,7 +223,7 @@ input[id="basic_info4"]:checked~.content4 {
 
 .content1 .content_name p {
 	padding: 12px 36px;
-	border: var(--border);
+	border: 1px solid #999999;
 	border-radius: 8px;
 }
 
@@ -237,7 +237,7 @@ input[id="basic_info4"]:checked~.content4 {
 .table th,
 .table td {
 	border: 1px solid #fafbfb;
-	border-top: var(--border);
+	border-top: 1px solid #999999;
 	border-collapse: collapse;
 	border-right: none;
 }

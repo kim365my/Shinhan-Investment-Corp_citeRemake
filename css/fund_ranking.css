@@ -166,7 +166,7 @@ main{
     display: inline-block;
     border-radius: 16px;
     padding: 5px 10px;
-    border: var(--border);
+    border: 1px solid #999999;
 }
 .slide .taskBtn div.join{
     background-color: #0046ff;
@@ -254,7 +254,7 @@ select:last-child {
 /* ==================================================== */
 /* List_CheckBox Area */
 .checkbox_area {
-    border-top: var(--border);
+    border-top: 1px solid #999999;
     /* 플렉스 */
     display: flex;
     align-items: center;
@@ -285,7 +285,7 @@ select:last-child {
 /* Compare Area  */
 .compare_area {
     height: 90px;
-    border-top: var(--border);
+    border-top: 1px solid #999999;
     background-color: #F6F6F6;
     /* 플렉스 */
     display: flex;
@@ -311,7 +311,7 @@ select:last-child {
     width: 226px;
     height: 50px;
     border-radius: 8px;
-    border: var(--border);
+    border: 1px solid #999999;
     margin-top: 20px;
     padding: 16px 100px 16px 20px;
     color: #000;
@@ -365,14 +365,14 @@ table input {
     transform: scale(1.5);
 }
 .table table th {
-    border-top: var(--border);
-    border-bottom: var(--border);
-    border-right: var(--border);
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    border-right: 1px solid #999999;
     font-weight: 500;
 }
 .table .tr2 td {
-    border-right: var(--border);
-    border-bottom: var(--border);
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
 }
 
 .table .tr1{
@@ -461,7 +461,7 @@ table input {
     color: #fff;
 }
 .td5 button:nth-child(2) {
-    border: var(--border);
+    border: 1px solid #999999;
 }
 /* 페이지 버튼 */
 .page_num {

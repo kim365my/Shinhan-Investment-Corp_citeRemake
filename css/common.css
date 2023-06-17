@@ -115,7 +115,7 @@ html {
     content: "";
     font-size: 0.8rem;
     padding-right: 16px;
-    border-right: var(--border);
+    border-right: 1px solid #999999;
     margin-right: 16px;
 }
 
