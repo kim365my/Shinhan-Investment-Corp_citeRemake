@@ -47,6 +47,12 @@ $(".header").load("./module/header.html", function(){
         // console.log($(this).hasClass(CHECK_CLASS));
     })
 
+    // -----------------
+    // 이미지 빨리 로드
+    let images = "./images/header/logo.png";
+
+    images = new Image();
+    images.src = preload.arguments.src;
 
 });
 $(".footer").load("./module/footer.html");
