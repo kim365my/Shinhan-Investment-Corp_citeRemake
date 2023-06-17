@@ -1,3 +1,15 @@
+// 슬라이드
+const rankColor = ["#B4558C", "#7655B3", "#6570C0", "#474747", "#4F4F4F", "#727272", "#959595", "#B9B9B9", "#cbcbcb", "#f6f6f6"];
+const rankImg = document.querySelectorAll(".rank_img");
+rankImg.forEach((item, index) => {
+    const height = Number(item.firstElementChild.textContent);
+    item.style.height = `${(height * 5) == 100 ? height : height * 5 }%`;
+    item.firstElementChild.style.backgroundColor = rankColor[index];
+    console.log(item.style.height);
+})
+
+
+
 // table 페이지 넘어가기
 // 페이지 num 버튼 효과
 var pg = $('.pg').find('a')
@@ -72,21 +84,17 @@ $('.forward_btn').on('click', function(){
     });
 });
 
-
+// -----------
 // modal
 const tb2Detail = document.querySelector(".tb2Detail");
 $(".td2_d2 a").on("click", (e)=>{
     e.preventDefault();
+    document.body.style.overflowY = "hidden";
     tb2Detail.showModal();
-    console.log(tb2Detail);
 });
 
-// $("window").on("click", (e)=>{
-//     e.target === 
-//     tb2Detail.close();
-// });
+$(".modalClose").on("click", (e)=>{
+    document.body.style.overflowY = "auto";
+    tb2Detail.close();
+});
 
-function setFramHegiht(obj){
-    // obj.width = obj.contentWindow.document.body.scrollWidth;
-    console.log(obj.contentWindow.document.body.scrollWidth);
-}

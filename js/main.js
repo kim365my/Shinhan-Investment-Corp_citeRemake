@@ -2,8 +2,6 @@
 // 슬라이드
 // -----------------------
 // 메인 슬라이드
-const playBtn = document.querySelector(".play");
-const pauseBtn = document.querySelector(".pause");
 const swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -11,13 +9,27 @@ const swiper = new Swiper(".mySwiper", {
   autoplay: {
     delay: 5000, // 오토플레이 시간
     disableOnInteraction: false,
-    pauseOnMouseEnter :true
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true
   },
 });
+
+const mainPlayBtn = document.querySelector(".main-play");
+const mainPauseBtn = document.querySelector(".main-pause");
+
+mainPlayBtn.addEventListener("click", () => {
+    swiper.autoplay.resume();
+    mainPlayBtn.classList.add("hidden");
+    mainPauseBtn.classList.remove("hidden");
+})
+mainPauseBtn.addEventListener("click", () => {
+    swiper.autoplay.pause();
+    mainPauseBtn.classList.add("hidden");
+    mainPlayBtn.classList.remove("hidden");
+})
+
 const subSwiper = new Swiper(".subSwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -26,7 +38,6 @@ const subSwiper = new Swiper(".subSwiper", {
     autoplay: {
     delay: 5000, // 오토플레이 시간
     disableOnInteraction: false,
-    pauseOnMouseEnter :true
     },
     pagination: {
     el: ".subSwiper-pagination",
@@ -38,6 +49,19 @@ const subSwiper = new Swiper(".subSwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+const subPlayBtn = document.querySelector(".sub-play");
+const subPauseBtn = document.querySelector(".sub-pause");
+
+subPlayBtn.addEventListener("click", () => {
+    subSwiper.autoplay.resume();
+    subPlayBtn.classList.add("hidden");
+    subPauseBtn.classList.remove("hidden");
+})
+subPauseBtn.addEventListener("click", () => {
+    subSwiper.autoplay.pause();
+    subPauseBtn.classList.add("hidden");
+    subPlayBtn.classList.remove("hidden");
+})
 
 // -----------------------
 // lnb 메뉴 : 자주가는 메뉴/처음이세요

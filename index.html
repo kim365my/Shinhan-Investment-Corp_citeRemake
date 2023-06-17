@@ -35,20 +35,20 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/replace.css">
     <!-- 모바일 css -->
     <link rel="stylesheet" href="./css/moblie_style.css">
 </head>
 <body>
     <div id="wrap">
         <!-- header -->
-        <header class="header w1440"></header>
+        <header class="header w1260"></header>
         <!-- /header -->
         
         <!-- article -->
-        <article class="w1440">
+        <article class="w1260">
             <!-- 슬라이드 콘텐츠 -->
             <div class="mainArticle">
+                <!-- 메인 슬라이드 -->
                 <div class="swiper mySwiper">
                     <div id="slider_banner_main" class="swiper-wrapper">
                         <div id="item01" class="swiper-slide">
@@ -94,8 +94,16 @@
                             </a>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-controll-wrap">                    
+                        <div class="autoplay-controll">
+                            <button class="main-play hidden"><i class="fa fa-play" aria-hidden="true"></i></button>
+                            <button class="main-pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
+                <!-- /메인 슬라이드 -->
+
                 <div class="lnbWrap">
                     <div class="lnb_btn">
                         <input type="radio" name="lnbBtn" id="lnbBtn01" checked>
@@ -314,15 +322,15 @@
 
                 <section id="snbArticle_02">
                     <h3>이벤트</h3>
-                    <div id="slider_banner_area" class="swiper subSwiper area">
+                    <div id="slider_banner_area" class="swiper subSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
                                     <img src="./images/main/event01.jpg" alt="">
                                 </a>
                             </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="bgGray">
+                            <div class="swiper-slide bgGray">
+                                <a href="#">
                                     <img src="./images/main/event02.jpg" alt="">
                                 </a>
                             </div>
@@ -334,7 +342,13 @@
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
-                        <div class="subSwiper-pagination"></div>
+                        <div class="swiper-controll-wrap">                    
+                            <div class="subSwiper-pagination"></div>
+                            <div class="autoplay-controll">
+                                <button class="sub-play hidden"><i class="fa fa-play" aria-hidden="true"></i></button>
+                                <button class="sub-pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -389,7 +403,7 @@
                     자산관리,<br>
                     <span class="em">신한투자증권</span>과&nbsp;함께하세요!
                 </h2>
-                <div class="card_wrap w1440">
+                <div class="card_wrap w1260">
                     <div class="card">
                         <a href="#">
                             <span><img src="./images/main/myAccount.png" alt="myAccount"></span>
@@ -431,7 +445,7 @@
                     </div>
                 </div>
             </section>
-            <section id="content2" class="w1440">
+            <section id="content2" class="w1260">
                 <!-- 그래프 -->
                 <section class="chartGraph">
                     <div id="stock_graph"></div>
@@ -468,7 +482,7 @@
             </section>
 
             <!-- 주식표 -->
-            <section id="content3" class="w1440">
+            <section id="content3" class="w1260">
                 <div>
                     <h2>국내 TOP 종목
                         <a href="#">더보기</a>
@@ -640,7 +654,7 @@
             </section>
             
             <!-- banner -->
-            <div id="banner_wapper" class="w1440">
+            <div id="banner_wapper" class="w1260">
                 <div class="banner">
                     <h2>
                         공모주 청약, 한번에 신청하세요!
@@ -656,7 +670,7 @@
         </main>
         <!-- main -->
         <!-- footer -->
-        <footer class="footer w1440"></footer>
+        <footer class="footer w1260"></footer>
         <!-- /footer -->     
 
         <!-- TOP 버튼 -->

@@ -63,7 +63,7 @@
 .login_method button {
     width: calc(100%/3);
     height: 68px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: #666;
 }
@@ -110,7 +110,7 @@ fieldset legend {
 .login_info input[type="submit"] {
     width: 160px;
     height: 108px;
-    font-size: 16px;
+    font-size: 1rem;
     background: #1a89da;
     border-radius: 8px;
     color: #fff;

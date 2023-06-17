@@ -7,7 +7,7 @@
         font-size: 1.8vw;
     }
     /* safe-area */
-    .w1440{
+    .w1260{
         width: 100vw;
     }
     /* ================================= */
@@ -41,7 +41,7 @@
     /* ================= */
     /* article */
     /* ================= */
-    article.w1440{
+    article.w1260{
         margin-top: 0;
         flex-flow: column;
     }
