@@ -3,23 +3,25 @@
 /* 폰트 CSS && 리셋 CSS */
 @import url(./font.css);
 @import url(./reset.css);
+@import url(./root.css);
 
 /* 공통 CSS */
 html {
     font-family: 'Pretendard', sans-serif;
+    font-size: 14px;
 }
 
 #wrap{
-    /* background-color: #FAFBFB; */
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding: 40px 0 60px;
+    /* 포지션 */
+    position: relative;
 }
 /* safe area */
-.w1440{
-    /* (1440/1920)*100 = 75 */
-    /* width: 75%; */
-    width: 1440px;
+.w1260{
+    min-width: 1260px;
+    width: 1260px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 /* --------------------- */
 /* 경고창 */
@@ -30,7 +32,7 @@ html {
     color: #fff;
     /* 포지션 */
     position: fixed;
-    top: 5%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99999; /* 경고창 */
@@ -38,11 +40,13 @@ html {
     display: none;
 }
 
+.hidden {
+    display: none;
+}
 /* ========================== */
 /* header */
 /* ========================== */
 .header{
-    /* (193/1440)*100 = 13.402777777777777 */
     padding-bottom: 20px;
     /* 플랙스 */
     display: flex;
@@ -116,19 +120,15 @@ html {
     content: "";
     font-size: 0.8rem;
     padding-right: 16px;
-    border-right: 1px solid #000;
+    border-right: var(--border);
     margin-right: 16px;
 }
 
 /* ---------------------------- */
 /* .header .snb */
-.header .snb{
+.header .snb_wrap{
     width: 100%;
-    height: auto !important;
-    padding: 30px;
-    background-color: white;
-    border: 1px solid #B9BDC4;
-    border-radius: 16px;
+    padding: 0 20px;
     /* 폰트 사이즈 수정 */
     font-size: 1rem;
     /* 포지션 */
@@ -137,16 +137,22 @@ html {
     transform: translateY(100%);
     left: 0;
     z-index: 999; /* 헤더 서브메뉴 */
+
+}
+.header .snb{
+    height: auto !important;
+    padding: 30px;
+    background-color: #FFF;
+    border: 1px solid #B9BDC4;
+    border-radius: 16px;
     /* 디스플레이 가리기 */
     display: none;
 }
-
 /* snb 타이틀 */
 .snbTitle{
     width: 100%;
     height: 60px;
-    padding: 0 24px;
-    line-height: 60px;
+    padding: 0 30px;
     border-top: 1px solid #B9BDC4;
     /* 플랙스 */
     display: flex;
@@ -166,7 +172,7 @@ html {
 .snb h2{
     height: 100%;
     line-height: 60px;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: #797979;
     transition: all 0.1s;
@@ -175,7 +181,7 @@ html {
 .snbItem{
     width: 100%;
     background-color: #F7F8F8;
-    padding: 24px 0;
+    padding: 30px 0;
     transition: all 0.8s;
     /* 숨기기 */
     display: none;
@@ -255,7 +261,7 @@ footer{
     /* 36/16 = 2.25 */
     font-size: 2.25rem;
     font-weight: 600;
-    color: #0046FF;
+    color: var(--main-color);
 }
 /* footer_csc nav div */
 .footer_csc nav div{
@@ -310,15 +316,12 @@ footer{
     font-weight: 400;
 }
 .fnb li.em{
-    color: #0046FF;
+    color: var(--main-color);
 }
 .fnb li:not(:first-child)::before{
     content: "|";
     padding-left: 10px;
     margin-right: 10px;
-}
-.fnb ul {
-    margin-bottom: 10px;
 }
 
 /* .last_footer */
@@ -334,24 +337,21 @@ footer{
 /* ========================== */
 /* Top button / chatBot */
 /* ========================== */
-/* ========================== */
-/* Top button / chatBot */
-/* ========================== */
 .aside_button{
-    height: 120px;
-    z-index: 99999;
+    /* 플렉스 */
+    display: flex;
+    flex-flow: column nowrap;
     /* 포지션 */
     position: fixed;
-    /* right: 140px; */
-    right: 7.291666666666667%;
-    transform: translateX(100%);
+    right: 3%;
     bottom: 50px;
+    z-index: 99999;
 }
 .aside_button div{
     width: 50px;
     height: 50px;
     line-height: 50px;
-    background-color: #0046ff;
+    background-color: var(--main-color);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -382,7 +382,7 @@ footer{
     height: 50px;
     padding-left: 30px;
     padding-top: 5px;
-    background-color: #0046FF;
+    background-color: var(--main-color);
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 80%);
     border-radius: 40px;
     /* 포지션 */
@@ -397,9 +397,6 @@ footer{
 .aside_button i {
     color: #fff;
     position: relative;
-    /* vertical-align: middle; */
-    /* top: 5px; */
-    /* transform: translateX(-50%); */
     left: 50%;
     transform: translateX(-50%);
 }

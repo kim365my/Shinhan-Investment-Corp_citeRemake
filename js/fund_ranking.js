@@ -1,3 +1,15 @@
+// 슬라이드
+const rankColor = ["#B4558C", "#7655B3", "#6570C0", "#474747", "#4F4F4F", "#727272", "#959595", "#B9B9B9", "#cbcbcb", "#f6f6f6"];
+const rankImg = document.querySelectorAll(".rank_img");
+rankImg.forEach((item, index) => {
+    const height = Number(item.firstElementChild.textContent);
+    item.style.height = `${(height * 5) == 100 ? height : height * 5 }%`;
+    item.firstElementChild.style.backgroundColor = rankColor[index];
+    console.log(item.style.height);
+})
+
+
+
 // table 페이지 넘어가기
 // 페이지 num 버튼 효과
 var pg = $('.pg').find('a')
@@ -14,9 +26,8 @@ $(pg).click(function(){
 var tab = $('.page_num').find('.pg');
 var table = $('.table').find('section div');
 
-var i;
 function tab_menu(num){
-    for(i=0; i<tab.length; i++){
+    for(let i=0; i<tab.length; i++){
         if(num == i) {
             tab.eq(i).addClass('active');
             table.eq(i).show();
@@ -57,37 +68,33 @@ $('#check3').click(function(){
 
 
 
-// a 링크 기본기능 제거
-$('a [href="#"]').on('click',function(e){
-    console.log(e);
-    e.preventDefault();
-});
-
-$('.eventNone').on('click',function(e){
-    console.log(e);
-    e.preventDefault();
-});
-
-
-
 // 그래프 화살표
 $('.forward_btn').on('click', function(){
-    $('.graph .slide>li').eq(-1).css({display:'flex','justify-content':'space-between'}).show();
-    $('.graph .slide>li').eq(0).hide();
+    $('.slide').eq(-1).css({
+        display:'flex','justify-content':'space-between'
+    }).show();
+    $('.slide_index').eq(-1).show();
+    $('.slide_index').eq(0).hide();
+    $('.slide').eq(0).hide();
     $('.back_btn').on('click',function(){
-        $('.graph .slide>li').eq(0).show();
-        $('.graph .slide>li').eq(-1).hide();
+        $('.slide').eq(0).show();
+        $('.slide').eq(-1).hide();
+        $('.slide_index').eq(0).show();
+        $('.slide_index').eq(-1).hide();
     });
 });
 
-$(function(){
-    $(`<div class="alert">죄송합니다. 해당페이지는 준비중입니다.</div>`).appendTo("#wrap");
-    $("button").not(".eventNone").on("click", function(e){
-        e.preventDefault();
-        $(".alert").stop().fadeIn(700)
-        setTimeout(() => {
-            $(".alert").stop().fadeOut(700);
-        }, 1000);
-    })
-})
+// -----------
+// modal
+const tb2Detail = document.querySelector(".tb2Detail");
+$(".td2_d2 a").on("click", (e)=>{
+    e.preventDefault();
+    document.body.style.overflowY = "hidden";
+    tb2Detail.showModal();
+});
+
+$(".modalClose").on("click", (e)=>{
+    document.body.style.overflowY = "auto";
+    tb2Detail.close();
+});
 

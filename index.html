@@ -24,10 +24,8 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/prefixfree.min.js"></script>
-    <!-- 제이쿼리 플러그인 -->
-    <!-- <script src="./js/jquery-ui.min.js"></script> -->
-    <script src="./js/jquery.bxslider.js"></script>
-    <!-- <script src="./js/jquery.scrollTo.min.js"></script> -->
+    <!-- 박스슬라이더 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- 그래프 JS -->
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/data.js"></script>
@@ -37,23 +35,23 @@
     <link rel="stylesheet" href="./css/common.css">
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/replace.css">
     <!-- 모바일 css -->
     <link rel="stylesheet" href="./css/moblie_style.css">
 </head>
 <body>
     <div id="wrap">
         <!-- header -->
-        <header class="header w1440"></header>
+        <header class="header w1260"></header>
         <!-- /header -->
         
         <!-- article -->
-        <article class="w1440">
+        <article class="w1260">
             <!-- 슬라이드 콘텐츠 -->
             <div class="mainArticle">
-                <div class="slider_wrap">
-                    <div id="slider_banner_main" class="mainSlider">
-                        <div id="item01">
+                <!-- 메인 슬라이드 -->
+                <div class="swiper mySwiper">
+                    <div id="slider_banner_main" class="swiper-wrapper">
+                        <div id="item01" class="swiper-slide">
                             <a href="#">
                                 <span>
                                     <p class="em">Grand Open</p>
@@ -66,7 +64,7 @@
                                 <img src="./images/main/slide01.png" alt="">
                             </a>
                         </div>
-                        <div id="item02">
+                        <div id="item02" class="swiper-slide">
                             <a href="#">
                                 <span>
                                     <p>HOT ISSUE 상품</p>
@@ -80,7 +78,7 @@
                                 <img src="./images/main/slide02.png" alt="">
                             </a>
                         </div>
-                        <div>
+                        <div class="swiper-slide">
                             <a href="#">
                                 <span>
                                     <p class="em">주식전략/시황</p>
@@ -96,7 +94,16 @@
                             </a>
                         </div>
                     </div>
+                    <div class="swiper-controll-wrap">                    
+                        <div class="autoplay-controll">
+                            <button class="main-play hidden"><i class="fa fa-play" aria-hidden="true"></i></button>
+                            <button class="main-pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
+                <!-- /메인 슬라이드 -->
+
                 <div class="lnbWrap">
                     <div class="lnb_btn">
                         <input type="radio" name="lnbBtn" id="lnbBtn01" checked>
@@ -211,84 +218,86 @@
                 </div>
 
                 <!-- 주식 슬라이드 -->
-                <div class="chart_wrap">
+                <section class="chart_containner">
                     <div id="chart_btn" class="bx-stop"></div>
-                    <div class="chartSlider_wrap">                        
-                        <div class="chartSlider playAni">
-                            <a href="#">
-                                <dl>
-                                    <dt>KOSOPAO</dt>
-                                    <dd>788.89</dd>
-                                    <dd>1.25</dd>
-                                </dl>
-                            </a>
-                            <a href="#">
-                                <dl>
-                                    <dt>DOW</dt>
-                                    <dd>733,826.69</dd>
-                                    <dd>3.03</dd>
-                                </dl>
-                            </a>
-                            <a href="#">
-                                <dl>
-                                    <dt>NASDAQ</dt>
-                                    <dd>711,787.27</dd>
-                                    <dd class="down">13.50</dd>
-                                </dl>
-                            </a>
-                            <a href="#">
-                                <dl>
-                                    <dt>LG엔솔</dt>
-                                    <dd>547.00</dd>
-                                    <dd>3.55</dd>
-                                </dl>
-                            </a>
-                            <a href="#">
-                                <dl>
-                                    <dt>POSCO</dt>
-                                    <dd>329.50</dd>
-                                    <dd>7.15</dd>
-                                </dl>
-                            </a>
-
-                            <a href="#">
-                                <dl>
-                                    <dt>S-Oil</dt>
-                                    <dd>50.50</dd>
-                                    <dd class="down">21.05</dd>
-                                </dl>
-                            </a>
-                            <a href="#">
-                                <dl>
-                                    <dt>KT&G</dt>
-                                    <dd>87.00</dd>
-                                    <dd class="down">11.25</dd>
-                                </dl>
-                            </a>
-                            <a href="#">
-                                <dl>
-                                    <dt>HMM</dt>
-                                    <dd>22.05</dd>
-                                    <dd>4.20</dd>
-                                </dl>
-                            </a>
-                            <a href="#">
-                                <dl>
-                                    <dt>NAVER</dt>
-                                    <dd>214.50</dd>
-                                    <dd>3.19</dd>
-                                </dl>
-                            </a>
-                            <a href="#">
-                                <dl>
-                                    <dt>SK그룹</dt>
-                                    <dd>184.40</dd>
-                                    <dd>5.25</dd>
-                                </dl>
-                            </a>
+                    <div class="chart_wrap">
+                        <div class="chartSlider_wrap">                        
+                            <div class="chartSlider playAni">
+                                <a href="#">
+                                    <dl>
+                                        <dt>KOSOPAO</dt>
+                                        <dd>788.89</dd>
+                                        <dd>1.25</dd>
+                                    </dl>
+                                </a>
+                                <a href="#">
+                                    <dl>
+                                        <dt>DOW</dt>
+                                        <dd>733,826.69</dd>
+                                        <dd>3.03</dd>
+                                    </dl>
+                                </a>
+                                <a href="#">
+                                    <dl>
+                                        <dt>NASDAQ</dt>
+                                        <dd>711,787.27</dd>
+                                        <dd class="down">13.50</dd>
+                                    </dl>
+                                </a>
+                                <a href="#">
+                                    <dl>
+                                        <dt>LG엔솔</dt>
+                                        <dd>547.00</dd>
+                                        <dd>3.55</dd>
+                                    </dl>
+                                </a>
+                                <a href="#">
+                                    <dl>
+                                        <dt>POSCO</dt>
+                                        <dd>329.50</dd>
+                                        <dd>7.15</dd>
+                                    </dl>
+                                </a>
+    
+                                <a href="#">
+                                    <dl>
+                                        <dt>S-Oil</dt>
+                                        <dd>50.50</dd>
+                                        <dd class="down">21.05</dd>
+                                    </dl>
+                                </a>
+                                <a href="#">
+                                    <dl>
+                                        <dt>KT&G</dt>
+                                        <dd>87.00</dd>
+                                        <dd class="down">11.25</dd>
+                                    </dl>
+                                </a>
+                                <a href="#">
+                                    <dl>
+                                        <dt>HMM</dt>
+                                        <dd>22.05</dd>
+                                        <dd>4.20</dd>
+                                    </dl>
+                                </a>
+                                <a href="#">
+                                    <dl>
+                                        <dt>NAVER</dt>
+                                        <dd>214.50</dd>
+                                        <dd>3.19</dd>
+                                    </dl>
+                                </a>
+                                <a href="#">
+                                    <dl>
+                                        <dt>SK그룹</dt>
+                                        <dd>184.40</dd>
+                                        <dd>5.25</dd>
+                                    </dl>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
             <!-- /슬라이드 콘텐츠 -->
 
@@ -313,21 +322,32 @@
 
                 <section id="snbArticle_02">
                     <h3>이벤트</h3>
-                    <div id="slider_banner_area" class="area">
-                        <div>
-                            <a href="#">
-                                <img src="./images/main/event01.jpg" alt="">
-                            </a>
+                    <div id="slider_banner_area" class="swiper subSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/main/event01.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide bgGray">
+                                <a href="#">
+                                    <img src="./images/main/event02.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="./images/main/event03.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <a href="#">
-                                <img src="./images/main/event02.jpg" alt="">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="./images/main/event03.jpg" alt="">
-                            </a>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-controll-wrap">                    
+                            <div class="subSwiper-pagination"></div>
+                            <div class="autoplay-controll">
+                                <button class="sub-play hidden"><i class="fa fa-play" aria-hidden="true"></i></button>
+                                <button class="sub-pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -383,7 +403,7 @@
                     자산관리,<br>
                     <span class="em">신한투자증권</span>과&nbsp;함께하세요!
                 </h2>
-                <div class="card_wrap w1440">
+                <div class="card_wrap w1260">
                     <div class="card">
                         <a href="#">
                             <span><img src="./images/main/myAccount.png" alt="myAccount"></span>
@@ -425,7 +445,7 @@
                     </div>
                 </div>
             </section>
-            <section id="content2" class="w1440">
+            <section id="content2" class="w1260">
                 <!-- 그래프 -->
                 <section class="chartGraph">
                     <div id="stock_graph"></div>
@@ -462,7 +482,7 @@
             </section>
 
             <!-- 주식표 -->
-            <section id="content3" class="w1440">
+            <section id="content3" class="w1260">
                 <div>
                     <h2>국내 TOP 종목
                         <a href="#">더보기</a>
@@ -523,7 +543,7 @@
     
                                 </tr>
                                 <tr>
-                                    <td><a href="#">KODEX코스닥150레버...</a></td>
+                                    <td><a href="#">KODEX코스닥150레버리지</a></td>
                                     <td>8,540</td>
                                     <td><span>+14.93</span></td>
                                     <td>2조 8,553억원</td>
@@ -607,7 +627,7 @@
     
                                 </tr>
                                 <tr>
-                                    <td><a href="#">KODEX코스닥150레버...</a></td>
+                                    <td><a href="#">KODEX코스닥150레버리지</a></td>
                                     <td>8,540</td>
                                     <td><span>+14.93</span></td>
                                     <td>2조 8,553억원</td>
@@ -634,29 +654,34 @@
             </section>
             
             <!-- banner -->
-            <div class="banner w1440">
-                <h2>
-                    공모주 청약, 한번에 신청하세요!
-                    <p>
-                        신규 상장 기업의 주식을 배정받기 위해 청약하는 것입니다. 증권사에서 청약을 하면, 최종 경쟁률과 총 청약지수에 따라 주식을 배정받게 됩니다.
-                    </p>
-                </h2>
-                <a href="#" class="bannerLink">자세히 보기</a>
+            <div id="banner_wapper" class="w1260">
+                <div class="banner">
+                    <h2>
+                        공모주 청약, 한번에 신청하세요!
+                        <p>
+                            신규 상장 기업의 주식을 배정받기 위해 청약하는 것입니다. 증권사에서 청약을 하면, 최종 경쟁률과 총 청약지수에 따라 주식을 배정받게 됩니다.
+                        </p>
+                    </h2>
+                    <a href="#" class="bannerLink">자세히 보기</a>
+                </div>
             </div>
             <!-- /banner -->
 
-            <!-- TOP 버튼 -->
-            <aside>
-                
-            </aside>
-            <!-- /TOP 버튼 -->
         </main>
         <!-- main -->
         <!-- footer -->
-        <footer class="footer"></footer>
+        <footer class="footer w1260"></footer>
         <!-- /footer -->     
+
+        <!-- TOP 버튼 -->
+        <aside>
+            
+        </aside>
+        <!-- /TOP 버튼 -->
     </div>
 </body>
+<!-- 박스 슬라이드 플러그인 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <!-- Header, Footer Load JS -->
 <script src="./js/load.js"></script>
 <!-- 미구현 기능 클릭시 안내문 -->

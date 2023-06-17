@@ -2,42 +2,66 @@
 // 슬라이드
 // -----------------------
 // 메인 슬라이드
-$("#slider_banner_main").bxSlider({
-    // 슬라이드간의 마진
-    slideMargin:0,
-    // 오토슬라이드
-    auto: true,
-    autoControls: true,
-    // stopAutoOnClick: true,
-    pager: true,
-    // 오토슬라이드 start/pause버튼 합치기
-    autoControlsCombine:true,
-    // 텍스트 없게
-    startText:" ",
-    stopText:" ",
-    // 오류픽스 : 터치로 이동되는 것을 막아서 이미지 클릭이 이동 되도록
-    touchEnabled : (navigator.maxTouchPoints > 0)
+const swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop:true,
+  autoplay: {
+    delay: 5000, // 오토플레이 시간
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
 });
-// 이벤트 슬라이드
-$("#slider_banner_area").bxSlider({
-    // 슬라이드간의 마진
-    slideMargin:0,
-    // 오토슬라이드
-    auto: true,
-    autoControls: true,
-    // stopAutoOnClick: true,
-    // 페이지 번호타입을 [1/3]형식으로
-    pagerType:"short",
-    // 오토슬라이드 start/pause버튼 합치기
-    autoControlsCombine:true,
-    // 텍스트 없게
-    nextText:" ",
-    prevText:" ",
-    startText:" ",
-    stopText:" ",
-    // 오류픽스 : 터치로 이동되는 것을 막아서 이미지 클릭이 이동 되도록
-    touchEnabled : (navigator.maxTouchPoints > 0)
+
+const mainPlayBtn = document.querySelector(".main-play");
+const mainPauseBtn = document.querySelector(".main-pause");
+
+mainPlayBtn.addEventListener("click", () => {
+    swiper.autoplay.resume();
+    mainPlayBtn.classList.add("hidden");
+    mainPauseBtn.classList.remove("hidden");
+})
+mainPauseBtn.addEventListener("click", () => {
+    swiper.autoplay.pause();
+    mainPauseBtn.classList.add("hidden");
+    mainPlayBtn.classList.remove("hidden");
+})
+
+const subSwiper = new Swiper(".subSwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    effect: "fade",
+    loop:true,
+    autoplay: {
+    delay: 5000, // 오토플레이 시간
+    disableOnInteraction: false,
+    },
+    pagination: {
+    el: ".subSwiper-pagination",
+    type: "fraction",
+    clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });
+const subPlayBtn = document.querySelector(".sub-play");
+const subPauseBtn = document.querySelector(".sub-pause");
+
+subPlayBtn.addEventListener("click", () => {
+    subSwiper.autoplay.resume();
+    subPlayBtn.classList.add("hidden");
+    subPauseBtn.classList.remove("hidden");
+})
+subPauseBtn.addEventListener("click", () => {
+    subSwiper.autoplay.pause();
+    subPauseBtn.classList.add("hidden");
+    subPlayBtn.classList.remove("hidden");
+})
 
 // -----------------------
 // lnb 메뉴 : 자주가는 메뉴/처음이세요
@@ -53,16 +77,17 @@ $(".lnb_btn label").click(function () {
 // 주식 차트 슬라이드
 // -----------------------
 // 차트 애니메이션 속도 일정하게 변경 리스트 하나당 2.5s로
-// 차트가 몇개 있는지 받아오기 / 나중에 차트를 동적으로 추가되지 않는 이상은 const를 써도 되지 않으려나? 잘 모르겠네
 let chartNum = $(".chartSlider").children().length;
-const result = chartNum * 2.5;
-$(".playAni").css("animation-duration", `${result}s`);
 
-// -----------------------
 // 기존 차트 슬라이드 복붙
 let chartChild = $(".chartSlider_wrap").children().eq(0).clone();
-// JS에서는 prepend로 해도 문제가 없었는데 JQ에서 요소가 겹치는 문제가 발생해서 수정
-chartChild.appendTo(".chartSlider_wrap");
+chartChild.appendTo(".chartSlider_wrap"); // JS에서는 prepend로 해도 문제가 없었는데 JQ에서 요소가 겹치는 문제가 발생해서 수정
+
+const result = chartNum * 2.5; // 차트가 몇개 있는지 받아오기
+$(".playAni").css("animation-duration", `${result}s`);
+
+$(".chartSlider").addClass("playAni");
+
 // -----------------------
 // 차트 슬라이드 조작 버튼
 const CLASS_START = "bx-start";

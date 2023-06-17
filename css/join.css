@@ -15,6 +15,7 @@
 }
 
 .extra_bar_cover {
+  padding: 0 30px;
   /* 플렉스 */
   display: flex;
   justify-content: space-between;
@@ -42,7 +43,9 @@
 .bar_right a img {
   cursor: pointer;
 }
-
+.contents {
+  padding: 0 30px;
+}
 .contents h2 {
   font-size: 40px;
   font-weight: 600;
@@ -92,8 +95,9 @@ legend {
   font-size: 0;
 }
 .join_method button {
+  width: 25%;
   height: 78px;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 48px;
   cursor: pointer;
 }
@@ -112,18 +116,7 @@ legend {
   border-radius: 10px 10px 0 0;
   cursor: pointer;
 }
-.join_method button:nth-child(1) {
-  width: 412px;
-}
-.join_method a:nth-child(2) button {
-  width: 256px;
-}
-.join_method a:nth-child(3) button {
-  width: 372px;
-}
-.join_method a:nth-child(4) button {
-  width: 400px;
-}
+
 
 .contents table {
   margin-top: 33px;
@@ -174,7 +167,7 @@ input[type="number"] {
   margin-left: 14px;
 }
 .contents td p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: #666;
 }
@@ -212,7 +205,7 @@ input[type="number"] {
 .next_btn_cover input[type="submit"] {
   width: 190px;
   height: 68px;
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
   background: #1a89da;
   border-radius: 15px;
@@ -257,7 +250,7 @@ input[type="number"] {
   margin: 0 45px;
 }
 .links ul li:first-child a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 .links ul li:first-child a img {
@@ -269,7 +262,7 @@ input[type="number"] {
   padding: 7px 29px;
 }
 .links ul li:last-child a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: #666;
 }

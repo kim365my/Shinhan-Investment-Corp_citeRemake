@@ -1,373 +1,327 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="JGM" />
-    <meta name="description" content="중꺾마 신한투자증권 리뉴얼" />
-    <title>신한투자증권</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="shortcut icon" href="./images/favicon/fav32.png" />
-    <link
-      rel="apple-touch-icon=precomposed"
-      href="./images/favicon/fav180.png"
-    />
-    <!-- 기본 코딩 JS 파일 -->
-    <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/prefixfree.min.js"></script>
-    <!-- 차트 JS 파일 -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/data.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="JGM" />
+	<meta name="description" content="중꺾마 신한투자증권 리뉴얼" />
+	<title>신한투자증권</title>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="shortcut icon" href="./images/favicon/fav32.png" />
+	<link rel="apple-touch-icon=precomposed" href="./images/favicon/fav180.png" />
+	<!-- 기본 코딩 JS 파일 -->
+	<script src="./js/jquery-1.12.4.min.js"></script>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/prefixfree.min.js"></script>
+	<!-- 차트 JS 파일 -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/data.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-    <!-- 기본 코딩 CSS 파일 -->
-    <link rel="stylesheet" href="./css/common.css">
-    <!-- 페이지 CSS -->
-    <link rel="stylesheet" href="./css/contents.css" />
-    <link rel="stylesheet" href="./css/chart.css">
+	<!-- 기본 코딩 CSS 파일 -->
+	<link rel="stylesheet" href="./css/common.css">
+	<!-- 페이지 CSS -->
+	<link rel="stylesheet" href="./css/contents.css" />
+</head>
+<body>
+	<!-- Contets -->
+	<main role="main">
+		<!-- Section 01 -->
+		<section class="sec_1">
+			<table class="stock_info">
+				<tr class="tr">
+					<td>상품유형</td>
+					<th>파생상품</th>
+					<td>투자지역</td>
+					<th>해외</th>
+					<td>기준가(당일기준)</td>
+					<th>140.20</th>
+					<td>순자산액</td>
+					<th>35.07억</th>
+				</tr>
+				<tr class="tr">
+					<td>총보수<i class="fa fa-exclamation-circle" aria-hidden="true"></i></td>
+					<th>0.2100%</th>
+					<td>환매수수료</td>
+					<th>없음</th>
+					<td>선취판매</td>
+					<th>0.42%</th>
+					<td>위험등급</td>
+					<th>고위험</th>
+				</tr>
+			</table>
+		</section>
+		<!-- /Section 01 -->
 
+		<!-- Section 02 -->
+		<figure class="highcharts-figure">
+			<div id="container"></div>
+		</figure>
+		<!-- /Section 02 -->
 
-    <!-- Header, Footer Load JS -->
-    <script>
-      $(function(){
-          // Footer 페이지 추가
-          $('.footer').load('./module/footer.html');
-      });
-    </script>
-  </head>
-  <body>
-    <div id="wrap">
-      <!-- Header -->
-      <header class="header w1440">
-        <nav class="gnb">
-          <h1 class="logo"><a href="index.html"><img src="./images/logo.png" alt="헤더로고"></a></h1>
-        </nav>
-      </header>   
-      <!-- /Header -->
-      
-      
-      <!-- Contets -->
-      <main role="main" class="w1440">
-        <!-- Section 01 -->
-        <section class="sec_1">
-          <article class="level">
-            <img src="./images/contents/highRisk.png" alt="고위험">
-            <img src="./images/contents/online.png" alt="온라인">
-          </article>
-          <h2>피델리티월지급식차이나하이일드증권자투자신탁A-e(채권-재)</h2>
-          <table class="stock_info">
-            <tr class="tr">
-              <td>상품유형</td>
-              <th>파생상품</th>
-              <td>투자지역</td>
-              <th>해외</th>
-            </tr>
-            <tr class="tr">
-              <td>기준가(당일기준)</td>
-              <th>140.20</th>
-              <td>순자산액</td>
-              <th>35.07억</th>
-            </tr>
-            <tr class="tr">
-              <td>총보수<i class="fa fa-exclamation-circle" aria-hidden="true"></i></td>
-              <th>0.2100%</th>
-              <td>환매수수료</td>
-              <th>없음</th>
-            </tr>
-            <tr class="tr">
-              <td>선취판매</td>
-              <th>0.42%</th>
-              <td>위험등급</td>
-              <th>고위험</th>
-            </tr>
-          </table>
-        </section>
-        <!-- /Section 01 -->
+		<!-- Section 03 -->
+		<section class="sec_3">
+			<div class="card no_ml">
+				<dl>
+					<dt>제로인평가등급<span>(3년기준)</span></dt>
+					<dd>
+						<img src="./images/contents/unmarked.png" alt="태극마크">
+						<img src="./images/contents/unmarked.png" alt="태극마크">
+						<img src="./images/contents/unmarked.png" alt="태극마크">
+						<img src="./images/contents/unmarked.png" alt="태극마크">
+						<img src="./images/contents/unmarked.png" alt="태극마크">
+					</dd>
+				</dl>
+			</div>
+			<div class="card">
+				<dl>
+					<dt>기준가<span>(2023.02.24)</span></dt>
+					<dd class="up">592.22원<i class="fa fa-caret-up" aria-hidden="true">&nbsp;0.13</i></dd>
+				</dl>
+			</div>
+			<div class="card">
+				<dl>
+					<dt>운용규모<span>(2023.02.23)</span></dt>
+					<dd>36.23&nbsp;&nbsp;억원</dd>
+				</dl>
+			</div>
+			<div class="card">
+				<dl>
+					<dt>설정일</dt>
+					<dd>2023.02.04 </dd>
+				</dl>
+			</div>
+			<div class="card no_ml">
+				<dl>
+					<dt>운용가</dt>
+					<dd>피델리피자산운용</dd>
+				</dl>
+			</div>
+			<div class="card">
+				<dl>
+					<dt>펀드보수</dt>
+					<dd class="check">투자설명서 확인</dd>
+				</dl>
+			</div>
+			<div class="card">
+				<dl>
+					<dt>선취수수료</dt>
+					<dd>가입금액의&nbsp;0.42%</dd>
+				</dl>
+			</div>
+			<div class="card">
+				<dl>
+					<dt>환매수수료</dt>
+					<dd>없음</dd>
+				</dl>
+			</div>
+		</section>
+		<section class="pdf">
+			<h3>상품정보 다운로드</h3>
+			<ul>
+				<li>
+					<a href="https://file.truefriend.com/updata/fund/FMIG/2/071496_2.pdf" target="_blank">
+						<img src="./images/contents/adobe.png" alt="pdf">&nbsp;
+						투자설명서<i class="fa fa-angle-down" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://file.truefriend.com/updata/fund/FMIG/9/071496_9.pdf" target="_blank">
+						<img src="./images/contents/adobe.png" alt="pdf">&nbsp;
+						간이설명서<i class="fa fa-angle-down" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://file.truefriend.com/updata/fund/FMIG/1/071496_1.pdf" target="_blank">
+						<img src="./images/contents/adobe.png" alt="pdf">&nbsp;
+						신탁계약서<i class="fa fa-angle-down" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://file.truefriend.com/updata/fund/FMIG/7/071496_7.pdf" target="_blank">
+						<img src="./images/contents/adobe.png" alt="pdf">&nbsp;
+						자산운용보고서<i class="fa fa-angle-down" aria-hidden="true"></i>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<div class="sec_3_btn">
+			<a href="#"><button>관심상품</button></a>
+			<a href="#"><button>매수예약</button></a>
+			<a href="#"><button class="blue_btn">신규매수</button></a>
+		</div>
+		<!-- /Section 03 -->
 
-        <!-- Section 02 -->
-        <figure class="highcharts-figure">
-          <div id="container"></div>
-        </figure>
-        <!-- /Section 02 -->
+		<!-- Section 04 -->
+		<div id="contents">
+			<input type="radio" name="content_name" id="basic_info1" checked>
+			<label for="basic_info1">기본정보</label>
+			<input type="radio" name="content_name" id="basic_info2">
+			<label for="basic_info2">수익률</label>
+			<a href="#"><input type="radio" name="content_name" id="basic_info3">
+				<label for="basic_info3">기준가</label></a>
+			<input type="radio" name="content_name" id="basic_info4">
+			<label for="basic_info4">포트폴리오&보고서자료</label>
+			<div class="content1">
+				<div class="content_name">
+					<h5>펀드 진단 결과</h5>
+					<p><a href="#">기준안내&nbsp;&nbsp;<img src="./images/contents/popup.png" alt="popup"></a></p>
+				</div>
+				<section class="table">
+					<table>
+						<tr>
+							<th>진단기준</th>
+							<th>종합평가</th>
+							<th>수익률&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png" alt="물음표"></a>
+							</th>
+							<th>수익률 %순위<br>(소유형 기준)&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png"
+										alt="물음표"></a></th>
+							<th>BM초과 수익률&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png"
+										alt="물음표"></a></th>
+							<th>설정액 증감<br>(클래스 합산)&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png"
+										alt="물음표"></a></th>
+							<th>펀드규모<br>(클래스 합산)&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png"
+										alt="물음표"></a></th>
+						</tr>
+						<tr>
+							<th>결과</th>
+							<td><img src="./images/contents/neutral.png" alt="중립"></td>
+							<td>주의</td>
+							<td>주의</td>
+							<td>주의</td>
+							<td>적정</td>
+							<td>중형</td>
+						</tr>
+					</table>
+					<div class="text">
+						<img src="./images/contents/mark.png" alt="mark">
+						<p>
+							위의 진단 결과는 제로인에서 제공하는 데이터를 기반으로 최근 1년간 운용성과에 대한 당사 분석 기준을 적용하여 각 항목별 점수를 산출한
+							결과이며,
+							<span>상품의 판매나 권유를 위해 제공하는 것이 아니오니 고객님의 투자판단을 돕는 참고 자료로만 활용하시기 바랍니다.
+							</span>과거의 운용실적이 미래의 운용성과를 보장하는 것은 아닙니다. 당사는 위 자료에 대한
+							<span>정보의 정확성이나 안전성을 보장하지 않으며, 어떠한 법적 책임도 없음을 알려드립니다.</span>
+						</p>
+					</div>
+					<section class="attention">
+						<p><img src="./images/contents/information.png" alt="info">&nbsp;&nbsp;유의사항</p>
+						<ul>
+							<li>· 본 내용은 간이투자설명서의 주요내용이므로 가입전 반드시 읽어보시기 바라며 간이투자설명서 주요내용 게시로 투자설명서 주요내용에 대한 설명을
+								갈음합니다.</li>
+							<li>· 본 자료는 펀드상품의 판매나 권유를 위해 작성된 것이 아니며, 정보 제공을 목적으로 하는 단순 참고자료로서, 한국투자증권은 이에 대해 법적 책임을
+								지지 않습니다.</li>
+							<li>· 본 상품은 운용실적에 따라 이익 또는 손실이 발생할 수 있으며, 그 결과는 투자자(주주)에게 귀속됩니다.</li>
+							<li>· 과거의 운용실적이 미래의 운용성과를 보장하는 것은 아닙니다.</li>
+							<li>· 이 금융상품은 예금자보호법에 따라 예금보험공사가 보호하지 않으며, 실적배당형 상품으로서 투자원금의 손실이 발생할 수 있습니다.</li>
+							<li>· 해외간접투자상품과 같이 외화표시 자산에 투자하는 상품의 경우 환율변동에 따라 투자자산가치가 변동될 수 있습니다.</li>
+							<li>· 운용내용은 자본시장법 시행령 제 50조에 따라 운용사로부터 과거 2개월 전 정보를 제공받아 보여드리는 것으로 기준일자가 2개월 이상 지난
+								운용정보임을 양지하여 주기 바랍니다.</li>
+						</ul>
+					</section>
+			</div>
+			<div class="content2">
+				<div class="content_name">
+					<h5>펀드 비교 수익률</h5>
+					<p>기준일:2023.03.13</p>
+				</div>
+				<section class="table">
+					<table>
+						<tr>
+							<th>기간</th>
+							<th>1개월</th>
+							<th>3개월</th>
+							<th>6개월</th>
+							<th>1년</th>
+							<th>3년</th>
+							<th>설정일이후</th>
+						</tr>
+						<tr>
+							<th>펀드</th>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">4.18</td>
+							<td class="red"><img src="./images/contents/redincrease.png" alt="상승"> 10.74</td>
+							<td class="red"><img src="./images/contents/redincrease.png" alt="상승">18.93</td>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">4.61</td>
+							<td class="red"><img src="./images/contents/redincrease.png" alt="상승">0.00</td>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">36.90</td>
+						</tr>
+						<tr>
+							<th>BM</th>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">1.43</td>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">0.19</td>
+							<td class="red"><img src="./images/contents/redincrease.png" alt="상승">0.17</td>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">5.40</td>
+							<td class="red"><img src="./images/contents/redincrease.png" alt="상승">0.00</td>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">8.09</td>
+						</tr>
+						<tr>
+							<th>유형평균</th>
+							<td class="red"><img src="./images/contents/redincrease.png" alt="상승">0.84</td>
+							<td class="red"><img src="./images/contents/redincrease.png" alt="상승">2.99</td>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">0.56</td>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">3.66</td>
+							<td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">9.40</td>
+							<td>-</td>
+						</tr>
+					</table>
+			</div>
+			<div class="content4">
+				<div class="content_name">
+					<h5>자산 구성 현황&nbsp;&nbsp;&nbsp;<span>(기준일:2023.03.13)</span></h5>
+				</div>
+				<section class="table">
+					<table class="portfolio">
+						<tr>
+							<th>구분</th>
+							<th>펀드 내 비중(%)</th>
+						</tr>
+						<tr>
+							<th>국내주식</th>
+							<td>0.00%</td>
+						</tr>
+						<tr>
+							<th>해외주식</th>
+							<td>0.00%</td>
+						</tr>
+						<tr>
+							<th>국내채권</th>
+							<td>0.00%</td>
+						</tr>
+						<tr>
+							<th>해외채권</th>
+							<td>0.00%</td>
+						</tr>
+						<tr>
+							<th>투자신탁</th>
+							<td>98.99%</td>
+						</tr>
+						<tr>
+							<th>유동성</th>
+							<td>1.01%</td>
+						</tr>
+						<tr>
+							<th>주식선물 순포지션</th>
+							<td>0.00%</td>
+						</tr>
+						<tr>
+							<th>금리선물 순포지션</th>
+							<td>0.00%</td>
+						</tr>
+					</table>
+					<img src="./images/contents/portfolio.PNG" alt="포트폴리오">
+				</section>
+			</div>
+		</div>
+		<!-- /Section 04 -->
 
-        <!-- Section 03 -->
-        <section class="sec_3">
-          <div class="card no_ml">
-            <dl>
-              <dt>제로인평가등급<span>(3년기준)</span></dt>
-                <dd>
-                  <img src="./images/contents/unmarked.png" alt="태극마크">
-                  <img src="./images/contents/unmarked.png" alt="태극마크">
-                  <img src="./images/contents/unmarked.png" alt="태극마크">
-                  <img src="./images/contents/unmarked.png" alt="태극마크">
-                  <img src="./images/contents/unmarked.png" alt="태극마크">
-                </dd>
-            </dl>
-          </div>
-          <div class="card">  
-            <dl>
-              <dt>기준가<span>(2023.02.24)</span></dt>
-              <dd class="up">592.22원<i class="fa fa-caret-up" aria-hidden="true">&nbsp;0.13</i></dd>
-            </dl>
-          </div>
-          <div class="card">
-            <dl>
-              <dt>운용규모<span>(2023.02.23)</span></dt>
-              <dd>36.23&nbsp;&nbsp;억원</dd>
-            </dl>
-          </div>
-          <div class="card">
-            <dl>
-              <dt>설정일</dt>
-              <dd>2023.02.04 </dd>
-            </dl>
-          </div>
-          <div class="card no_ml">
-            <dl>
-              <dt>운용가</dt>
-              <dd>피델리피자산운용</dd>
-            </dl>
-          </div>
-          <div class="card">
-            <dl>
-              <dt>펀드보수</dt>
-              <dd class="check">투자설명서 확인</dd>
-            </dl>
-          </div>
-          <div class="card">
-            <dl>
-              <dt>선취수수료</dt>
-              <dd>가입금액의&nbsp;0.42%</dd>
-            </dl>
-          </div>
-          <div class="card">
-            <dl>
-              <dt>환매수수료</dt>
-              <dd>없음</dd>
-            </dl>
-          </div>
-        </section>
-        <section class="pdf">
-          <h3>상품정보 다운로드</h3>
-          <ul>
-            <li>
-              <a href="https://file.truefriend.com/updata/fund/FMIG/2/071496_2.pdf" target="_blank">
-                <img src="./images/contents/adobe.png" alt="pdf">&nbsp;
-                투자설명서<i class="fa fa-angle-down" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://file.truefriend.com/updata/fund/FMIG/9/071496_9.pdf" target="_blank">
-                <img src="./images/contents/adobe.png" alt="pdf">&nbsp;
-                간이설명서<i class="fa fa-angle-down" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://file.truefriend.com/updata/fund/FMIG/1/071496_1.pdf" target="_blank">
-                <img src="./images/contents/adobe.png" alt="pdf">&nbsp;
-                신탁계약서<i class="fa fa-angle-down" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://file.truefriend.com/updata/fund/FMIG/7/071496_7.pdf" target="_blank">
-                <img src="./images/contents/adobe.png" alt="pdf">&nbsp;
-                자산운용보고서<i class="fa fa-angle-down" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </section>
-        <div class="sec_3_btn">
-          <a href="#"><button>관심상품</button></a>
-          <a href="#"><button>매수예약</button></a>
-          <a href="#"><button class="blue_btn">신규매수</button></a>
-        </div>
-        <!-- /Section 03 -->
-
-        <!-- Section 04 -->
-        <div id="contents">
-          <input type="radio" name="content_name" id="basic_info1" checked>
-          <label for="basic_info1">기본정보</label>
-          <input type="radio" name="content_name" id="basic_info2">
-          <label for="basic_info2">수익률</label>
-          <a href="#"><input type="radio" name="content_name" id="basic_info3">
-          <label for="basic_info3">기준가</label></a>
-          <input type="radio" name="content_name" id="basic_info4">
-          <label for="basic_info4">포트폴리오&보고서자료</label>
-          <div class="content1">
-            <div class="content_name">
-              <h5>펀드 진단 결과</h5>
-              <p><a href="#">기준안내&nbsp;&nbsp;<img src="./images/contents/popup.png" alt="popup"></a></p>
-            </div>
-            <section class="table">
-              <table>
-                <tr>
-                  <th>진단기준</th>
-                  <th>종합평가</th>
-                  <th>수익률&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png" alt="물음표"></a></th>
-                  <th>수익률 %순위<br>(소유형 기준)&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png" alt="물음표"></a></th>
-                  <th>BM초과 수익률&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png" alt="물음표"></a></th>
-                  <th>설정액 증감<br>(클래스 합산)&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png" alt="물음표"></a></th>
-                  <th>펀드규모<br>(클래스 합산)&nbsp;&nbsp;<a href="#"><img src="./images/contents/question.png" alt="물음표"></a></th>
-                </tr>
-                <tr>
-                  <th>결과</th>
-                  <td><img src="./images/contents/neutral.png" alt="중립"></td>
-                  <td>주의</td>
-                  <td>주의</td>
-                  <td>주의</td>
-                  <td>적정</td>
-                  <td>중형</td>
-                </tr>
-              </table>
-              <div class="text">
-                <img src="./images/contents/mark.png" alt="mark">
-                <p>
-                  위의 진단 결과는 제로인에서 제공하는 데이터를 기반으로 최근 1년간 운용성과에 대한 당사 분석 기준을 적용하여 각 항목별 점수를 산출한
-                  결과이며,
-                  <span>상품의 판매나 권유를 위해 제공하는 것이 아니오니 고객님의 투자판단을 돕는 참고 자료로만 활용하시기 바랍니다.
-                  </span>과거의 운용실적이 미래의 운용성과를 보장하는 것은 아닙니다. 당사는 위 자료에 대한
-                  <span>정보의 정확성이나 안전성을 보장하지 않으며, 어떠한 법적 책임도 없음을 알려드립니다.</span>
-                </p>
-              </div>
-              <section class="attention">
-                <p><img src="./images/contents/information.png" alt="info">&nbsp;&nbsp;유의사항</p>
-                <ul>
-                  <li>· 본 내용은 간이투자설명서의 주요내용이므로 가입전 반드시 읽어보시기 바라며 간이투자설명서 주요내용 게시로 투자설명서 주요내용에 대한 설명을 갈음합니다.</li>
-                  <li>· 본 자료는 펀드상품의 판매나 권유를 위해 작성된 것이 아니며, 정보 제공을 목적으로 하는 단순 참고자료로서, 한국투자증권은 이에 대해 법적 책임을 지지 않습니다.</li>
-                  <li>· 본 상품은 운용실적에 따라 이익 또는 손실이 발생할 수 있으며, 그 결과는 투자자(주주)에게 귀속됩니다.</li>
-                  <li>· 과거의 운용실적이 미래의 운용성과를 보장하는 것은 아닙니다.</li>
-                  <li>· 이 금융상품은 예금자보호법에 따라 예금보험공사가 보호하지 않으며, 실적배당형 상품으로서 투자원금의 손실이 발생할 수 있습니다.</li>
-                  <li>· 해외간접투자상품과 같이 외화표시 자산에 투자하는 상품의 경우 환율변동에 따라 투자자산가치가 변동될 수 있습니다.</li>
-                  <li>· 운용내용은 자본시장법 시행령 제 50조에 따라 운용사로부터 과거 2개월 전 정보를 제공받아 보여드리는 것으로 기준일자가 2개월 이상 지난 운용정보임을 양지하여 주기 바랍니다.</li>
-                </ul>
-              </section>
-          </div>
-          <div class="content2">
-            <div class="content_name">
-              <h5>펀드 비교 수익률</h5>
-              <p>기준일:2023.03.13</p>
-            </div>
-            <section class="table">
-              <table>
-                <tr>
-                  <th>기간</th>
-                  <th>1개월</th>
-                  <th>3개월</th>
-                  <th>6개월</th>
-                  <th>1년</th>
-                  <th>3년</th>
-                  <th>설정일이후</th>
-                </tr>
-                <tr>
-                  <th>펀드</th>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">4.18</td>
-                  <td class="red"><img src="./images/contents/redincrease.png" alt="상승">  10.74</td>
-                  <td class="red"><img src="./images/contents/redincrease.png" alt="상승">18.93</td>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">4.61</td>
-                  <td class="red"><img src="./images/contents/redincrease.png" alt="상승">0.00</td>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">36.90</td>
-                </tr>
-                <tr>
-                  <th>BM</th>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">1.43</td>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">0.19</td>
-                  <td class="red"><img src="./images/contents/redincrease.png" alt="상승">0.17</td>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">5.40</td>
-                  <td class="red"><img src="./images/contents/redincrease.png" alt="상승">0.00</td>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">8.09</td>
-                </tr>
-                <tr>
-                  <th>유형평균</th>
-                  <td class="red"><img src="./images/contents/redincrease.png" alt="상승">0.84</td>
-                  <td class="red"><img src="./images/contents/redincrease.png" alt="상승">2.99</td>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">0.56</td>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">3.66</td>
-                  <td class="blue"><img src="./images/contents/bluedecrease.png" alt="하락">9.40</td>
-                  <td>-</td>
-                </tr>
-              </table>
-          </div>
-          <div class="content4">
-            <div class="content_name">
-              <h5>자산 구성 현황&nbsp;&nbsp;&nbsp;<span>(기준일:2023.03.13)</span></h5>
-            </div>
-            <section class="table">
-              <table class="portfolio">
-                <tr>
-                  <th>구분</th>
-                  <th>펀드 내 비중(%)</th>
-                </tr>
-                <tr>
-                  <th>국내주식</th>
-                  <td>0.00%</td>
-                </tr>
-                <tr>
-                  <th>해외주식</th>
-                  <td>0.00%</td>
-                </tr>
-                <tr>
-                  <th>국내채권</th>
-                  <td>0.00%</td>
-                </tr>
-                <tr>
-                  <th>해외채권</th>
-                  <td>0.00%</td>
-                </tr>
-                <tr>
-                  <th>투자신탁</th>
-                  <td>98.99%</td>
-                </tr>
-                <tr>
-                  <th>유동성</th>
-                  <td>1.01%</td>
-                </tr>
-                <tr>
-                  <th>주식선물 순포지션</th>
-                  <td>0.00%</td>
-                </tr>
-                <tr>
-                  <th>금리선물 순포지션</th>
-                  <td>0.00%</td>
-                </tr>
-              </table>
-              <img src="./images/contents/portfolio.PNG" alt="포트폴리오">
-            </section>
-          </div>
-        </div>
-        <!-- /Section 04 -->
-
-      </main>
-
-
-
-      <!-- /Contets -->
-      <!-- TOP 버튼 / 챗봇 -->
-
-      <!-- /TOP 버튼 / 챗봇 -->
-      <aside>
-        
-      </aside>
-      <!-- Footer -->
-      <footer class="footer">
-              
-      </footer>
-      <!-- /Footer -->
-    </div>
-
-  
-  <!-- 페이지 JS -->
-  <script src="./js/contents.js"></script>
-  <script src="./js/chart.js"></script>
-  <script src="./js/alret.js"></script>
-  <!-- <script src="./js/load.js"></script> -->
-  </body>
+	</main>	
+</body>
+<!-- 페이지 JS -->
+<script src="./js/contents.js"></script>
+<script src="./js/chart.js"></script>
+<script src="./js/alret.js"></script>
 </html>

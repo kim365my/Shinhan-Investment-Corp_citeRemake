@@ -7,8 +7,8 @@
         font-size: 1.8vw;
     }
     /* safe-area */
-    .w1440{
-        width: 90vw;
+    .w1260{
+        width: 100vw;
     }
     /* ================================= */
     /* main 페이지 */
@@ -18,7 +18,7 @@
     .mainArticle{
         width: 70%;
     }
-    .mainSlider div a{
+    .swiper-wrapper div a{
         height: 50vh;
     }
     /* ================================= */
@@ -41,7 +41,7 @@
     /* ================= */
     /* article */
     /* ================= */
-    article.w1440{
+    article.w1260{
         margin-top: 0;
         flex-flow: column;
     }
@@ -67,7 +67,7 @@
         /* (335/768)*100 = 43.61979166666667 */
         width: 43.61979166666667%;
     }
-    .mainSlider img {
+    .swiper-wrapper img {
         max-width: none;
         width: auto;
     }
