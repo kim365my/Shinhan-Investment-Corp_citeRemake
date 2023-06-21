@@ -16,15 +16,10 @@
 제가 작업한 페이지는 index 페이지입니다. 
 
 ## 스크린샷
-- index 페이지
-    ![펀드랭킹](./screenShot/index.png)
-- fund_ranking 페이지
-    ![펀드랭킹](./screenShot/fund_ranking.png)
-- contents 페이지
-    ![펀드랭킹](./screenShot/contents.png)
-- join 페이지
-    ![펀드랭킹](./screenShot/join.png)
-- login 페이지
-    ![펀드랭킹](./screenShot/login.png)
+![펀드랭킹](./screenShot/index.png)
+![펀드랭킹](./screenShot/fund_ranking.png)
+![펀드랭킹](./screenShot/contents.png)
+![펀드랭킹](./screenShot/join.png)
+![펀드랭킹](./screenShot/login.png)
 
 

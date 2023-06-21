@@ -2,34 +2,37 @@
 // 슬라이드
 // -----------------------
 // 메인 슬라이드
-const swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  loop:true,
-  autoplay: {
-    delay: 5000, // 오토플레이 시간
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-});
-
 const mainPlayBtn = document.querySelector(".main-play");
 const mainPauseBtn = document.querySelector(".main-pause");
+const swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop:true,
+    autoplay: {
+    delay: 5000, // 오토플레이 시간
+    disableOnInteraction: false,
+    },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+    },
+    on: {
+        autoplayResume() {
+            mainPlayBtn.classList.add("hidden");
+            mainPauseBtn.classList.remove("hidden");
+        },
+        autoplayPause(){
+            mainPauseBtn.classList.add("hidden");
+            mainPlayBtn.classList.remove("hidden");
+        },
+    }
+});
+mainPlayBtn.addEventListener("click", () => swiper.autoplay.resume())
+mainPauseBtn.addEventListener("click", () => swiper.autoplay.pause())
 
-mainPlayBtn.addEventListener("click", () => {
-    swiper.autoplay.resume();
-    mainPlayBtn.classList.add("hidden");
-    mainPauseBtn.classList.remove("hidden");
-})
-mainPauseBtn.addEventListener("click", () => {
-    swiper.autoplay.pause();
-    mainPauseBtn.classList.add("hidden");
-    mainPlayBtn.classList.remove("hidden");
-})
-
+// 서브 슬라이드
+const subPlayBtn = document.querySelector(".sub-play");
+const subPauseBtn = document.querySelector(".sub-pause");
 const subSwiper = new Swiper(".subSwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -48,20 +51,19 @@ const subSwiper = new Swiper(".subSwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    on: {
+        autoplayResume() {
+            subPlayBtn.classList.add("hidden");
+            subPauseBtn.classList.remove("hidden");
+        },
+        autoplayPause(){
+            subPauseBtn.classList.add("hidden");
+            subPlayBtn.classList.remove("hidden");
+        },
+    }
 });
-const subPlayBtn = document.querySelector(".sub-play");
-const subPauseBtn = document.querySelector(".sub-pause");
-
-subPlayBtn.addEventListener("click", () => {
-    subSwiper.autoplay.resume();
-    subPlayBtn.classList.add("hidden");
-    subPauseBtn.classList.remove("hidden");
-})
-subPauseBtn.addEventListener("click", () => {
-    subSwiper.autoplay.pause();
-    subPauseBtn.classList.add("hidden");
-    subPlayBtn.classList.remove("hidden");
-})
+subPlayBtn.addEventListener("click", () => subSwiper.autoplay.resume())
+subPauseBtn.addEventListener("click", () => subSwiper.autoplay.pause())
 
 // -----------------------
 // lnb 메뉴 : 자주가는 메뉴/처음이세요

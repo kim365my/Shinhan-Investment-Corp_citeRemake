@@ -49,10 +49,7 @@ $(".header").load("./module/header.html", function(){
 
     // -----------------
     // 이미지 빨리 로드
-    let images = "./images/header/logo.png";
-
-    images = new Image();
-    images.src = preload.arguments.src;
+    let images = new Image().src = "./images/header/logo.png";
 
 });
 $(".footer").load("./module/footer.html");

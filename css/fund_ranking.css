@@ -5,17 +5,23 @@
     position: relative;
 }
 h1.title{
-    display: inline-block;
     width:max-content;
     font-size: 20px;
     font-weight: 700;
-    padding-left: 15px;
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 230px;
     
     /* 포지션 */
-    position: absolute;
-    top: 45px;
-    left: 260px
+    position: relative;
+    top: -48px;
+    z-index: -1;
+}
+h1.title::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 main{
     margin-top: 20px;
@@ -580,7 +586,7 @@ table input {
     height: 90%;
     border: 0;
     border-radius: 25px;
-    padding: 50px 0;
+    padding: 0 0 130px;
     overflow: hidden;
     /* 포지션 */
     position: relative;
@@ -588,8 +594,9 @@ table input {
     transform: translateY(-50%);
 }
 .tb2Detail-title-wrap{
-    padding: 0 40px;
+    padding: 30px 40px;
     margin-bottom: 30px;
+    border-bottom: 1px solid #000;
     /* 플렉스 */
     display: flex;
     justify-content: space-between;

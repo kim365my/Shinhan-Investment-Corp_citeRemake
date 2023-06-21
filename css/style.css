@@ -53,7 +53,7 @@ article.w1260{
 /* ------------------------ */
 /* 박스 슬라이더 커스텀 작업 */
 .mySwiper{
-    height: 500px;
+    height: 550px;
     border-radius: 16px 16px 0 0;
 }
 
@@ -82,7 +82,7 @@ article.w1260{
     max-width:fit-content;
     width: fit-content;
     top: 193px;
-    left: -60px;
+    left: -100px;
 }
 .mySwiper .swiper-wrapper #item02{
 
@@ -365,7 +365,7 @@ article.w1260{
 /* ------------------------ */
 .subSwiper {
     width: 100%;
-    height: 176px;
+    height: 180px;
     border-radius: 16px;
 }
 /* 이벤트 슬라이드 배너 */
@@ -487,7 +487,7 @@ main{
     /* 플랙스 */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 #content1 .card{
     /* (335/1440)*100 = 23.26388888888889 */
@@ -498,7 +498,7 @@ main{
     height: 319px;
     border-radius: 16px;
     background-color: #fff;
-    box-shadow: 0 0 10px 5px #EEF1F9;
+    box-shadow: 0 0 20px 8px #EEF1F9;
     padding: 15px;
     padding-top: 64px;
 }
